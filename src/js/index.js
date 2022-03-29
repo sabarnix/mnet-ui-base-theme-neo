@@ -45,6 +45,17 @@ const statusColors = {
   unknown: '#CCCCCC',
   disabled: '#CCCCCC',
 };
+const stateTextColors = {
+  active: '#0AAD6C',
+  complete: '#9DA2AD',
+  paused: '#E3A21D',
+};
+const stateBackgroundColors = {
+  active: '#D7FCED',
+  complete: '#EEEEEE',
+  paused: '#FFF0D1',
+};
+
 const darkColors = [
   '#29313D',
   '#2F3A4A',
@@ -167,6 +178,12 @@ colorArray(neutralColors, 'neutral');
 colorArray(chartColors, 'chart');
 Object.keys(statusColors).forEach(color => {
   colors[`status-${color}`] = statusColors[color];
+});
+Object.keys(stateTextColors).forEach(color => {
+  colors[`text-${color}`] = stateTextColors[color];
+});
+Object.keys(stateBackgroundColors).forEach(color => {
+  colors[`bg-${color}`] = stateBackgroundColors[color];
 });
 
 export const generate = (baseSpacing = 24, scale = 6) => {

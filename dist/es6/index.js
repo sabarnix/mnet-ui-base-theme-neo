@@ -38,6 +38,16 @@ var statusColors = {
   unknown: '#CCCCCC',
   disabled: '#CCCCCC'
 };
+var stateTextColors = {
+  active: '#0AAD6C',
+  complete: '#9DA2AD',
+  paused: '#E3A21D'
+};
+var stateBackgroundColors = {
+  active: '#D7FCED',
+  complete: '#EEEEEE',
+  paused: '#FFF0D1'
+};
 var darkColors = ['#29313D', '#2F3A4A', '#575F7D', '#898EA2', '#BABDCA', '#DEDEDE', '#333333'];
 var lightColors = ['#fbfbfb', '#f5f6f8', '#E7EAF1', '#e1e3ef', '#dfdfdf', '#DADADA', '#F5F7FD', '#F4F6F8', '#D9DBE5', '#E8E7E7', '#F5F6FA', '#CCCCCC', '#E0E4ED', '#edfff2', '#EDF6FF'];
 var chartColors = ['#FC564F', '#719CF7', '#36C18B', '#FC90C9', '#F5B473', '#7371D9', '#98DB98', '#FC805A', '#3165B0', '#5DD8EB', '#FCD743', '#C94F78', '#AFA392', '#F5938C', '#6A3A27', '#DB2001', '#3C9678', '#575F7D', '#650B7C', '#9F7D56'];
@@ -116,6 +126,12 @@ colorArray(neutralColors, 'neutral');
 colorArray(chartColors, 'chart');
 Object.keys(statusColors).forEach(function (color) {
   colors["status-" + color] = statusColors[color];
+});
+Object.keys(stateTextColors).forEach(function (color) {
+  colors["text-" + color] = stateTextColors[color];
+});
+Object.keys(stateBackgroundColors).forEach(function (color) {
+  colors["bg-" + color] = stateBackgroundColors[color];
 });
 export var generate = function generate(baseSpacing, scale) {
   if (baseSpacing === void 0) {
