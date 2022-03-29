@@ -36,6 +36,7 @@ const accentColors = [
   '#FFF2F1',
   '#70A67F',
   '#F2F5FC',
+  '#f5f5f5',
 ];
 const neutralColors = ['#519bff', '#99742E', '#00739D', '#A2423D'];
 const statusColors = {
