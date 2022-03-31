@@ -1673,10 +1673,13 @@ export var generate = function generate(baseSpacing, scale) {
         // background: undefined,
         border: 'all',
         // extend: undefined,
-        extend: {
-          'font-weight': '600',
-          color: 'dark-3',
-          verticalAlign: 'middle'
+        extend: function extend(_ref13) {
+          var theme = _ref13.theme;
+          return {
+            'font-weight': '600',
+            color: normalizeColor('dark-3', theme),
+            verticalAlign: 'middle'
+          };
         }
       },
       // row: {
@@ -1696,8 +1699,8 @@ export var generate = function generate(baseSpacing, scale) {
         // extend: undefined,
 
       },
-      extend: function extend(_ref13) {
-        var theme = _ref13.theme;
+      extend: function extend(_ref14) {
+        var theme = _ref14.theme;
         return {
           position: 'relative',
           'border-spacing': 0,
@@ -1757,8 +1760,8 @@ export var generate = function generate(baseSpacing, scale) {
       xxlarge: _extends({}, fontSizing(4))
     },
     textArea: {
-      extend: function extend(_ref14) {
-        var theme = _ref14.theme;
+      extend: function extend(_ref15) {
+        var theme = _ref15.theme;
         return {
           color: normalizeColor('dark-3', theme),
           fontWeight: 400
@@ -1780,14 +1783,14 @@ export var generate = function generate(baseSpacing, scale) {
           paddingLeft: baseSpacing * 1.125 + "px"
         }
       },
-      extend: function extend(_ref15) {
-        var plain = _ref15.plain,
-            focus = _ref15.focus,
-            reverse = _ref15.reverse,
-            icon = _ref15.icon,
-            theme = _ref15.theme,
-            readOnly = _ref15.readOnly,
-            error = _ref15.error;
+      extend: function extend(_ref16) {
+        var plain = _ref16.plain,
+            focus = _ref16.focus,
+            reverse = _ref16.reverse,
+            icon = _ref16.icon,
+            theme = _ref16.theme,
+            readOnly = _ref16.readOnly,
+            error = _ref16.error;
         return _extends({
           paddingTop: baseSpacing / 1.78 + "px",
           paddingBottom: baseSpacing / 1.78 + "px",

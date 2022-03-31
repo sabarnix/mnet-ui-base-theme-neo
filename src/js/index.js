@@ -1562,11 +1562,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         // background: undefined,
         border: 'all', // extend: undefined,
-        extend: {
+        extend: ({ theme }) => ({
           'font-weight': '600',
-          color: 'dark-3',
+          color: normalizeColor('dark-3', theme),
           verticalAlign: 'middle',
-        },
+        }),
       },
       // row: {
       //   hover: {
