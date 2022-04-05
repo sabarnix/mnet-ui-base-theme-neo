@@ -1455,7 +1455,7 @@ var generate = function generate(baseSpacing, scale) {
       container: {
         width: 'large',
         border: {
-          color: 'light-3'
+          color: 'dark-6'
         },
         round: 'small'
       }
