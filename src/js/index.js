@@ -1334,9 +1334,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       container: {
         width: 'large',
-        border: {
-          color: 'dark-6',
-        },
         round: 'small',
       },
     },
