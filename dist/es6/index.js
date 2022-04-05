@@ -1439,6 +1439,9 @@ export var generate = function generate(baseSpacing, scale) {
       },
       container: {
         width: 'large',
+        border: {
+          color: 'dark-6'
+        },
         round: 'small'
       }
     },
