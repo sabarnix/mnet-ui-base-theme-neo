@@ -1,4 +1,12 @@
-var _templateObject;
+function _templateObject() {
+  var data = _taggedTemplateLiteralLoose(["\n            border: 1px solid ", ";\n            border-right: none;\n            button {\n              display: flex;\n              align-items: center;\n              justify-content: center;\n            }\n            &:first-child {\n              border-radius: 4px 0 0 4px;\n                        \n            }\n            &:last-child {\n              border-radius: 0 4px 4px 0;\n              border-right: 1px solid ", ";\n            }\n\n        "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
@@ -1326,7 +1334,10 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         container: {
-          pad: 'medium',
+          pad: {
+            horizontal: 'large',
+            vertical: 'medium'
+          },
           extend: function extend(_ref10) {
             var isEmpty = _ref10.isEmpty;
             return {
@@ -1794,7 +1805,7 @@ export var generate = function generate(baseSpacing, scale) {
     pagination: {
       control: {
         extend: function extend(props) {
-          return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n            border: 1px solid ", ";\n            border-right: none;\n            button {\n              display: flex;\n              align-items: center;\n              justify-content: center;\n            }\n            &:first-child {\n              border-radius: 4px 0 0 4px;\n                        \n            }\n            &:last-child {\n              border-radius: 0 4px 4px 0;\n              border-right: 1px solid ", ";\n            }\n\n        "])), normalizeColor('light-4', props.theme), normalizeColor('light-4', props.theme));
+          return css(_templateObject(), normalizeColor('light-4', props.theme), normalizeColor('light-4', props.theme));
         }
       },
       button: {
