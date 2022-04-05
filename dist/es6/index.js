@@ -1347,6 +1347,7 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         container: {
+          pad: 'medium',
           extend: function extend(_ref10) {
             var isEmpty = _ref10.isEmpty;
             return {

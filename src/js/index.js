@@ -1250,6 +1250,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           },
         },
         container: {
+          pad: 'medium',
           extend: ({ isEmpty }) => ({
             padding: `${isEmpty ? `${baseSpacing / 1.6}` : '0'}px ${isEmpty ? `${baseSpacing}` : '0'}px`,
           }),
