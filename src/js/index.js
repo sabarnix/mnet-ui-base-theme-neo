@@ -1129,7 +1129,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           margin: 'medium',
           border: {
             side: 'top',
-            color: 'light-3',
+            color: 'dark-6',
           },
           color: 'dark-3',
           size: 'medium',
@@ -1171,7 +1171,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           pad: 'none',
           border: {
             side: 'bottom',
-            color: 'light-3',
+            color: 'dark-6',
           },
           style: {
             minHeight: `${baseSpacing * 2.5}px`,
@@ -1208,7 +1208,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
       },
       rightPanel: {
-        border: 'light-3',
+        border: 'dark-6',
         incExcHeader: {
           box: {
             direction: 'row',
@@ -1217,7 +1217,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             background: 'white',
             border: {
               side: 'bottom',
-              color: 'light-3',
+              color: 'dark-6',
             },
             align: 'center',
           },
@@ -1248,7 +1248,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           direction: 'row',
           width: 'large',
           border: {
-            color: 'light-3',
+            color: 'dark-6',
           },
           round: 'small',
         },
@@ -1291,7 +1291,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             align: 'center',
             border: {
               side: 'top',
-              color: 'light-3',
+              color: 'dark-6',
             },
             pad: 'none',
             height: {

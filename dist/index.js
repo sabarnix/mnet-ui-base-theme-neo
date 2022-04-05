@@ -1237,7 +1237,7 @@ var generate = function generate(baseSpacing, scale) {
           margin: 'medium',
           border: {
             side: 'top',
-            color: 'light-3'
+            color: 'dark-6'
           },
           color: 'dark-3',
           size: 'medium',
@@ -1281,7 +1281,7 @@ var generate = function generate(baseSpacing, scale) {
           pad: 'none',
           border: {
             side: 'bottom',
-            color: 'light-3'
+            color: 'dark-6'
           },
           style: {
             minHeight: baseSpacing * 2.5 + "px",
@@ -1318,7 +1318,7 @@ var generate = function generate(baseSpacing, scale) {
         }
       },
       rightPanel: {
-        border: 'light-3',
+        border: 'dark-6',
         incExcHeader: {
           box: {
             direction: 'row',
@@ -1327,7 +1327,7 @@ var generate = function generate(baseSpacing, scale) {
             background: 'white',
             border: {
               side: 'bottom',
-              color: 'light-3'
+              color: 'dark-6'
             },
             align: 'center'
           },
@@ -1366,7 +1366,7 @@ var generate = function generate(baseSpacing, scale) {
           direction: 'row',
           width: 'large',
           border: {
-            color: 'light-3'
+            color: 'dark-6'
           },
           round: 'small'
         },
@@ -1411,7 +1411,7 @@ var generate = function generate(baseSpacing, scale) {
             align: 'center',
             border: {
               side: 'top',
-              color: 'light-3'
+              color: 'dark-6'
             },
             pad: 'none',
             height: {
