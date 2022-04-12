@@ -736,7 +736,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       groupEnd: {
         border: { side: 'bottom', size: 'xsmall' },
       },
-      header: {},
+      header: {
+        extend: () => ({
+          textAlign: 'start',
+        }),
+      },
       primary: {
         weight: 'bold',
       },

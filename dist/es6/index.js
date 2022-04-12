@@ -809,7 +809,13 @@ export var generate = function generate(baseSpacing, scale) {
           size: 'xsmall'
         }
       },
-      header: {},
+      header: {
+        extend: function extend() {
+          return {
+            textAlign: 'start'
+          };
+        }
+      },
       primary: {
         weight: 'bold'
       },
