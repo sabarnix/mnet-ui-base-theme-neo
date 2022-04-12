@@ -1337,7 +1337,6 @@ export var generate = function generate(baseSpacing, scale) {
           extend: function extend(_ref10) {
             var isEmpty = _ref10.isEmpty;
             return {
-              as: console.log(isEmpty),
               padding: (isEmpty ? "" + baseSpacing / 1.6 : '0') + "px " + (isEmpty ? "" + baseSpacing : '0') + "px"
             };
           }
