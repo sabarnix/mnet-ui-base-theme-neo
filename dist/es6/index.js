@@ -1136,11 +1136,11 @@ export var generate = function generate(baseSpacing, scale) {
       size: {
         small: baseSpacing * 0.5 + "px",
         // 8px
-        medium: baseSpacing * 1 + "px",
+        medium: baseSpacing * 0.75 + "px",
+        // 12px
+        large: baseSpacing * 1 + "px",
         // 16px
-        large: baseSpacing * 1.5 + "px",
-        // 24px
-        xlarge: baseSpacing * 2 + "px" // 32px
+        xlarge: baseSpacing * 1.25 + "px" // 20px
 
       }
     },
