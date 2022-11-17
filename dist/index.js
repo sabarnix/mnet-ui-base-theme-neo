@@ -1570,14 +1570,14 @@ var generate = function generate(baseSpacing, scale) {
           icon: _TickCircle.TickCircle,
           extend: {
             color: 'accent-1',
-            size: 'large'
+            size: 'medium'
           }
         },
         exclude: {
           icon: _TickCircle.TickCircle,
           extend: {
             color: 'error',
-            size: 'large'
+            size: 'medium'
           }
         }
       },
