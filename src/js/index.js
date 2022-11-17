@@ -1622,7 +1622,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           },
           icon: {
             name: Check,
-            size: 'xlarge',
+            size: 'medium',
             color: darkColors[6], // TODO: check dark-7 works ?
           },
         },
@@ -2018,7 +2018,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         width: '60%',
         timeout: 2000,
         icon: {
-          size: 'xlarge',
+          size: 'medium',
           default: TickCircle,
           ok: TickCircle,
           error: Error,
@@ -2324,7 +2324,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       range: {
         icon: {
           name: LongArrowRight,
-          size: `${baseFontSize}px`,
+          size: 'medium',
         },
         text: {
           weight: '400',
@@ -2411,7 +2411,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         menu: {
           icons: {
             color: 'brand',
-            size: 'xlarge',
+            size: 'medium',
             icon: Plus,
           },
           item: {
@@ -2617,7 +2617,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               },
               icons: {
                 info: Info,
-                size: 'large',
+                size: 'medium',
                 color: 'accent-12',
               },
             },
@@ -2773,7 +2773,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       dataTable: {
         icons: {
-          size: 'large',
+          size: 'medium',
           sort: {
             default: DefaultSort,
             asc: AscSort,

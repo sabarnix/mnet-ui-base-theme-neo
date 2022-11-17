@@ -1751,7 +1751,7 @@ var generate = function generate(baseSpacing, scale) {
           },
           icon: {
             name: _Check.Check,
-            size: 'xlarge',
+            size: 'medium',
             color: darkColors[6] // TODO: check dark-7 works ?
 
           }
@@ -2159,7 +2159,7 @@ var generate = function generate(baseSpacing, scale) {
         width: '60%',
         timeout: 2000,
         icon: {
-          size: 'xlarge',
+          size: 'medium',
           "default": _TickCircle.TickCircle,
           ok: _TickCircle.TickCircle,
           error: _Error.Error,
@@ -2496,7 +2496,7 @@ var generate = function generate(baseSpacing, scale) {
       range: {
         icon: {
           name: _LongArrowRight.LongArrowRight,
-          size: baseFontSize + "px"
+          size: 'medium'
         },
         text: {
           weight: '400',
@@ -2584,7 +2584,7 @@ var generate = function generate(baseSpacing, scale) {
         menu: {
           icons: {
             color: 'brand',
-            size: 'xlarge',
+            size: 'medium',
             icon: _Plus.Plus
           },
           item: {
@@ -2799,7 +2799,7 @@ var generate = function generate(baseSpacing, scale) {
               },
               icons: {
                 info: _Info.Info,
-                size: 'large',
+                size: 'medium',
                 color: 'accent-12'
               }
             },
@@ -2969,7 +2969,7 @@ var generate = function generate(baseSpacing, scale) {
       },
       dataTable: {
         icons: {
-          size: 'large',
+          size: 'medium',
           sort: {
             "default": _DefaultSort.DefaultSort,
             asc: _AscSort.AscSort,
