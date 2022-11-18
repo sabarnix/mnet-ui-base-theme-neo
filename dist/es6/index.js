@@ -1731,7 +1731,7 @@ export var generate = function generate(baseSpacing, scale) {
           right: 'none'
         },
         background: 'transparent',
-        size: 'xxlarge',
+        size: 'medium',
         up: Up,
         down: Down // extend: undefined,
 
