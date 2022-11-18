@@ -1634,7 +1634,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           right: 'none',
         },
         background: 'transparent',
-        size: 'xxlarge',
+        size: 'medium',
         up: Up,
         down: Down,
         // extend: undefined,
