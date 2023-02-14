@@ -943,6 +943,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       error: {
         color: 'status-critical',
         margin: { top: 'xsmall', bottom: 'small', horizontal: 'none' },
+        extend: {
+          maxWidth: `${baseSpacing * 32}px`,
+        },
         // background: undefined,
       },
       // extend: undefined,

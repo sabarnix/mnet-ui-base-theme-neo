@@ -998,6 +998,9 @@ export var generate = function generate(baseSpacing, scale) {
           top: 'xsmall',
           bottom: 'small',
           horizontal: 'none'
+        },
+        extend: {
+          maxWidth: baseSpacing * 32 + "px"
         } // background: undefined,
 
       },
