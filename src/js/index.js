@@ -1764,13 +1764,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         border: { color: colors.border.light, side: 'all' }, // verticalAlign: undefined,
         // background: undefined,
-        extend: {
+        extend: ({ theme, rowHighlight }) => ({
           'font-weight': '600',
           color: darkColors[6],
           verticalAlign: 'middle',
           fontSize: fontSizing(0).size,
           lineHeight: fontSizing(0).height,
-        },
+          backgroundColor: rowHighlight ? normalizeColor('light-8', theme) : 'transparent',
+        }),
       },
       extend: ({ theme }) => ({
         position: 'relative',

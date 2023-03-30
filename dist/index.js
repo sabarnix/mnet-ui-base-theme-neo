@@ -1910,16 +1910,21 @@ var generate = function generate(baseSpacing, scale) {
         },
         // verticalAlign: undefined,
         // background: undefined,
-        extend: {
-          'font-weight': '600',
-          color: darkColors[6],
-          verticalAlign: 'middle',
-          fontSize: fontSizing(0).size,
-          lineHeight: fontSizing(0).height
+        extend: function extend(_ref16) {
+          var theme = _ref16.theme,
+              rowHighlight = _ref16.rowHighlight;
+          return {
+            'font-weight': '600',
+            color: darkColors[6],
+            verticalAlign: 'middle',
+            fontSize: fontSizing(0).size,
+            lineHeight: fontSizing(0).height,
+            backgroundColor: rowHighlight ? (0, _colors.normalizeColor)('light-8', theme) : 'transparent'
+          };
         }
       },
-      extend: function extend(_ref16) {
-        var theme = _ref16.theme;
+      extend: function extend(_ref17) {
+        var theme = _ref17.theme;
         return {
           position: 'relative',
           'border-spacing': 0,
@@ -2009,8 +2014,8 @@ var generate = function generate(baseSpacing, scale) {
       xxxxlarge: _extends({}, fontSizing(4.5))
     },
     textArea: {
-      extend: function extend(_ref17) {
-        var theme = _ref17.theme;
+      extend: function extend(_ref18) {
+        var theme = _ref18.theme;
         return {
           color: (0, _colors.normalizeColor)('dark-3', theme),
           fontWeight: 400
@@ -2031,14 +2036,14 @@ var generate = function generate(baseSpacing, scale) {
           paddingLeft: baseSpacing * 1.125 + "px"
         }
       },
-      extend: function extend(_ref18) {
-        var plain = _ref18.plain,
-            focus = _ref18.focus,
-            reverse = _ref18.reverse,
-            icon = _ref18.icon,
-            theme = _ref18.theme,
-            readOnly = _ref18.readOnly,
-            error = _ref18.error;
+      extend: function extend(_ref19) {
+        var plain = _ref19.plain,
+            focus = _ref19.focus,
+            reverse = _ref19.reverse,
+            icon = _ref19.icon,
+            theme = _ref19.theme,
+            readOnly = _ref19.readOnly,
+            error = _ref19.error;
         return _extends({
           padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           boxShadow: 'none',
@@ -2614,8 +2619,8 @@ var generate = function generate(baseSpacing, scale) {
               }
             },
             hover: {
-              extend: function extend(_ref19) {
-                var theme = _ref19.theme;
+              extend: function extend(_ref20) {
+                var theme = _ref20.theme;
                 return {
                   color: (0, _colors.normalizeColor)('dark-7', theme)
                 };
@@ -2684,9 +2689,9 @@ var generate = function generate(baseSpacing, scale) {
             // width: {
             //   min: `${baseSpacing * 11.25}px`,
             // },
-            extend: function extend(_ref20) {
-              var hasTagHover = _ref20.hasTagHover,
-                  theme = _ref20.theme;
+            extend: function extend(_ref21) {
+              var hasTagHover = _ref21.hasTagHover,
+                  theme = _ref21.theme;
               return {
                 '&:hover': {
                   borderColor: hasTagHover && (0, _colors.normalizeColor)('light-24', theme)
@@ -2722,8 +2727,8 @@ var generate = function generate(baseSpacing, scale) {
             margin: {
               left: baseSpacing / 2 + "px"
             },
-            extend: function extend(_ref21) {
-              var theme = _ref21.theme;
+            extend: function extend(_ref22) {
+              var theme = _ref22.theme;
               return {
                 paddingLeft: baseSpacing / 2 + "px",
                 'svg:hover > g > path': {
@@ -2790,8 +2795,8 @@ var generate = function generate(baseSpacing, scale) {
                 height: {
                   max: baseSpacing * 12.5 + "px"
                 },
-                extend: function extend(_ref22) {
-                  var theme = _ref22.theme;
+                extend: function extend(_ref23) {
+                  var theme = _ref23.theme;
                   return {
                     '::-webkit-scrollbar': {
                       width: '14px'
@@ -2818,8 +2823,8 @@ var generate = function generate(baseSpacing, scale) {
                 gap: baseSpacing / 2 + "px",
                 align: 'center',
                 margin: '0',
-                extend: function extend(_ref23) {
-                  var theme = _ref23.theme;
+                extend: function extend(_ref24) {
+                  var theme = _ref24.theme;
                   return {
                     fontSize: baseSpacing * 0.875 + "px",
                     '> label': {
@@ -2853,9 +2858,9 @@ var generate = function generate(baseSpacing, scale) {
               item: {
                 align: 'center',
                 pad: 'medium',
-                extend: function extend(_ref24) {
-                  var isActive = _ref24.isActive,
-                      theme = _ref24.theme;
+                extend: function extend(_ref25) {
+                  var isActive = _ref25.isActive,
+                      theme = _ref25.theme;
                   return {
                     fontSize: baseSpacing * 0.875 + "px",
                     fontWeight: '600',
@@ -2869,8 +2874,8 @@ var generate = function generate(baseSpacing, scale) {
               pad: 'medium',
               item: {
                 gap: 'medium',
-                extend: function extend(_ref25) {
-                  var theme = _ref25.theme;
+                extend: function extend(_ref26) {
+                  var theme = _ref26.theme;
                   return {
                     '> label': {
                       color: (0, _colors.normalizeColor)('dark-7', theme),
@@ -2903,9 +2908,9 @@ var generate = function generate(baseSpacing, scale) {
                     option: {
                       width: '100%',
                       pad: 'large',
-                      extend: function extend(_ref26) {
-                        var checked = _ref26.checked,
-                            theme = _ref26.theme;
+                      extend: function extend(_ref27) {
+                        var checked = _ref27.checked,
+                            theme = _ref27.theme;
                         return {
                           borderLeft: checked ? "3px solid " + (0, _colors.normalizeColor)('brand', theme) : '0',
                           borderBottom: "1px solid " + (0, _colors.normalizeColor)('border', theme),
@@ -2937,8 +2942,8 @@ var generate = function generate(baseSpacing, scale) {
                   }
                 },
                 wrapper: {
-                  extend: function extend(_ref27) {
-                    var theme = _ref27.theme;
+                  extend: function extend(_ref28) {
+                    var theme = _ref28.theme;
                     return {
                       'label, label>div': {
                         width: '100%',
@@ -2989,8 +2994,8 @@ var generate = function generate(baseSpacing, scale) {
                   prev: _Left.Left,
                   next: _Right.Right,
                   color: 'dark-8',
-                  hover: function hover(_ref28) {
-                    var theme = _ref28.theme;
+                  hover: function hover(_ref29) {
+                    var theme = _ref29.theme;
                     return {
                       background: (0, _colors.normalizeColor)('active', theme)
                     };
