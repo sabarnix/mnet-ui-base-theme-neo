@@ -1948,7 +1948,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-right: ${baseSpacing / 2}px;
-              &:hover {
+              button:hover {
                 svg {
                   stroke: white;
                 }
@@ -1965,7 +1965,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-left: ${baseSpacing / 2}px;
-              &:hover {
+              button:hover {
                 svg {
                   stroke: white;
                 }
