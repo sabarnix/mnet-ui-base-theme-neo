@@ -1938,6 +1938,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         extend: props => css`
             border: 1px solid ${normalizeColor('border', props.theme)};
             border-right: none;
+            background: white;
             button {
               display: flex;
               align-items: center;
@@ -1947,6 +1948,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-right: ${baseSpacing / 2}px;
+              &:hover {
+                svg {
+                  stroke: white;
+                }
+              }
             }
             &:nth-child(2) {
               border-radius: 4px 0 0 4px;
@@ -1959,6 +1965,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-left: ${baseSpacing / 2}px;
+              &:hover {
+                svg {
+                  stroke: white;
+                }
+              }
             }
         `,
       },
@@ -2039,8 +2050,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       icons: {
         color: 'dark-7',
-        previous: FormPrevious,
-        next: FormNext,
+        previous: Left,
+        next: Right,
       },
     },
     tip: {
