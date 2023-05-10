@@ -1931,6 +1931,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         extend: props => css`
             border: 1px solid ${normalizeColor('border', props.theme)};
             border-right: none;
+            background-color: white;
             button {
               display: flex;
               align-items: center;
@@ -1957,11 +1958,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       button: {
         padding: 'none',
+        border: {
+          radius: 'inherit',
+        },
         active: {
           background: 'brand',
           color: 'white',
           border: {
-            width: '1px',
             color: 'brand',
             radius: 'inherit',
           },
@@ -1971,8 +1974,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: 'brand',
           },
           color: 'white',
-          extend: {
-            borderRadius: 'inherit',
+          border: {
+            color: 'brand',
           },
         },
         disabled: {

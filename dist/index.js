@@ -2094,16 +2094,18 @@ var generate = function generate(baseSpacing, scale) {
     pagination: {
       control: {
         extend: function extend(props) {
-          return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n            border: 1px solid ", ";\n            border-right: none;\n            button {\n              display: flex;\n              align-items: center;\n              justify-content: center;\n            }\n            &:first-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-right: ", "px;\n            }\n            &:nth-child(2) {\n              border-radius: 4px 0 0 4px;\n            }\n            &:nth-last-child(2) {\n              border-radius: 0 4px 4px 0;\n              border-right: 1px solid ", ";\n            }\n            &:last-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-left: ", "px;\n            }\n        "])), (0, _colors.normalizeColor)('border', props.theme), (0, _colors.normalizeColor)('border', props.theme), baseSpacing / 2, (0, _colors.normalizeColor)('border', props.theme), (0, _colors.normalizeColor)('border', props.theme), baseSpacing / 2);
+          return (0, _styledComponents.css)(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n            border: 1px solid ", ";\n            border-right: none;\n            background-color: white;\n            button {\n              display: flex;\n              align-items: center;\n              justify-content: center;\n            }\n            &:first-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-right: ", "px;\n            }\n            &:nth-child(2) {\n              border-radius: 4px 0 0 4px;\n            }\n            &:nth-last-child(2) {\n              border-radius: 0 4px 4px 0;\n              border-right: 1px solid ", ";\n            }\n            &:last-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-left: ", "px;\n            }\n        "])), (0, _colors.normalizeColor)('border', props.theme), (0, _colors.normalizeColor)('border', props.theme), baseSpacing / 2, (0, _colors.normalizeColor)('border', props.theme), (0, _colors.normalizeColor)('border', props.theme), baseSpacing / 2);
         }
       },
       button: {
         padding: 'none',
+        border: {
+          radius: 'inherit'
+        },
         active: {
           background: 'brand',
           color: 'white',
           border: {
-            width: '1px',
             color: 'brand',
             radius: 'inherit'
           }
@@ -2113,8 +2115,8 @@ var generate = function generate(baseSpacing, scale) {
             color: 'brand'
           },
           color: 'white',
-          extend: {
-            borderRadius: 'inherit'
+          border: {
+            color: 'brand'
           }
         },
         disabled: {
