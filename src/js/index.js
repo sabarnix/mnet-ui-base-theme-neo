@@ -25,7 +25,7 @@ import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
 import { normalizeColor } from 'grommet/utils/colors';
 import { parseMetricToNum } from 'grommet/utils/mixins';
-import { FormNext, FormPrevious, Clear } from 'grommet-icons';
+import { Clear } from 'grommet-icons';
 
 Tick.notSvg = true;
 
@@ -1938,7 +1938,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         extend: props => css`
             border: 1px solid ${normalizeColor('border', props.theme)};
             border-right: none;
-            background: white;
+            background-color: white;
             button {
               display: flex;
               align-items: center;
@@ -1948,9 +1948,15 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-right: ${baseSpacing / 2}px;
-              button:hover {
+              svg {
+                width: 12px;
+                height: 12px;
+              }
+              button:not([disabled]):hover {
                 svg {
-                  stroke: white;
+                  path{
+                    fill: white;
+                  }
                 }
               }
             }
@@ -1965,9 +1971,15 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-left: ${baseSpacing / 2}px;
-              button:hover {
+              svg{
+                width: 12px;
+                height: 12px;
+              }
+              button:not([disabled]):hover {
                 svg {
-                  stroke: white;
+                  path{
+                    fill: white;
+                  }
                 }
               }
             }
