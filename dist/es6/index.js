@@ -2069,7 +2069,7 @@ export var generate = function generate(baseSpacing, scale) {
     pagination: {
       control: {
         extend: function extend(props) {
-          return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n            border: 1px solid ", ";\n            border-right: none;\n            background-color: white;\n            button {\n              display: flex;\n              align-items: center;\n              justify-content: center;\n            }\n            &:first-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-right: ", "px;\n              svg {\n                width: 12px;\n                height: 12px;\n              }\n              button:not([disabled]):hover {\n                svg {\n                  path{\n                    fill: white;\n                  }\n                }\n              }\n            }\n            &:nth-child(2) {\n              border-radius: 4px 0 0 4px;\n            }\n            &:nth-last-child(2) {\n              border-radius: 0 4px 4px 0;\n              border-right: 1px solid ", ";\n            }\n            &:last-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-left: ", "px;\n              svg{\n                width: 12px;\n                height: 12px;\n              }\n              button:not([disabled]):hover {\n                svg {\n                  path{\n                    fill: white;\n                  }\n                }\n              }\n            }\n        "])), normalizeColor('border', props.theme), normalizeColor('border', props.theme), baseSpacing / 2, normalizeColor('border', props.theme), normalizeColor('border', props.theme), baseSpacing / 2);
+          return css(_templateObject || (_templateObject = _taggedTemplateLiteralLoose(["\n            border: 1px solid ", ";\n            border-right: none;\n            background-color: white;\n            button {\n              display: flex;\n              align-items: center;\n              justify-content: center;\n            }\n            &:first-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-right: ", "px;\n              svg {\n                width: 12px;\n                height: 12px;\n              }\n            }\n            &:nth-child(2) {\n              border-radius: 4px 0 0 4px;\n            }\n            &:nth-last-child(2) {\n              border-radius: 0 4px 4px 0;\n              border-right: 1px solid ", ";\n            }\n            &:last-child {\n              border-radius: 4px;\n              border-right: 1px solid ", ";\n              margin-left: ", "px;\n              svg{\n                width: 12px;\n                height: 12px;\n              }\n            }\n        "])), normalizeColor('border', props.theme), normalizeColor('border', props.theme), baseSpacing / 2, normalizeColor('border', props.theme), normalizeColor('border', props.theme), baseSpacing / 2);
         }
       },
       button: {
@@ -2085,11 +2085,12 @@ export var generate = function generate(baseSpacing, scale) {
         },
         hover: {
           background: {
-            color: 'brand'
+            color: 'light-8'
           },
-          color: 'white',
+          color: 'dark-7',
           extend: {
-            borderRadius: 'inherit'
+            borderRadius: 'inherit',
+            height: '30px'
           }
         },
         disabled: {
