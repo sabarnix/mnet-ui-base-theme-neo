@@ -1952,13 +1952,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                 width: 12px;
                 height: 12px;
               }
-              button:not([disabled]):hover {
-                svg {
-                  path{
-                    fill: white;
-                  }
-                }
-              }
             }
             &:nth-child(2) {
               border-radius: 4px 0 0 4px;
@@ -1974,13 +1967,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               svg{
                 width: 12px;
                 height: 12px;
-              }
-              button:not([disabled]):hover {
-                svg {
-                  path{
-                    fill: white;
-                  }
-                }
               }
             }
         `,
@@ -1998,11 +1984,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         hover: {
           background: {
-            color: 'brand',
+            color: 'light-8',
           },
-          color: 'white',
+          color: 'dark-7',
           extend: {
             borderRadius: 'inherit',
+            height: '30px',
           },
         },
         disabled: {
