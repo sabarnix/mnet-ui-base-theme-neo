@@ -2936,7 +2936,10 @@ var generate = function generate(baseSpacing, scale) {
                       width: '100%',
                       padding: baseSpacing * 0.5 + "px " + baseSpacing * 0.75 + "px",
                       '> div': {
-                        marginRight: baseSpacing * 0.5 + "px"
+                        marginRight: baseSpacing * 0.5 + "px",
+                        '> span': {
+                          fontSize: baseSpacing * 0.875 + "px"
+                        }
                       }
                     },
                     '&:hover': {

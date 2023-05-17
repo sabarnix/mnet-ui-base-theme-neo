@@ -2745,7 +2745,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                     padding: `${baseSpacing * 0.5}px ${baseSpacing * 0.75}px`,
                     '> div': {
                       marginRight: `${baseSpacing * 0.5}px`,
+                      '> span': {
+                        fontSize: `${baseSpacing * 0.875}px`,
+                      },
                     },
+                    
                   },
                   '&:hover': {
                     cursor: 'pointer',
