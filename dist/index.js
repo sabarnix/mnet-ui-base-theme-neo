@@ -2930,7 +2930,10 @@ var generate = function generate(baseSpacing, scale) {
                     fontSize: baseSpacing * 0.875 + "px",
                     '> label': {
                       width: '100%',
-                      padding: baseSpacing * 0.5 + "px " + baseSpacing * 0.75 + "px"
+                      padding: baseSpacing * 0.5 + "px " + baseSpacing * 0.75 + "px",
+                      '> div': {
+                        marginRight: baseSpacing * 0.5 + "px"
+                      }
                     },
                     '&:hover': {
                       cursor: 'pointer',
