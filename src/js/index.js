@@ -2743,6 +2743,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                   '> label': {
                     width: '100%',
                     padding: `${baseSpacing * 0.5}px ${baseSpacing * 0.75}px`,
+                    '> div': {
+                      marginRight: `${baseSpacing * 0.5}px`,
+                    },
                   },
                   '&:hover': {
                     cursor: 'pointer',
