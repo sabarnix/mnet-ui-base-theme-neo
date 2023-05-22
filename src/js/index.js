@@ -1659,7 +1659,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           right: 'none',
         },
         background: 'transparent',
-        size: 'large',
+        size: 'small',
         up: Up,
         down: Down,
         // extend: undefined,
