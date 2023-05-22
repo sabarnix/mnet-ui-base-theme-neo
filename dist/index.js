@@ -1788,7 +1788,7 @@ var generate = function generate(baseSpacing, scale) {
           right: 'none'
         },
         background: 'transparent',
-        size: 'large',
+        size: 'small',
         up: _Up.Up,
         down: _Down.Down // extend: undefined,
 
