@@ -55,7 +55,7 @@ var _mixins = require("grommet/utils/mixins");
 
 var _Clear = require("grommet-icons/es6/icons/Clear");
 
-var _templateObject;
+var _templateObject, _templateObject2;
 
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
@@ -2111,6 +2111,9 @@ var generate = function generate(baseSpacing, scale) {
             width: '1px',
             color: 'brand',
             radius: 'inherit'
+          },
+          extend: function extend(props) {
+            return (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n            &:hover{\n              background-color: ", " !important;\n              color: white !important;\n              height: inherit !important;\n            }\n          "])), (0, _colors.normalizeColor)('brand', props.theme));
           }
         },
         hover: {
