@@ -1983,6 +1983,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: 'brand',
             radius: 'inherit',
           },
+          extend: props => css`
+            &:hover{
+              background-color: ${normalizeColor('brand', props.theme)} !important;
+              color: white !important;
+              height: inherit !important;
+            }
+          `,
         },
         hover: {
           background: {
