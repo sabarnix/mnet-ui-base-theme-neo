@@ -1338,7 +1338,7 @@ export var generate = function generate(baseSpacing, scale) {
               width: twoColumnLayout ? '100%' : 'auto',
               margin: twoColumnLayout ? 0 : baseSpacing / (1.618 * 2) + "px",
               background: normalizeColor(twoColumnLayout ? 'white' : 'light-10', theme),
-              padding: twoColumnLayout ? baseSpacing / 1.618 + "px" : baseSpacing / (1.618 * 2) + "px " + baseSpacing / 1.618 + "px",
+              padding: twoColumnLayout ? baseSpacing / 1.618 + "px " + baseSpacing * 0.875 + "px " + baseSpacing / 1.618 + "px " + baseSpacing / 1.618 + "px" : baseSpacing / (1.618 * 2) + "px " + baseSpacing / 1.618 + "px",
               borderRadius: twoColumnLayout ? 0 : baseSpacing / (1.618 * 2) + "px",
               borderBottom: 'none',
               justifyContent: twoColumnLayout ? 'space-between' : 'flex-start'
@@ -1424,11 +1424,11 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         placeholder: {
-          color: 'dark-4',
+          color: 'dark-7',
           weight: 400,
           size: 'medium',
           margin: {
-            left: 'small'
+            left: '0'
           }
         },
         icon: {
@@ -1709,7 +1709,7 @@ export var generate = function generate(baseSpacing, scale) {
               }
             },
             lineHeight: baseSpacing * 1.5 + "px",
-            padding: baseSpacing * 0.5 - 1.5 + "px " + baseSpacing + "px " + (baseSpacing * 0.5 - 1.5) + "px " + baseSpacing / 2 + "px",
+            padding: baseSpacing * 0.5 - 1.5 + "px " + baseSpacing + "px " + (baseSpacing * 0.5 - 1.5) + "px " + baseSpacing + "px",
             background: disabled ? normalizeColor('light-1', theme) : null,
             borderBottomWidth: !plain && theme.global.borderSize.small
           }, !disabled ? {
@@ -2006,6 +2006,7 @@ export var generate = function generate(baseSpacing, scale) {
           color: normalizeColor('dark-3', theme),
           fontWeight: 400,
           borderBottomWidth: '2px',
+          paddingLeft: '16px',
           '&:hover': {
             borderBottomColor: !disabled && normalizeColor('accent-12', theme)
           }
