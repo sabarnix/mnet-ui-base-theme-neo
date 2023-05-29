@@ -1636,7 +1636,8 @@ var generate = function generate(baseSpacing, scale) {
           var theme = _ref12.theme;
           return {
             color: (0, _colors.normalizeColor)('dark-7', theme),
-            fontWeight: 400
+            fontWeight: 400,
+            opacity: 1
           };
         }
       },
