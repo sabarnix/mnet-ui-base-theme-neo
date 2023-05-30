@@ -1883,7 +1883,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     textArea: {
       extend: ({ theme, disabled }) => ({
-        color: normalizeColor('dark-3', theme),
+        color: normalizeColor('dark-7', theme),
         fontWeight: 400,
         borderBottomWidth: '2px',
         paddingLeft: '16px',
