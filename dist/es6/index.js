@@ -2006,7 +2006,7 @@ export var generate = function generate(baseSpacing, scale) {
         var theme = _ref17.theme,
             disabled = _ref17.disabled;
         return {
-          color: normalizeColor('dark-3', theme),
+          color: normalizeColor('dark-7', theme),
           fontWeight: 400,
           borderBottomWidth: '2px',
           paddingLeft: '16px',
