@@ -2731,6 +2731,21 @@ export var generate = function generate(baseSpacing, scale) {
             '& ::-webkit-scrollbar-corner': {
               backgroundColor: 'transparent'
             }
+          },
+          button: {
+            extend: function extend(_ref20) {
+              var theme = _ref20.theme,
+                  active = _ref20.active;
+              return {
+                background: "" + (active ? normalizeColor('light-8', theme) : 'transparent'),
+                border: active ? "1px solid " + normalizeColor('light-21', theme) : 'none',
+                borderRadius: '4px',
+                '&:hover': {
+                  background: normalizeColor('light-8', theme),
+                  border: "1px solid " + normalizeColor('light-21', theme)
+                }
+              };
+            }
           }
         },
         tag: {
@@ -2762,10 +2777,10 @@ export var generate = function generate(baseSpacing, scale) {
             // width: {
             //   min: `${baseSpacing * 11.25}px`,
             // },
-            extend: function extend(_ref20) {
-              var disabled = _ref20.disabled,
-                  hasTagHover = _ref20.hasTagHover,
-                  theme = _ref20.theme;
+            extend: function extend(_ref21) {
+              var disabled = _ref21.disabled,
+                  hasTagHover = _ref21.hasTagHover,
+                  theme = _ref21.theme;
               return {
                 '&:hover': _extends({}, !disabled && hasTagHover ? {
                   'border-color': normalizeColor('light-24', theme)
@@ -2801,8 +2816,8 @@ export var generate = function generate(baseSpacing, scale) {
             margin: {
               left: baseSpacing / 2 + "px"
             },
-            extend: function extend(_ref21) {
-              var theme = _ref21.theme;
+            extend: function extend(_ref22) {
+              var theme = _ref22.theme;
               return {
                 paddingLeft: baseSpacing / 2 + "px",
                 'svg:hover > g > path': {
@@ -2869,8 +2884,8 @@ export var generate = function generate(baseSpacing, scale) {
                 height: {
                   max: baseSpacing * 12.5 + "px"
                 },
-                extend: function extend(_ref22) {
-                  var theme = _ref22.theme;
+                extend: function extend(_ref23) {
+                  var theme = _ref23.theme;
                   return {
                     '::-webkit-scrollbar': {
                       width: '14px'
@@ -2897,8 +2912,8 @@ export var generate = function generate(baseSpacing, scale) {
                 gap: baseSpacing / 2 + "px",
                 align: 'center',
                 margin: '0',
-                extend: function extend(_ref23) {
-                  var theme = _ref23.theme;
+                extend: function extend(_ref24) {
+                  var theme = _ref24.theme;
                   return {
                     fontSize: baseSpacing * 0.875 + "px",
                     '> label': {
@@ -2952,9 +2967,9 @@ export var generate = function generate(baseSpacing, scale) {
               item: {
                 align: 'center',
                 pad: 'medium',
-                extend: function extend(_ref24) {
-                  var isActive = _ref24.isActive,
-                      theme = _ref24.theme;
+                extend: function extend(_ref25) {
+                  var isActive = _ref25.isActive,
+                      theme = _ref25.theme;
                   return {
                     fontSize: baseSpacing * 0.875 + "px",
                     fontWeight: '600',
@@ -2968,8 +2983,8 @@ export var generate = function generate(baseSpacing, scale) {
               pad: 'medium',
               item: {
                 gap: 'medium',
-                extend: function extend(_ref25) {
-                  var theme = _ref25.theme;
+                extend: function extend(_ref26) {
+                  var theme = _ref26.theme;
                   return {
                     '> label': {
                       color: normalizeColor('dark-7', theme),
@@ -3002,9 +3017,9 @@ export var generate = function generate(baseSpacing, scale) {
                     option: {
                       width: '100%',
                       pad: 'large',
-                      extend: function extend(_ref26) {
-                        var checked = _ref26.checked,
-                            theme = _ref26.theme;
+                      extend: function extend(_ref27) {
+                        var checked = _ref27.checked,
+                            theme = _ref27.theme;
                         return {
                           borderLeft: checked ? "3px solid " + normalizeColor('brand', theme) : '0',
                           borderBottom: "1px solid " + normalizeColor('border', theme),
@@ -3087,8 +3102,8 @@ export var generate = function generate(baseSpacing, scale) {
                   prev: Left,
                   next: Right,
                   color: 'dark-8',
-                  hover: function hover(_ref27) {
-                    var theme = _ref27.theme;
+                  hover: function hover(_ref28) {
+                    var theme = _ref28.theme;
                     return {
                       background: normalizeColor('active', theme)
                     };
