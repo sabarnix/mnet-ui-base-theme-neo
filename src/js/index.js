@@ -2593,6 +2593,21 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               backgroundColor: 'transparent',
             },
           },
+          button: {
+            extend: ({ theme, active }) => ({
+              background: `${
+                active ? normalizeColor('light-8', theme) : 'transparent'
+              }`,
+              border: active
+                ? `1px solid ${normalizeColor('light-21', theme)}`
+                : 'none',
+              borderRadius: '4px',
+              '&:hover': {
+                background: normalizeColor('light-8', theme),
+                border: `1px solid ${normalizeColor('light-21', theme)}`,
+              },
+            }),
+          }
         },
         tag: {
           label: {
