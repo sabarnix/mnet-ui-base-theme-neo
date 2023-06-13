@@ -2607,7 +2607,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                 border: `1px solid ${normalizeColor('light-21', theme)}`,
               },
             }),
-          }
+          },
         },
         tag: {
           label: {
