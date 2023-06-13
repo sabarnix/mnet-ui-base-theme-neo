@@ -2775,7 +2775,9 @@ var generate = function generate(baseSpacing, scale) {
                 background: "" + (active ? lightColors[7] : 'transparent'),
                 border: active ? "1px solid " + lightColors[20] : '1px solid transparent',
                 borderRadius: '4px',
-                padding: "0 " + baseSpacing * 0.5 + "px !important",
+                minWidth: baseSpacing * 2 + "px",
+                display: 'flex',
+                justifyContent: 'center',
                 '&:hover': {
                   background: lightColors[7] + " !important",
                   border: "1px solid " + lightColors[20]
