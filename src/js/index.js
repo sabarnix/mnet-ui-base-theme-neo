@@ -2592,17 +2592,18 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             },
           },
           button: {
-            extend: ({ theme, active }) => ({
+            extend: ({ active }) => ({
               background: `${
-                active ? normalizeColor('light-8', theme) : 'transparent'
+                active ? lightColors[7] : 'transparent'
               }`,
               border: active
-                ? `1px solid ${normalizeColor('light-21', theme)}`
-                : 'none',
+                ? `1px solid ${lightColors[20]}`
+                : '1px solid transparent',
               borderRadius: '4px',
+              padding: `0 ${baseSpacing * 0.5}px !important`,
               '&:hover': {
-                background: normalizeColor('light-8', theme),
-                border: `1px solid ${normalizeColor('light-21', theme)}`,
+                background: `${lightColors[7]} !important`,
+                border: `1px solid ${lightColors[20]}`,
               },
             }),
           },
