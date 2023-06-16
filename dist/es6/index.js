@@ -674,22 +674,19 @@ export var generate = function generate(baseSpacing, scale) {
         switch (props.sizeProp) {
           case 'large':
             styles.push({
-              fontSize: baseFontSize * 1.16 + "px",
-              height: baseSpacing * 2.5 + "px"
+              fontSize: baseFontSize * 1.16 + "px"
             });
             break;
 
           case 'medium':
             styles.push({
-              fontSize: baseFontSize + "px",
-              height: baseSpacing * 2 + "px"
+              fontSize: baseFontSize + "px"
             });
             break;
 
           case 'small':
             styles.push({
-              fontSize: baseFontSize * 0.83 + "px",
-              height: baseSpacing * 1.5 + "px"
+              fontSize: baseFontSize * 0.83 + "px"
             });
             break;
 
