@@ -1595,6 +1595,16 @@ var generate = function generate(baseSpacing, scale) {
           }
         }
       },
+      normalBtn: {
+        primary: false,
+        style: {
+          background: 'white',
+          flexGrow: 1,
+          height: '100%'
+        },
+        showIcon: true,
+        color: 'dark-7'
+      },
       includeBtn: {
         primary: false,
         style: {
