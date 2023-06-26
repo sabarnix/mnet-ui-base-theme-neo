@@ -1479,7 +1479,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           },
         },
       },
-      normalBtn: {
+      addButton: {
         primary: false,
         style: {
           background: 'white',
@@ -2525,6 +2525,18 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     reporting: {
       filters: {
         menu: {
+          container: {
+            extend: ({ theme, isOpen }) => ({
+              backgroundColor: `${isOpen ? normalizeColor('light-8', theme) : 'transparent'}`,
+              border: `1px solid ${isOpen ? normalizeColor('light-21', theme) : 'transparent'}`,
+              minWidth: `${baseSpacing * 2}px`,
+              borderRadius: `${baseSpacing * 0.25}px`,
+              '&:hover': {
+                backgroundColor: `${normalizeColor('light-8', theme)}`,
+                border: `1px solid ${normalizeColor('light-21', theme)}`,
+              },
+            }),
+          },
           search: {
             wrapper: {
               margin: '0',
@@ -2600,24 +2612,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             '& ::-webkit-scrollbar-corner': {
               backgroundColor: 'transparent',
             },
-          },
-          button: {
-            extend: ({ active }) => ({
-              background: `${
-                active ? lightColors[7] : 'transparent'
-              }`,
-              border: active
-                ? `1px solid ${lightColors[20]}`
-                : '1px solid transparent',
-              borderRadius: '4px',
-              minWidth: `${baseSpacing * 2}px`,
-              display: 'flex',
-              justifyContent: 'center',
-              '&:hover': {
-                background: `${lightColors[7]} !important`,
-                border: `1px solid ${lightColors[20]}`,
-              },
-            }),
           },
         },
         tag: {
@@ -2784,7 +2778,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                         fontSize: `${baseSpacing * 0.875}px`,
                       },
                     },
-                    
                   },
                   '&:hover': {
                     cursor: 'pointer',

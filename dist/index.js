@@ -1595,7 +1595,7 @@ var generate = function generate(baseSpacing, scale) {
           }
         }
       },
-      normalBtn: {
+      addButton: {
         primary: false,
         style: {
           background: 'white',
@@ -2693,6 +2693,22 @@ var generate = function generate(baseSpacing, scale) {
     reporting: {
       filters: {
         menu: {
+          container: {
+            extend: function extend(_ref19) {
+              var theme = _ref19.theme,
+                  isOpen = _ref19.isOpen;
+              return {
+                backgroundColor: "" + (isOpen ? (0, _colors.normalizeColor)('light-8', theme) : 'transparent'),
+                border: "1px solid " + (isOpen ? (0, _colors.normalizeColor)('light-21', theme) : 'transparent'),
+                minWidth: baseSpacing * 2 + "px",
+                borderRadius: baseSpacing * 0.25 + "px",
+                '&:hover': {
+                  backgroundColor: "" + (0, _colors.normalizeColor)('light-8', theme),
+                  border: "1px solid " + (0, _colors.normalizeColor)('light-21', theme)
+                }
+              };
+            }
+          },
           search: {
             wrapper: {
               margin: '0',
@@ -2722,8 +2738,8 @@ var generate = function generate(baseSpacing, scale) {
               }
             },
             hover: {
-              extend: function extend(_ref19) {
-                var theme = _ref19.theme;
+              extend: function extend(_ref20) {
+                var theme = _ref20.theme;
                 return {
                   color: (0, _colors.normalizeColor)('dark-7', theme)
                 };
@@ -2772,23 +2788,6 @@ var generate = function generate(baseSpacing, scale) {
             },
             '& ::-webkit-scrollbar-corner': {
               backgroundColor: 'transparent'
-            }
-          },
-          button: {
-            extend: function extend(_ref20) {
-              var active = _ref20.active;
-              return {
-                background: "" + (active ? lightColors[7] : 'transparent'),
-                border: active ? "1px solid " + lightColors[20] : '1px solid transparent',
-                borderRadius: '4px',
-                minWidth: baseSpacing * 2 + "px",
-                display: 'flex',
-                justifyContent: 'center',
-                '&:hover': {
-                  background: lightColors[7] + " !important",
-                  border: "1px solid " + lightColors[20]
-                }
-              };
             }
           }
         },
