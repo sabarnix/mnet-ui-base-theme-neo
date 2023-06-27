@@ -2925,20 +2925,16 @@ export var generate = function generate(baseSpacing, scale) {
                 gap: baseSpacing / 2 + "px",
                 align: 'center',
                 margin: '0',
+                pad: baseSpacing * 0.5 + "px " + baseSpacing * 0.75 + "px",
+                label: {
+                  margin: {
+                    left: baseSpacing * 0.25 + "px"
+                  },
+                  size: baseSpacing * 0.875 + "px"
+                },
                 extend: function extend(_ref24) {
                   var theme = _ref24.theme;
                   return {
-                    fontSize: baseSpacing * 0.875 + "px",
-                    '> label': {
-                      width: '100%',
-                      padding: baseSpacing * 0.5 + "px " + baseSpacing * 0.75 + "px",
-                      '> div': {
-                        marginRight: baseSpacing * 0.5 + "px",
-                        '> span': {
-                          fontSize: baseSpacing * 0.875 + "px"
-                        }
-                      }
-                    },
                     '&:hover': {
                       cursor: 'pointer',
                       background: normalizeColor('active', theme)
