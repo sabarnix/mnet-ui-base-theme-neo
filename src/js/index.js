@@ -1960,10 +1960,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-right: ${baseSpacing / 2}px;
-              svg {
-                width: 12px;
-                height: 12px;
-              }
             }
             &:nth-child(2) {
               border-radius: 4px 0 0 4px;
@@ -1976,10 +1972,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               border-radius: 4px;
               border-right: 1px solid ${normalizeColor('border', props.theme)};
               margin-left: ${baseSpacing / 2}px;
-              svg{
-                width: 12px;
-                height: 12px;
-              }
             }
         `,
       },
@@ -2008,7 +2000,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           color: 'dark-7',
           extend: {
             borderRadius: 'inherit',
-            height: '30px',
+            height: `${baseSpacing * 1.875}px`,
           },
         },
         disabled: {
