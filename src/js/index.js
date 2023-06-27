@@ -2767,18 +2767,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                 gap: `${baseSpacing / 2}px`,
                 align: 'center',
                 margin: '0',
+                pad: `${baseSpacing * 0.5}px ${baseSpacing * 0.75}px`,
+                label: {
+                  margin: { left: `${baseSpacing * 0.25}px` },
+                  size: `${baseSpacing * 0.875}px`,
+                },
                 extend: ({ theme }) => ({
-                  fontSize: `${baseSpacing * 0.875}px`,
-                  '> label': {
-                    width: '100%',
-                    padding: `${baseSpacing * 0.5}px ${baseSpacing * 0.75}px`,
-                    '> div': {
-                      marginRight: `${baseSpacing * 0.5}px`,
-                      '> span': {
-                        fontSize: `${baseSpacing * 0.875}px`,
-                      },
-                    },
-                  },
                   '&:hover': {
                     cursor: 'pointer',
                     background: normalizeColor('active', theme),
