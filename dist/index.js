@@ -2049,7 +2049,7 @@ var generate = function generate(baseSpacing, scale) {
           color: (0, _colors.normalizeColor)('dark-7', theme),
           fontWeight: 400,
           borderBottomWidth: '2px',
-          paddingLeft: '16px',
+          paddingLeft: baseSpacing + "px",
           '&:hover': {
             borderBottomColor: !disabled && (0, _colors.normalizeColor)('accent-12', theme)
           }
