@@ -45,6 +45,8 @@ var _AlertTriangle = require("mnet-icons/dist/es6/icons/neo/AlertTriangle");
 
 var _Search = require("mnet-icons/dist/es6/icons/neo/Search");
 
+var _Excluded = require("mnet-icons/dist/es6/icons/neo/Excluded");
+
 var _styledComponents = require("styled-components");
 
 var _object = require("grommet/utils/object");
@@ -52,8 +54,6 @@ var _object = require("grommet/utils/object");
 var _colors = require("grommet/utils/colors");
 
 var _mixins = require("grommet/utils/mixins");
-
-var _Clear = require("grommet-icons/es6/icons/Clear");
 
 var _templateObject, _templateObject2;
 
@@ -2851,7 +2851,7 @@ var generate = function generate(baseSpacing, scale) {
           },
           icons: {
             "delete": _Close.Close,
-            disable: _Clear.Clear,
+            disable: _Excluded.Excluded,
             size: 'small',
             color: 'dark-8'
           },

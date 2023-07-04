@@ -25,11 +25,11 @@ import { DesSort } from "mnet-icons/dist/es6/icons/neo/DesSort";
 import { Help } from "mnet-icons/dist/es6/icons/neo/Help";
 import { AlertTriangle } from "mnet-icons/dist/es6/icons/neo/AlertTriangle";
 import { Search } from "mnet-icons/dist/es6/icons/neo/Search";
+import { Excluded } from "mnet-icons/dist/es6/icons/neo/Excluded";
 import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
 import { normalizeColor } from 'grommet/utils/colors';
 import { parseMetricToNum } from 'grommet/utils/mixins';
-import { Clear } from "grommet-icons/es6/icons/Clear";
 Tick.notSvg = true;
 addGoogleFont({
   'Open Sans': ['400', '600', '700']
@@ -2819,7 +2819,7 @@ export var generate = function generate(baseSpacing, scale) {
           },
           icons: {
             "delete": Close,
-            disable: Clear,
+            disable: Excluded,
             size: 'small',
             color: 'dark-8'
           },
