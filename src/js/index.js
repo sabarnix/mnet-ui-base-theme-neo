@@ -22,12 +22,12 @@ import {
   Search,
   AccountLogin,
   MergedView,
+  Excluded,
 } from 'mnet-icons/neo';
 import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
 import { normalizeColor } from 'grommet/utils/colors';
 import { parseMetricToNum } from 'grommet/utils/mixins';
-import { Clear } from 'grommet-icons';
 
 Tick.notSvg = true;
 
@@ -2663,7 +2663,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           },
           icons: {
             delete: Close,
-            disable: Clear,
+            disable: Excluded,
             size: 'small',
             color: 'dark-8',
           },
