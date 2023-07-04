@@ -1898,7 +1898,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         color: normalizeColor('dark-7', theme),
         fontWeight: 400,
         borderBottomWidth: '2px',
-        paddingLeft: '16px',
+        paddingLeft: `${baseSpacing}px`,
         '&:hover': {
           borderBottomColor: !disabled && normalizeColor('accent-12', theme),
         },
