@@ -2698,7 +2698,7 @@ var generate = function generate(baseSpacing, scale) {
       filters: {
         menu: {
           container: {
-            extend: function extend(_ref19) {
+            interactions: function interactions(_ref19) {
               var theme = _ref19.theme,
                   isOpen = _ref19.isOpen;
               return {
@@ -2706,6 +2706,7 @@ var generate = function generate(baseSpacing, scale) {
                 border: "1px solid " + (isOpen ? (0, _colors.normalizeColor)('light-21', theme) : 'transparent'),
                 minWidth: baseSpacing * 2 + "px",
                 borderRadius: baseSpacing * 0.25 + "px",
+                cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: "" + (0, _colors.normalizeColor)('light-8', theme),
                   border: "1px solid " + (0, _colors.normalizeColor)('light-21', theme)

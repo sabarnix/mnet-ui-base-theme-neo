@@ -2520,11 +2520,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       filters: {
         menu: {
           container: {
-            extend: ({ theme, isOpen }) => ({
+            interactions: ({ theme, isOpen }) => ({
               backgroundColor: `${isOpen ? normalizeColor('light-8', theme) : 'transparent'}`,
               border: `1px solid ${isOpen ? normalizeColor('light-21', theme) : 'transparent'}`,
               minWidth: `${baseSpacing * 2}px`,
               borderRadius: `${baseSpacing * 0.25}px`,
+              cursor: 'pointer',
               '&:hover': {
                 backgroundColor: `${normalizeColor('light-8', theme)}`,
                 border: `1px solid ${normalizeColor('light-21', theme)}`,
