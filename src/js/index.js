@@ -106,8 +106,8 @@ const lightColors = [
 ];
 const chartColors = [
   '#FC564F',
-  '#719CF7',
-  '#36C18B',
+  '#5B8BF2',
+  '#38C18B',
   '#FC90C9',
   '#F5B473',
   '#7371D9',
