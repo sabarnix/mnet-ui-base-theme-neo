@@ -1340,7 +1340,8 @@ export var generate = function generate(baseSpacing, scale) {
               width: twoColumnLayout ? '100%' : 'auto',
               margin: twoColumnLayout ? 0 : baseSpacing / (1.618 * 2) + "px",
               background: normalizeColor(twoColumnLayout ? 'white' : 'light-10', theme),
-              padding: twoColumnLayout ? baseSpacing / 1.618 + "px " + baseSpacing * 0.875 + "px " + baseSpacing / 1.618 + "px " + baseSpacing / 1.618 + "px" : baseSpacing / (1.618 * 2) + "px " + baseSpacing / 1.618 + "px",
+              // This alignment to be solved when the entire multiselect alignment is solved
+              padding: twoColumnLayout ? baseSpacing / 1.618 + "px" : baseSpacing / (1.618 * 2) + "px " + baseSpacing / 1.618 + "px",
               borderRadius: twoColumnLayout ? 0 : baseSpacing / (1.618 * 2) + "px",
               borderBottom: 'none',
               justifyContent: twoColumnLayout ? 'space-between' : 'flex-start'
@@ -1722,7 +1723,7 @@ export var generate = function generate(baseSpacing, scale) {
               }
             },
             lineHeight: baseSpacing * 1.5 + "px",
-            padding: baseSpacing * 0.5 - 1.5 + "px " + baseSpacing + "px " + (baseSpacing * 0.5 - 1.5) + "px " + baseSpacing + "px",
+            padding: baseSpacing * 0.5 - 1.5 + "px " + baseSpacing + "px",
             background: disabled ? normalizeColor('light-1', theme) : null,
             borderBottomWidth: !plain && theme.global.borderSize.small
           }, !disabled ? {
@@ -2016,10 +2017,12 @@ export var generate = function generate(baseSpacing, scale) {
         var theme = _ref17.theme,
             disabled = _ref17.disabled;
         return {
-          color: normalizeColor('dark-7', theme),
+          padding: {
+            horizontal: parseMetricToNum(baseSpacing / 2 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px",
+            vertical: parseMetricToNum(baseSpacing / 1.418 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px"
+          },
           fontWeight: 400,
           borderBottomWidth: '2px',
-          paddingLeft: baseSpacing + "px",
           '&:hover': {
             borderBottomColor: !disabled && normalizeColor('accent-12', theme)
           }
@@ -2669,13 +2672,13 @@ export var generate = function generate(baseSpacing, scale) {
                   isOpen = _ref19.isOpen;
               return {
                 backgroundColor: "" + (isOpen ? normalizeColor('light-8', theme) : 'transparent'),
-                border: "1px solid " + (isOpen ? normalizeColor('light-21', theme) : 'transparent'),
+                border: "1px solid " + (isOpen ? normalizeColor('border', theme) : 'transparent'),
                 minWidth: baseSpacing * 2 + "px",
                 borderRadius: baseSpacing * 0.25 + "px",
                 cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: "" + normalizeColor('light-8', theme),
-                  border: "1px solid " + normalizeColor('light-21', theme)
+                  border: "1px solid " + normalizeColor('border', theme)
                 }
               };
             }
