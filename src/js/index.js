@@ -2002,14 +2002,21 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             }
           `,
         },
+        border: {
+          color: 'border',
+        },
         hover: {
           background: {
             color: 'light-8',
           },
           color: 'dark-7',
+          border: {
+            width: '1px',
+          },
           extend: {
             borderRadius: 'inherit',
-            height: `${baseSpacing * 1.875}px`,
+            borderLeft: 'none',
+            borderRight: 'none',
           },
         },
         disabled: {
@@ -2527,17 +2534,33 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       filters: {
         menu: {
           container: {
-            active: ({ theme, isOpen }) => ({
-              backgroundColor: `${isOpen ? normalizeColor('light-8', theme) : 'transparent'}`,
-              border: `1px solid ${isOpen ? normalizeColor('border', theme) : 'transparent'}`,
-              minWidth: `${baseSpacing * 2}px`,
-              borderRadius: `${baseSpacing * 0.25}px`,
-              cursor: 'pointer',
-              '&:hover': {
-                backgroundColor: `${normalizeColor('light-8', theme)}`,
-                border: `1px solid ${normalizeColor('border', theme)}`,
+            active: {
+              background: {
+                color: ({ isOpen, theme }) => (isOpen ? normalizeColor('light-8', theme) : 'transparent'),
               },
-            }),
+              // border: ({ isOpen, theme }) => ({
+              //   color: isOpen ? normalizeColor('border', theme) : 'transparent',
+              // }),
+              border: {
+                color: 'transparent',
+              },
+              width: {
+                min: `${baseSpacing * 2}px`,
+              },
+              round: `${baseSpacing * 0.25}px`,
+              hoverIndicator: {
+                background: {
+                  color: 'light-8',
+                },
+              },
+              extend: ({ theme, isOpen }) => ({
+                cursor: 'pointer',
+                ...(isOpen ? { ' border-color': normalizeColor('border', theme) } : {}),
+                '&:hover': {
+                  borderColor: normalizeColor('border', theme),
+                },
+              }),
+            },
           },
           search: {
             wrapper: {

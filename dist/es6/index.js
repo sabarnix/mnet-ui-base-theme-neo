@@ -2099,14 +2099,21 @@ export var generate = function generate(baseSpacing, scale) {
             return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n            &:hover{\n              background-color: ", " !important;\n              color: white !important;\n              height: inherit !important;\n            }\n          "])), normalizeColor('brand', props.theme));
           }
         },
+        border: {
+          color: 'border'
+        },
         hover: {
           background: {
             color: 'light-8'
           },
           color: 'dark-7',
+          border: {
+            width: '1px'
+          },
           extend: {
             borderRadius: 'inherit',
-            height: baseSpacing * 1.875 + "px"
+            borderLeft: 'none',
+            borderRight: 'none'
           }
         },
         disabled: {
@@ -2665,20 +2672,42 @@ export var generate = function generate(baseSpacing, scale) {
       filters: {
         menu: {
           container: {
-            interactions: function interactions(_ref19) {
-              var theme = _ref19.theme,
-                  isOpen = _ref19.isOpen;
-              return {
-                backgroundColor: "" + (isOpen ? normalizeColor('light-8', theme) : 'transparent'),
-                border: "1px solid " + (isOpen ? normalizeColor('border', theme) : 'transparent'),
-                minWidth: baseSpacing * 2 + "px",
-                borderRadius: baseSpacing * 0.25 + "px",
-                cursor: 'pointer',
-                '&:hover': {
-                  backgroundColor: "" + normalizeColor('light-8', theme),
-                  border: "1px solid " + normalizeColor('border', theme)
+            active: {
+              background: {
+                color: function color(_ref19) {
+                  var isOpen = _ref19.isOpen,
+                      theme = _ref19.theme;
+                  return isOpen ? normalizeColor('light-8', theme) : 'transparent';
                 }
-              };
+              },
+              // border: ({ isOpen, theme }) => ({
+              //   color: isOpen ? normalizeColor('border', theme) : 'transparent',
+              // }),
+              border: {
+                color: 'transparent'
+              },
+              width: {
+                min: baseSpacing * 2 + "px"
+              },
+              round: baseSpacing * 0.25 + "px",
+              hoverIndicator: {
+                background: {
+                  color: 'light-8'
+                }
+              },
+              extend: function extend(_ref20) {
+                var theme = _ref20.theme,
+                    isOpen = _ref20.isOpen;
+                return _extends({
+                  cursor: 'pointer'
+                }, isOpen ? {
+                  ' border-color': normalizeColor('border', theme)
+                } : {}, {
+                  '&:hover': {
+                    borderColor: normalizeColor('border', theme)
+                  }
+                });
+              }
             }
           },
           search: {
@@ -2710,8 +2739,8 @@ export var generate = function generate(baseSpacing, scale) {
               }
             },
             hover: {
-              extend: function extend(_ref20) {
-                var theme = _ref20.theme;
+              extend: function extend(_ref21) {
+                var theme = _ref21.theme;
                 return {
                   color: normalizeColor('dark-7', theme)
                 };
@@ -2792,10 +2821,10 @@ export var generate = function generate(baseSpacing, scale) {
             // width: {
             //   min: `${baseSpacing * 11.25}px`,
             // },
-            extend: function extend(_ref21) {
-              var disabled = _ref21.disabled,
-                  hasTagHover = _ref21.hasTagHover,
-                  theme = _ref21.theme;
+            extend: function extend(_ref22) {
+              var disabled = _ref22.disabled,
+                  hasTagHover = _ref22.hasTagHover,
+                  theme = _ref22.theme;
               return {
                 '&:hover': _extends({}, !disabled && hasTagHover ? {
                   'border-color': normalizeColor('light-24', theme)
@@ -2831,8 +2860,8 @@ export var generate = function generate(baseSpacing, scale) {
             margin: {
               left: baseSpacing / 2 + "px"
             },
-            extend: function extend(_ref22) {
-              var theme = _ref22.theme;
+            extend: function extend(_ref23) {
+              var theme = _ref23.theme;
               return {
                 paddingLeft: baseSpacing / 2 + "px",
                 'svg:hover > g > path': {
@@ -2899,8 +2928,8 @@ export var generate = function generate(baseSpacing, scale) {
                 height: {
                   max: baseSpacing * 12.5 + "px"
                 },
-                extend: function extend(_ref23) {
-                  var theme = _ref23.theme;
+                extend: function extend(_ref24) {
+                  var theme = _ref24.theme;
                   return {
                     '::-webkit-scrollbar': {
                       width: '14px'
@@ -2934,8 +2963,8 @@ export var generate = function generate(baseSpacing, scale) {
                   },
                   size: baseSpacing * 0.875 + "px"
                 },
-                extend: function extend(_ref24) {
-                  var theme = _ref24.theme;
+                extend: function extend(_ref25) {
+                  var theme = _ref25.theme;
                   return {
                     '&:hover': {
                       cursor: 'pointer',
@@ -2978,9 +3007,9 @@ export var generate = function generate(baseSpacing, scale) {
               item: {
                 align: 'center',
                 pad: 'medium',
-                extend: function extend(_ref25) {
-                  var isActive = _ref25.isActive,
-                      theme = _ref25.theme;
+                extend: function extend(_ref26) {
+                  var isActive = _ref26.isActive,
+                      theme = _ref26.theme;
                   return {
                     fontSize: baseSpacing * 0.875 + "px",
                     fontWeight: '600',
@@ -2994,8 +3023,8 @@ export var generate = function generate(baseSpacing, scale) {
               pad: 'medium',
               item: {
                 gap: 'medium',
-                extend: function extend(_ref26) {
-                  var theme = _ref26.theme;
+                extend: function extend(_ref27) {
+                  var theme = _ref27.theme;
                   return {
                     '> label': {
                       color: normalizeColor('dark-7', theme),
@@ -3028,9 +3057,9 @@ export var generate = function generate(baseSpacing, scale) {
                     option: {
                       width: '100%',
                       pad: 'large',
-                      extend: function extend(_ref27) {
-                        var checked = _ref27.checked,
-                            theme = _ref27.theme;
+                      extend: function extend(_ref28) {
+                        var checked = _ref28.checked,
+                            theme = _ref28.theme;
                         return {
                           borderLeft: checked ? "3px solid " + normalizeColor('brand', theme) : '0',
                           borderBottom: "1px solid " + normalizeColor('border', theme),
@@ -3113,8 +3142,8 @@ export var generate = function generate(baseSpacing, scale) {
                   prev: Left,
                   next: Right,
                   color: 'dark-8',
-                  hover: function hover(_ref28) {
-                    var theme = _ref28.theme;
+                  hover: function hover(_ref29) {
+                    var theme = _ref29.theme;
                     return {
                       background: normalizeColor('active', theme)
                     };
