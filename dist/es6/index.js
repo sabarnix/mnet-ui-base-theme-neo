@@ -338,8 +338,8 @@ export var generate = function generate(baseSpacing, scale) {
       },
       input: {
         padding: {
-          horizontal: parseMetricToNum(baseSpacing / 2 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px",
-          vertical: parseMetricToNum(baseSpacing / 1.418 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px"
+          horizontal: baseSpacing + "px",
+          vertical: baseSpacing * 0.5 + "px"
         },
         font: {
           // size: undefined,
@@ -2015,10 +2015,6 @@ export var generate = function generate(baseSpacing, scale) {
         var theme = _ref17.theme,
             disabled = _ref17.disabled;
         return {
-          padding: {
-            horizontal: parseMetricToNum(baseSpacing / 2 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px",
-            vertical: parseMetricToNum(baseSpacing / 1.418 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px"
-          },
           fontWeight: 400,
           borderBottomWidth: '2px',
           '&:hover': {
@@ -2055,7 +2051,6 @@ export var generate = function generate(baseSpacing, scale) {
             disabled = _ref18.disabled,
             error = _ref18.error;
         return _extends({
-          padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           boxShadow: 'none',
           height: '100%',
           fontSize: theme.global.font.size,

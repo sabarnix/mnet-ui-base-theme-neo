@@ -364,14 +364,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       input: {
         padding: {
-          horizontal: `${
-            parseMetricToNum(`${baseSpacing / 2}px`)
-            - parseMetricToNum(`${controlBorderWidth}px`)
-          }px`,
-          vertical: `${
-            parseMetricToNum(`${baseSpacing / 1.418}px`)
-            - parseMetricToNum(`${controlBorderWidth}px`)
-          }px`,
+          horizontal: `${baseSpacing}px`,
+          vertical: `${baseSpacing * 0.5}px`,
         },
         font: {
           // size: undefined,
@@ -1894,16 +1888,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     textArea: {
       extend: ({ theme, disabled }) => ({
-        padding: {
-          horizontal: `${
-            parseMetricToNum(`${baseSpacing / 2}px`)
-            - parseMetricToNum(`${controlBorderWidth}px`)
-          }px`,
-          vertical: `${
-            parseMetricToNum(`${baseSpacing / 1.418}px`)
-            - parseMetricToNum(`${controlBorderWidth}px`)
-          }px`,
-        },
         fontWeight: 400,
         borderBottomWidth: '2px',
         '&:hover': {
@@ -1931,7 +1915,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       extend: ({
         plain, focus, reverse, icon, theme, readOnly = false, disabled, error,
       }) => ({
-        padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
         boxShadow: 'none',
         height: '100%',
         fontSize: theme.global.font.size,
