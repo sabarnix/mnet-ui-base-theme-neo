@@ -338,8 +338,8 @@ export var generate = function generate(baseSpacing, scale) {
       },
       input: {
         padding: {
-          horizontal: baseSpacing + "px",
-          vertical: baseSpacing * 0.5 + "px"
+          horizontal: parseMetricToNum(baseSpacing / 2 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px",
+          vertical: parseMetricToNum(baseSpacing / 1.418 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px"
         },
         font: {
           // size: undefined,
@@ -2015,6 +2015,7 @@ export var generate = function generate(baseSpacing, scale) {
         var theme = _ref17.theme,
             disabled = _ref17.disabled;
         return {
+          padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           fontWeight: 400,
           borderBottomWidth: '2px',
           '&:hover': {
@@ -2051,6 +2052,7 @@ export var generate = function generate(baseSpacing, scale) {
             disabled = _ref18.disabled,
             error = _ref18.error;
         return _extends({
+          padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           boxShadow: 'none',
           height: '100%',
           fontSize: theme.global.font.size,
@@ -2675,9 +2677,6 @@ export var generate = function generate(baseSpacing, scale) {
                   return isOpen ? normalizeColor('light-8', theme) : 'transparent';
                 }
               },
-              // border: ({ isOpen, theme }) => ({
-              //   color: isOpen ? normalizeColor('border', theme) : 'transparent',
-              // }),
               border: {
                 color: 'transparent'
               },
@@ -2702,6 +2701,13 @@ export var generate = function generate(baseSpacing, scale) {
                     borderColor: normalizeColor('border', theme)
                   }
                 });
+              }
+            },
+            extend: {
+              '> button': {
+                minWidth: baseSpacing * 2 + "px",
+                display: 'flex',
+                justifyContent: 'center'
               }
             }
           },

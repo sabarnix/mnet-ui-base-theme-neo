@@ -370,8 +370,8 @@ var generate = function generate(baseSpacing, scale) {
       },
       input: {
         padding: {
-          horizontal: baseSpacing + "px",
-          vertical: baseSpacing * 0.5 + "px"
+          horizontal: (0, _mixins.parseMetricToNum)(baseSpacing / 2 + "px") - (0, _mixins.parseMetricToNum)(controlBorderWidth + "px") + "px",
+          vertical: (0, _mixins.parseMetricToNum)(baseSpacing / 1.418 + "px") - (0, _mixins.parseMetricToNum)(controlBorderWidth + "px") + "px"
         },
         font: {
           // size: undefined,
@@ -2047,6 +2047,7 @@ var generate = function generate(baseSpacing, scale) {
         var theme = _ref17.theme,
             disabled = _ref17.disabled;
         return {
+          padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           fontWeight: 400,
           borderBottomWidth: '2px',
           '&:hover': {
@@ -2083,6 +2084,7 @@ var generate = function generate(baseSpacing, scale) {
             disabled = _ref18.disabled,
             error = _ref18.error;
         return _extends({
+          padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           boxShadow: 'none',
           height: '100%',
           fontSize: theme.global.font.size,
@@ -2707,9 +2709,6 @@ var generate = function generate(baseSpacing, scale) {
                   return isOpen ? (0, _colors.normalizeColor)('light-8', theme) : 'transparent';
                 }
               },
-              // border: ({ isOpen, theme }) => ({
-              //   color: isOpen ? normalizeColor('border', theme) : 'transparent',
-              // }),
               border: {
                 color: 'transparent'
               },
@@ -2734,6 +2733,13 @@ var generate = function generate(baseSpacing, scale) {
                     borderColor: (0, _colors.normalizeColor)('border', theme)
                   }
                 });
+              }
+            },
+            extend: {
+              '> button': {
+                minWidth: baseSpacing * 2 + "px",
+                display: 'flex',
+                justifyContent: 'center'
               }
             }
           },

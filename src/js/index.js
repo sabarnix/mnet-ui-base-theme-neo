@@ -364,8 +364,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       input: {
         padding: {
-          horizontal: `${baseSpacing}px`,
-          vertical: `${baseSpacing * 0.5}px`,
+          horizontal: `${
+            parseMetricToNum(`${baseSpacing / 2}px`)
+            - parseMetricToNum(`${controlBorderWidth}px`)
+          }px`,
+          vertical: `${
+            parseMetricToNum(`${baseSpacing / 1.418}px`)
+            - parseMetricToNum(`${controlBorderWidth}px`)
+          }px`,
         },
         font: {
           // size: undefined,
@@ -1888,6 +1894,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     textArea: {
       extend: ({ theme, disabled }) => ({
+        padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
         fontWeight: 400,
         borderBottomWidth: '2px',
         '&:hover': {
@@ -1915,6 +1922,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       extend: ({
         plain, focus, reverse, icon, theme, readOnly = false, disabled, error,
       }) => ({
+        padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
         boxShadow: 'none',
         height: '100%',
         fontSize: theme.global.font.size,
@@ -2521,9 +2529,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               background: {
                 color: ({ isOpen, theme }) => (isOpen ? normalizeColor('light-8', theme) : 'transparent'),
               },
-              // border: ({ isOpen, theme }) => ({
-              //   color: isOpen ? normalizeColor('border', theme) : 'transparent',
-              // }),
               border: {
                 color: 'transparent',
               },
@@ -2543,6 +2548,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                   borderColor: normalizeColor('border', theme),
                 },
               }),
+            },
+            extend: {
+              '> button': {
+                minWidth: `${baseSpacing * 2}px`,
+                display: 'flex',
+                justifyContent: 'center',
+              },
             },
           },
           search: {
