@@ -637,7 +637,7 @@ export var generate = function generate(baseSpacing, scale) {
         // color: undefined},
         // extend: undefined,
         "default": {
-          background: 'light-22',
+          background: 'light-8',
           color: 'dark-7'
         },
         primary: {

@@ -631,7 +631,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         // color: undefined},
         // extend: undefined,
         default: {
-          background: 'light-22',
+          background: 'light-8',
           color: 'dark-7',
         },
         primary: {
