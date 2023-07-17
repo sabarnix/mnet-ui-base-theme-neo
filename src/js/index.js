@@ -2779,7 +2779,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                 },
                 options: {
                   container: {
-                    margin: '12px',
+                    margin: `${baseSpacing * 0.75}px`,
                   },
                 },
               },

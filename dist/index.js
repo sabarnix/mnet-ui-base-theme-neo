@@ -2984,7 +2984,7 @@ var generate = function generate(baseSpacing, scale) {
                 },
                 options: {
                   container: {
-                    margin: '12px'
+                    margin: baseSpacing * 0.75 + "px"
                   }
                 }
               },
