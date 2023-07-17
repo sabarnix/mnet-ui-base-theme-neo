@@ -2918,6 +2918,55 @@ export var generate = function generate(baseSpacing, scale) {
                   }
                 }
               }
+            },
+            threshold: {
+              wrapper: {
+                border: {
+                  side: 'vertical',
+                  color: 'border'
+                },
+                background: 'white',
+                width: baseSpacing * 4.375 + "px"
+              },
+              select: {
+                container: {
+                  extend: function extend() {
+                    return {
+                      fontSize: baseSpacing * 0.875 + "px",
+                      padding: baseSpacing * 0.5 + "px 0"
+                    };
+                  }
+                },
+                control: {
+                  extend: function extend() {
+                    return {
+                      padding: "0 " + baseSpacing * 0.5 + "px",
+                      height: baseSpacing * 1.875 + "px",
+                      input: {
+                        background: 'white',
+                        padding: baseSpacing * 0.25 + "px",
+                        fontSize: baseSpacing * 0.875 + "px"
+                      }
+                    };
+                  }
+                },
+                options: {
+                  container: {
+                    margin: '12px'
+                  }
+                }
+              },
+              item: {
+                pad: {
+                  horizontal: baseSpacing + "px",
+                  vertical: baseSpacing * 0.5 + "px"
+                }
+              },
+              drop: {
+                margin: {
+                  vertical: 'small'
+                }
+              }
             }
           },
           dropdown: {
