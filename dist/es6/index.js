@@ -1049,7 +1049,11 @@ export var generate = function generate(baseSpacing, scale) {
           side: 'right',
           color: 'dark-6',
           size: 'xsmall'
-        }]
+        }],
+        round: {
+          size: baseSpacing * 0.25 + "px",
+          corner: 'right'
+        }
       },
       prefix: {
         color: 'white',
