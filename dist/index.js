@@ -1101,7 +1101,11 @@ var generate = function generate(baseSpacing, scale) {
           side: 'left',
           color: 'dark-6',
           size: 'xsmall'
-        }]
+        }],
+        round: {
+          size: baseSpacing * 0.25 + "px",
+          corner: 'left'
+        }
       },
       round: 'small'
     },
