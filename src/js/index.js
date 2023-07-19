@@ -1006,6 +1006,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             size: 'xsmall',
           },
         ],
+        round: {
+          size: `${baseSpacing * 0.25}px`,
+          corner: 'left',
+        },
       },
       round: 'small',
     },
