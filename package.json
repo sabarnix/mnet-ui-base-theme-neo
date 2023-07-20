@@ -54,6 +54,7 @@
   ],
   "dependencies": {
     "google-fonts": "^1.0.0",
-    "grommet-icons": "^4.7.0"
+    "grommet-icons": "^4.7.0",
+    "mnet-ui-base-theme-neo": "sabarnix/mnet-ui-base-theme-neo"
   }
 }

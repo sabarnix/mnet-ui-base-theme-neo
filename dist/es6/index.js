@@ -4,7 +4,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import { rgba } from 'polished';
+import { margin, rgba } from 'polished';
 import { add as addGoogleFont } from 'google-fonts';
 import { Close } from "mnet-icons/dist/es6/icons/neo/Close";
 import { Down } from "mnet-icons/dist/es6/icons/neo/Down";
@@ -3412,6 +3412,97 @@ export var generate = function generate(baseSpacing, scale) {
               height: baseSpacing * 1.5 + "px"
             }
           }
+        }
+      }
+    },
+    navBar: {
+      background: "",
+      navItem: {
+        minHeight: '41px',
+        border: {
+          color: '#FFFFFF',
+          width: '3px',
+          style: 'solid'
+        },
+        icons: {
+          linkIcon: {
+            size: 'small',
+            color: '',
+            active: {
+              color: ''
+            }
+          },
+          accordianIcon: {
+            size: 'small',
+            color: '',
+            active: {
+              color: ''
+            }
+          }
+        },
+        label: {
+          size: 'small',
+          color: '',
+          active: {
+            color: ''
+          }
+        },
+        hover: {
+          background: '#F4F6F8'
+        },
+        subMenu: {
+          border: {
+            color: '#F4F6F8',
+            size: '3px',
+            style: 'solid'
+          },
+          level0: {
+            width: '228px',
+            'margin-left': '21px'
+          },
+          level1: {
+            width: '202px',
+            'margin-left': '31px'
+          },
+          extend: {},
+          navItem: {
+            borderLeft: '3px solid gray',
+            minHeight: '32px'
+          }
+        },
+        disabled: {
+          cursor: 'not-allowed',
+          opacity: 0.4
+        },
+        active: {
+          border: {
+            color: '#FC564F',
+            size: '3px',
+            style: 'solid'
+          }
+        },
+        otherThanZero: {
+          padding: {
+            left: "32px"
+          }
+        },
+        padding: {
+          left: '64px'
+        },
+        wrapper: {
+          marginBottom: '8px',
+          extend: {
+            position: 'relative',
+            'flex-direction': 'column',
+            'margin-bottom': '8px'
+          }
+        },
+        extend: {
+          position: 'relative',
+          width: '100%',
+          display: 'flex',
+          'flex-direction': 'row',
+          'align-items': 'center'
         }
       }
     }
