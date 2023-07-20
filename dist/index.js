@@ -3276,6 +3276,101 @@ var generate = function generate(baseSpacing, scale) {
           }
         }
       }
+    },
+    navBar: {
+      background: "",
+      navItem: {
+        minHeight: '41px',
+        border: {
+          color: '#FFFFFF',
+          width: '3px',
+          style: 'solid'
+        },
+        icons: {
+          linkIcon: {
+            size: 'small',
+            color: '',
+            active: {
+              color: ''
+            }
+          },
+          accordianIcon: {
+            size: 'small',
+            color: '',
+            active: {
+              color: ''
+            }
+          }
+        },
+        label: {
+          size: 'small',
+          color: '',
+          active: {
+            color: ''
+          }
+        },
+        hover: {
+          background: '#F4F6F8'
+        },
+        subMenu: {
+          border: {
+            color: '#F4F6F8',
+            size: '3px',
+            style: 'solid'
+          },
+          level0: {
+            width: '228px',
+            'margin-left': '21px'
+          },
+          level1: {
+            width: '202px',
+            'margin-left': '31px'
+          },
+          extend: {},
+          navItem: {
+            borderLeft: '3px solid gray',
+            minHeight: '32px',
+            wrapper: {
+              minHeight: '32px'
+            }
+          }
+        },
+        disabled: {
+          cursor: 'not-allowed',
+          opacity: 0.4
+        },
+        active: {
+          border: {
+            color: '#FC564F',
+            size: '3px',
+            style: 'solid'
+          }
+        },
+        otherThanZero: {
+          padding: {
+            left: "32px"
+          }
+        },
+        padding: {
+          left: '64px'
+        },
+        wrapper: {
+          marginBottom: '8px',
+          minHeight: '42px',
+          extend: {
+            position: 'relative',
+            'flex-direction': 'column',
+            'margin-bottom': '8px'
+          }
+        },
+        extend: {
+          position: 'relative',
+          width: '100%',
+          display: 'flex',
+          'flex-direction': 'row',
+          'align-items': 'center'
+        }
+      }
     }
   };
   return (0, _object.deepFreeze)(result);
