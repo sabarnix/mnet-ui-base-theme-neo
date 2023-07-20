@@ -1580,7 +1580,7 @@ export var generate = function generate(baseSpacing, scale) {
           height: '100%'
         },
         showIcon: true,
-        color: 'brandColor'
+        color: brandColor
       },
       includeBtn: {
         primary: false,
