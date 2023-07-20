@@ -1498,7 +1498,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           height: '100%',
         },
         showIcon: true,
-        color: 'dark-7',
+        color: 'brandColor',
       },
       includeBtn: {
         primary: false,
