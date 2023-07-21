@@ -1440,6 +1440,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             },
             textarea: {
               minHeight: `${baseSpacing * 11.56}px`,
+              padding: `${baseSpacing * 0.25}px 0`,
             },
           },
           onKeyDown: e => {
@@ -1455,6 +1456,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           height: 'medium',
           minHeight: `${baseSpacing * 8.75}px`,
           margin: { vertical: 'medium' },
+        },
+        formField: {
+          flex: { shrink: 0 },
         },
         actions: {
           wrapper: {
