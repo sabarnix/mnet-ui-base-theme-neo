@@ -1551,7 +1551,8 @@ var generate = function generate(baseSpacing, scale) {
               border: 'none'
             },
             textarea: {
-              minHeight: baseSpacing * 11.56 + "px"
+              minHeight: baseSpacing * 11.56 + "px",
+              padding: baseSpacing * 0.25 + "px 0"
             }
           },
           onKeyDown: function onKeyDown(e) {
@@ -1568,6 +1569,11 @@ var generate = function generate(baseSpacing, scale) {
           minHeight: baseSpacing * 8.75 + "px",
           margin: {
             vertical: 'medium'
+          }
+        },
+        formField: {
+          flex: {
+            shrink: 0
           }
         },
         actions: {
