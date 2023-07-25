@@ -3280,31 +3280,32 @@ var generate = function generate(baseSpacing, scale) {
     navBar: {
       background: "",
       navItem: {
-        minHeight: '41px',
+        minHeight: '42px',
         border: {
-          color: '#FFFFFF',
-          width: '3px',
-          style: 'solid'
+          color: '#FFFFFF'
         },
         icons: {
           linkIcon: {
             size: 'small',
-            color: '',
             active: {
               color: ''
             }
           },
           accordianIcon: {
             size: 'small',
-            color: '',
+            active: {
+              color: ''
+            }
+          },
+          tickIcon: {
+            size: 'small',
             active: {
               color: ''
             }
           }
         },
-        label: {
-          size: 'small',
-          color: '',
+        text: {
+          size: 'xlarge',
           active: {
             color: ''
           }
@@ -3313,10 +3314,12 @@ var generate = function generate(baseSpacing, scale) {
           background: '#F4F6F8'
         },
         subMenu: {
+          backgroundColor: '#FFFFFF',
+          text: {
+            size: 'large'
+          },
           border: {
-            color: '#F4F6F8',
-            size: '3px',
-            style: 'solid'
+            color: '#F4F6F8'
           },
           level0: {
             width: '228px',
@@ -3327,13 +3330,7 @@ var generate = function generate(baseSpacing, scale) {
             'margin-left': '31px'
           },
           extend: {},
-          navItem: {
-            borderLeft: '3px solid gray',
-            minHeight: '32px',
-            wrapper: {
-              minHeight: '32px'
-            }
-          }
+          navItem: {}
         },
         disabled: {
           cursor: 'not-allowed',
@@ -3341,35 +3338,16 @@ var generate = function generate(baseSpacing, scale) {
         },
         active: {
           border: {
-            color: '#FC564F',
-            size: '3px',
-            style: 'solid'
-          }
-        },
-        otherThanZero: {
-          padding: {
-            left: "32px"
+            color: '#FC564F'
           }
         },
         padding: {
           left: '64px'
         },
         wrapper: {
-          marginBottom: '8px',
-          minHeight: '42px',
-          extend: {
-            position: 'relative',
-            'flex-direction': 'column',
-            'margin-bottom': '8px'
-          }
+          extend: {}
         },
-        extend: {
-          position: 'relative',
-          width: '100%',
-          display: 'flex',
-          'flex-direction': 'row',
-          'align-items': 'center'
-        }
+        extend: {}
       }
     }
   };
