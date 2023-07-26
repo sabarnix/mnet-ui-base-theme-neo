@@ -20,12 +20,12 @@ import {
   Help,
   AlertTriangle,
   Search,
+  Excluded,
 } from 'mnet-icons/neo';
 import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
 import { normalizeColor } from 'grommet/utils/colors';
 import { parseMetricToNum } from 'grommet/utils/mixins';
-import { FormNext, FormPrevious, Clear } from 'grommet-icons';
 
 Tick.notSvg = true;
 
@@ -629,7 +629,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         // color: undefined},
         // extend: undefined,
         default: {
-          background: 'light-22',
+          background: 'light-8',
           color: 'dark-7',
         },
         primary: {
@@ -988,6 +988,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             size: 'xsmall',
           },
         ],
+        round: {
+          size: `${baseSpacing * 0.25}px`,
+          corner: 'right',
+        },
       },
       prefix: {
         color: 'white',
@@ -1006,6 +1010,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             size: 'xsmall',
           },
         ],
+        round: {
+          size: `${baseSpacing * 0.25}px`,
+          corner: 'left',
+        },
       },
       round: 'small',
     },
@@ -1260,6 +1268,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               ? 0
               : `${baseSpacing / (1.618 * 2)}px`,
             background: normalizeColor(twoColumnLayout ? 'white' : 'light-10', theme),
+            // This alignment to be solved when the entire multiselect alignment is solved
             padding: twoColumnLayout
               ? `${baseSpacing / 1.618}px`
               : `${baseSpacing / (1.618 * 2)}px ${baseSpacing / 1.618}px`,
@@ -1349,10 +1358,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           }),
         },
         placeholder: {
-          color: 'dark-4',
+          color: 'dark-7',
           weight: 400,
           size: 'medium',
-          margin: { left: 'small' },
+          margin: { left: '0' },
         },
         icon: {
           size: 'medium',
@@ -1429,6 +1438,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             },
             textarea: {
               minHeight: `${baseSpacing * 11.56}px`,
+              padding: `${baseSpacing * 0.25}px 0`,
             },
           },
           onKeyDown: e => {
@@ -1444,6 +1454,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           height: 'medium',
           minHeight: `${baseSpacing * 8.75}px`,
           margin: { vertical: 'medium' },
+        },
+        formField: {
+          flex: { shrink: 0 },
         },
         actions: {
           wrapper: {
@@ -1478,6 +1491,16 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             size: 'medium',
           },
         },
+      },
+      addButton: {
+        primary: false,
+        style: {
+          background: 'white',
+          flexGrow: 1,
+          height: '100%',
+        },
+        showIcon: true,
+        color: brandColor,
       },
       includeBtn: {
         primary: false,
@@ -1519,6 +1542,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         extend: ({ theme }) => ({
           color: normalizeColor('dark-7', theme),
           fontWeight: 400,
+          opacity: 1,
         }),
       },
       border: {
@@ -1613,7 +1637,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             },
           },
           lineHeight: `${baseSpacing * 1.5}px`,
-          padding: `${baseSpacing * 0.5 - 1.5}px ${baseSpacing}px ${baseSpacing * 0.5 - 1.5}px ${baseSpacing / 2}px`,
+          padding: `${baseSpacing * 0.5 - 1.5}px ${baseSpacing}px`,
           background: disabled ? normalizeColor('light-1', theme) : null,
           borderBottomWidth: !plain && theme.global.borderSize.small,
           ...(!disabled ? {
@@ -1657,7 +1681,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           right: 'none',
         },
         background: 'transparent',
-        size: 'large',
+        size: 'small',
         up: Up,
         down: Down,
         // extend: undefined,
@@ -1882,7 +1906,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     textArea: {
       extend: ({ theme, disabled }) => ({
-        color: normalizeColor('dark-3', theme),
+        padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
         fontWeight: 400,
         borderBottomWidth: '2px',
         '&:hover': {
@@ -1938,6 +1962,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         extend: props => css`
             border: 1px solid ${normalizeColor('border', props.theme)};
             border-right: none;
+            background-color: white;
             button {
               display: flex;
               align-items: center;
@@ -1972,14 +1997,29 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: 'brand',
             radius: 'inherit',
           },
+          extend: props => css`
+            &:hover{
+              background-color: ${normalizeColor('brand', props.theme)} !important;
+              color: white !important;
+              height: inherit !important;
+            }
+          `,
+        },
+        border: {
+          color: 'border',
         },
         hover: {
           background: {
-            color: 'brand',
+            color: 'light-8',
           },
-          color: 'white',
+          color: 'dark-7',
+          border: {
+            width: '1px',
+          },
           extend: {
             borderRadius: 'inherit',
+            borderLeft: 'none',
+            borderRight: 'none',
           },
         },
         disabled: {
@@ -2039,8 +2079,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       icons: {
         color: 'dark-7',
-        previous: FormPrevious,
-        next: FormNext,
+        previous: Left,
+        next: Right,
       },
     },
     tip: {
@@ -2496,6 +2536,39 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     reporting: {
       filters: {
         menu: {
+          container: {
+            active: {
+              background: {
+                color: ({ isOpen, theme }) => (isOpen ? normalizeColor('light-8', theme) : 'transparent'),
+              },
+              border: {
+                color: 'transparent',
+              },
+              width: {
+                min: `${baseSpacing * 2}px`,
+              },
+              round: `${baseSpacing * 0.25}px`,
+              hoverIndicator: {
+                background: {
+                  color: 'light-8',
+                },
+              },
+              extend: ({ theme, isOpen }) => ({
+                cursor: 'pointer',
+                ...(isOpen ? { ' border-color': normalizeColor('border', theme) } : {}),
+                '&:hover': {
+                  borderColor: normalizeColor('border', theme),
+                },
+              }),
+            },
+            extend: {
+              '> button': {
+                minWidth: `${baseSpacing * 2}px`,
+                display: 'flex',
+                justifyContent: 'center',
+              },
+            },
+          },
           search: {
             wrapper: {
               margin: '0',
@@ -2628,7 +2701,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           },
           icons: {
             delete: Close,
-            disable: Clear,
+            disable: Excluded,
             size: 'small',
             color: 'dark-8',
           },
@@ -2726,12 +2799,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                 gap: `${baseSpacing / 2}px`,
                 align: 'center',
                 margin: '0',
+                pad: `${baseSpacing * 0.5}px ${baseSpacing * 0.75}px`,
+                label: {
+                  margin: { left: `${baseSpacing * 0.25}px` },
+                  size: `${baseSpacing * 0.875}px`,
+                },
                 extend: ({ theme }) => ({
-                  fontSize: `${baseSpacing * 0.875}px`,
-                  '> label': {
-                    width: '100%',
-                    padding: `${baseSpacing * 0.5}px ${baseSpacing * 0.75}px`,
-                  },
                   '&:hover': {
                     cursor: 'pointer',
                     background: normalizeColor('active', theme),
