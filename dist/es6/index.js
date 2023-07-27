@@ -2975,9 +2975,7 @@ export var generate = function generate(baseSpacing, scale) {
           menu: {
             container: {
               active: {
-                border: {
-                  width: '0'
-                }
+                border: 'none'
               }
             }
           }
