@@ -3007,7 +3007,14 @@ var generate = function generate(baseSpacing, scale) {
           menu: {
             container: {
               active: {
-                border: 'none'
+                border: {
+                  width: '0'
+                },
+                extend: {
+                  '&:hover': {
+                    borderColor: 'transparent'
+                  }
+                }
               }
             }
           }

@@ -2802,7 +2802,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           menu: {
             container: {
               active: {
-                border: 'none',
+                border: {
+                  width: '0',
+                },
+                extend: {
+                  '&:hover': {
+                    borderColor: 'transparent',
+                  },
+                },
               },
             },
           },
