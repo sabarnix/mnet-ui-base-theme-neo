@@ -2799,6 +2799,15 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           dropdown: {
             width: 'medium',
           },
+          menu: {
+            container: {
+              active: {
+                border: {
+                  width: '0',
+                },
+              },
+            },
+          },
         },
         drop: {
           selection: {
