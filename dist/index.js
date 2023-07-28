@@ -3011,13 +3011,14 @@ var generate = function generate(baseSpacing, scale) {
           menu: {
             container: {
               active: {
-                border: {
-                  width: '0'
-                },
-                extend: {
-                  '&:hover': {
-                    borderColor: 'transparent'
-                  }
+                extend: function extend() {
+                  return {
+                    cursor: 'pointer',
+                    border: 'none',
+                    '&:hover': {
+                      border: 'none'
+                    }
+                  };
                 }
               }
             }
