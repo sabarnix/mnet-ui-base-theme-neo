@@ -3202,6 +3202,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           }
         },
         icons: {
+          color: '#898FA2',
           linkIcon: {
             size: 'large',
             active: {
