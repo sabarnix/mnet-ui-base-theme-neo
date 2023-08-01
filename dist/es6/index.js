@@ -3254,7 +3254,7 @@ export var generate = function generate(baseSpacing, scale) {
         },
         icons: {
           linkIcon: {
-            size: 'small',
+            size: 'large',
             active: {
               color: '#FC564F'
             }

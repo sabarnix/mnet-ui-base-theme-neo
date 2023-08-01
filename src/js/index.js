@@ -3052,7 +3052,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         icons: {
           linkIcon: {
-            size: 'small',
+            size: 'large',
             active: {
               color: '#FC564F'
             }
