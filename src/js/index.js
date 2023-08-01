@@ -3193,37 +3193,36 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
     },
     navBar: {
-      background: "",
+      background: "#FFFFFF",
       navItem: {
-        minHeight: '42px',
         border: {
           color: '#FFFFFF',
+          active: {
+            color: '#FC564F',
+          }
         },
         icons: {
           linkIcon: {
             size: 'small',
             active: {
-              color: ''
+              color: '#FC564F'
             }
           },
           accordianIcon: {
             size: 'small',
             active: {
-              color: ''
+              color: '#000000'
             }
           }, 
           tickIcon: {
             size: 'small',
             active: {
-              color: ''
+              color: '#000000'
             }
           }, 
         },
         text: {
-          size: 'xlarge',
-          active: {
-           color: '' 
-          }
+          size: 'large',
         },
         hover: {
           background: '#F4F6F8'
@@ -3231,38 +3230,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         subMenu: {
           backgroundColor: '#FFFFFF',
           text: {
-            size: 'large',
+            size: 'medium',
           },
           border: {
             color: '#F4F6F8',
           },
-          level0: {
-            width: '228px',
-            'margin-left': '21px',
-          },
-          level1: {
-            width: '202px',
-            'margin-left': '31px',
-          },
-          extend: {
-          },
-          navItem: {
-          },
-        },
-        disabled: {
-          cursor: 'not-allowed',
-          opacity: 0.4,
-        },
-        active: {
-          border: {
-            color: '#FC564F',
-          }
-        },
-        padding: {
-          left: '64px',
-        },
-        wrapper: {
-          extend: {},
         },
         extend: {},
       }

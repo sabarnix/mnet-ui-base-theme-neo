@@ -3492,8 +3492,8 @@ var generate = function generate(baseSpacing, scale) {
             color: '#F4F6F8'
           },
           level0: {
-            width: '228px',
-            'margin-left': '21px'
+            width: '100%',
+            'margin-left': '30px'
           },
           level1: {
             width: '202px',
