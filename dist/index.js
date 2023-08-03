@@ -3008,6 +3008,7 @@ var generate = function generate(baseSpacing, scale) {
           dropdown: {
             width: 'medium'
           },
+          // To be remvoed when we add Drag and drop for filter Tag
           menu: {
             container: {
               active: {
