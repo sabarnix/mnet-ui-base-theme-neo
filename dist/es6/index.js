@@ -3245,7 +3245,7 @@ export var generate = function generate(baseSpacing, scale) {
     },
     header: {
       background: {
-        color: '#FFFFF'
+        color: '#FFFFFF'
       },
       border: {
         color: 'light-21'
@@ -3300,14 +3300,21 @@ export var generate = function generate(baseSpacing, scale) {
             }
           }
         },
+        tooltipText: {
+          color: '#000000'
+        },
         text: {
           size: 'large'
         },
         hover: {
-          background: '#F4F6F8'
+          background: {
+            color: '#F4F6F8'
+          }
         },
         subMenu: {
-          backgroundColor: '#FFFFFF',
+          background: {
+            color: '#FFFFFF'
+          },
           text: {
             size: 'medium'
           },
