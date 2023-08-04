@@ -2782,6 +2782,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                     margin: `${baseSpacing * 0.75}px`,
                   },
                 },
+                icons: {
+                  color: 'dark-8',
+                },
               },
               item: {
                 pad: {
