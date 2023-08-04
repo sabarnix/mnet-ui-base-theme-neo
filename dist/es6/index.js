@@ -3243,8 +3243,35 @@ export var generate = function generate(baseSpacing, scale) {
         }
       }
     },
+    header: {
+      background: {
+        color: '#FFFFF'
+      },
+      border: {
+        color: 'light-21'
+      },
+      burgerMenu: {
+        color: 'dark-8'
+      },
+      timer: {
+        background: {
+          color: 'light-8'
+        }
+      }
+    },
+    userAccountMenu: {},
+    sideBar: {
+      border: {
+        color: 'light-21'
+      },
+      background: {
+        color: '#FFFFFF'
+      }
+    },
     navBar: {
-      background: "#FFFFFF",
+      background: {
+        color: '#FFFFFF'
+      },
       navItem: {
         border: {
           color: '#FFFFFF',
@@ -3253,7 +3280,7 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         icons: {
-          color: '#898FA2',
+          color: 'dark-8',
           linkIcon: {
             size: 'large',
             active: {
@@ -3289,6 +3316,11 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         extend: {}
+      }
+    },
+    main: {
+      background: {
+        color: '#F8FAFE'
       }
     }
   };
