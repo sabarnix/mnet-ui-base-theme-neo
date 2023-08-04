@@ -2986,6 +2986,9 @@ var generate = function generate(baseSpacing, scale) {
                   container: {
                     margin: baseSpacing * 0.75 + "px"
                   }
+                },
+                icons: {
+                  color: 'dark-8'
                 }
               },
               item: {
