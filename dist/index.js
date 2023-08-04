@@ -3447,38 +3447,65 @@ var generate = function generate(baseSpacing, scale) {
         }
       }
     },
+    header: {
+      background: {
+        color: '#FFFFF'
+      },
+      border: {
+        color: 'light-21'
+      },
+      burgerMenu: {
+        color: 'dark-8'
+      },
+      timer: {
+        background: {
+          color: 'light-8'
+        }
+      }
+    },
+    userAccountMenu: {},
+    sideBar: {
+      border: {
+        color: 'light-21'
+      },
+      background: {
+        color: '#FFFFFF'
+      }
+    },
     navBar: {
-      background: "",
+      background: {
+        color: '#FFFFFF'
+      },
       navItem: {
-        minHeight: '42px',
         border: {
-          color: '#FFFFFF'
+          color: '#FFFFFF',
+          active: {
+            color: '#FC564F'
+          }
         },
         icons: {
+          color: 'dark-8',
           linkIcon: {
-            size: 'small',
+            size: 'large',
             active: {
-              color: ''
+              color: '#FC564F'
             }
           },
           accordianIcon: {
             size: 'small',
             active: {
-              color: ''
+              color: '#000000'
             }
           },
           tickIcon: {
             size: 'small',
             active: {
-              color: ''
+              color: '#000000'
             }
           }
         },
         text: {
-          size: 'xlarge',
-          active: {
-            color: ''
-          }
+          size: 'large'
         },
         hover: {
           background: '#F4F6F8'
@@ -3486,38 +3513,18 @@ var generate = function generate(baseSpacing, scale) {
         subMenu: {
           backgroundColor: '#FFFFFF',
           text: {
-            size: 'large'
+            size: 'medium'
           },
           border: {
             color: '#F4F6F8'
-          },
-          level0: {
-            width: '100%',
-            'margin-left': '30px'
-          },
-          level1: {
-            width: '202px',
-            'margin-left': '31px'
-          },
-          extend: {},
-          navItem: {}
-        },
-        disabled: {
-          cursor: 'not-allowed',
-          opacity: 0.4
-        },
-        active: {
-          border: {
-            color: '#FC564F'
           }
         },
-        padding: {
-          left: '64px'
-        },
-        wrapper: {
-          extend: {}
-        },
         extend: {}
+      }
+    },
+    main: {
+      background: {
+        color: '#F8FAFE'
       }
     }
   };
