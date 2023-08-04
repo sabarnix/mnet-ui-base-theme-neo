@@ -1089,10 +1089,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     icon: {
       size: {
-        small: `${baseSpacing * 0.75}px`, // 12px
-        medium: `${baseSpacing * 0.875}px`, // 14px
-        large: `${baseSpacing * 1}px`, // 16px
-        xlarge: `${baseSpacing * 1.125}px`, // 18px
+        small: `${baseFontSize + (-0.75 * fontScale)}px`,
+        medium: `${baseFontSize}px`,
+        large: `${baseFontSize + (0.75 * fontScale)}px`,
+        xlarge: `${baseFontSize + (1.50 * fontScale)}px`,
       },
     },
     layer: {
