@@ -3129,6 +3129,31 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       background: {
         color: '#F8FAFE'
       }
+    },
+    prebidApp: {
+      fontFamily: 'open_sanssemibold',
+      border: {
+        color: 'light-21',
+      },
+      background: {
+        color: '#F4F6F8',
+      },
+      icon: {
+        down: {
+          color: 'dark-8'
+        }
+      },
+      drop: {
+        item: {
+          fontFamily: 'open_sansregular',
+          hover: {
+            background: {
+              color: '#F4F6F8',
+            }
+          }
+          
+        }
+      }
     }
   };
 
