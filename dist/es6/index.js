@@ -2569,12 +2569,12 @@ export var generate = function generate(baseSpacing, scale) {
           border: {
             side: 'top',
             color: 'border'
-          },
-          text: {
-            weight: 'bold',
-            size: 'medium',
-            color: 'brand'
           }
+        },
+        text: {
+          weight: 'bold',
+          size: 'medium',
+          color: 'brand'
         }
       }
     },

@@ -2425,11 +2425,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             side: 'top',
             color: 'border',
           },
-          text: {
-            weight: 'bold',
-            size: 'medium',
-            color: 'brand',
-          },
+        },
+        text: {
+          weight: 'bold',
+          size: 'medium',
+          color: 'brand',
         },
       },
     },
