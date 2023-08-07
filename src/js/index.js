@@ -3205,8 +3205,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       timer: {
         background: {
           color: 'light-8',
-        }
-      }
+        },
+      },
     },
     userAccountMenu: {
 
@@ -3217,7 +3217,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       background: {
         color: '#FFFFFF'
-      }
+      },
     },
     navBar: {
       background: {
@@ -3265,7 +3265,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         subMenu: {
           background: {
-            color: '#FFFFFF'
+            color: '#FFFFFF',
           },
           text: {
             fontFamily: 'open_sansregular',
@@ -3274,9 +3274,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           border: {
             color: '#F4F6F8',
           },
+          header: {
+            fontFamily: 'open_sansbold',
+          },
         },
         extend: {},
-      }
+      },
     },
     main: {
       background: {
@@ -3307,7 +3310,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           
         }
       }
-    }
+    },
   };
 
   return deepFreeze(result);
