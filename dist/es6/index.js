@@ -2539,6 +2539,11 @@ export var generate = function generate(baseSpacing, scale) {
         },
         round: 'small'
       },
+      commentsContainer: {
+        height: {
+          max: '300px'
+        }
+      },
       addComment: {
         container: {
           pad: 'large'

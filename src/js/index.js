@@ -2394,6 +2394,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         round: 'small',
       },
+      commentsContainer: {
+        height: {
+          max: '300px',
+        },
+      },
       addComment: {
         container: {
           pad: 'large',
