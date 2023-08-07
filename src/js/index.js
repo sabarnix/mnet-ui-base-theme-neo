@@ -2430,7 +2430,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             top: 'small',
           },
           justify: 'between',
-          flex: 1,
+          flex: { grow: 1 },
         },
         text: {
           header: {

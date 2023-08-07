@@ -2607,7 +2607,9 @@ var generate = function generate(baseSpacing, scale) {
             top: 'small'
           },
           justify: 'between',
-          flex: 1
+          flex: {
+            grow: 1
+          }
         },
         text: {
           header: {
