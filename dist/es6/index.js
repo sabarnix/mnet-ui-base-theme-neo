@@ -2574,7 +2574,8 @@ export var generate = function generate(baseSpacing, scale) {
           pad: {
             top: 'small'
           },
-          justify: 'between'
+          justify: 'between',
+          flex: 1
         },
         text: {
           header: {
