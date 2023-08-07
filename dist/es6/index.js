@@ -2556,6 +2556,10 @@ export var generate = function generate(baseSpacing, scale) {
             height: baseSpacing * 2 + "px",
             width: baseSpacing * 2 + "px",
             round: '50%'
+          },
+          color: {
+            customer: 'border',
+            publisher: 'status-critical'
           }
         },
         container: {
@@ -2565,6 +2569,12 @@ export var generate = function generate(baseSpacing, scale) {
             color: 'border'
           },
           gap: 'large'
+        },
+        commentDataContainer: {
+          pad: {
+            top: 'small'
+          },
+          justify: 'between'
         },
         text: {
           header: {

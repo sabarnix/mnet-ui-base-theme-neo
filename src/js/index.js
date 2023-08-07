@@ -2412,6 +2412,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             width: `${baseSpacing * 2}px`,
             round: '50%',
           },
+          color: {
+            customer: 'border',
+            publisher: 'status-critical',
+          },
         },
         container: {
           pad: 'large',
@@ -2420,6 +2424,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: 'border',
           },
           gap: 'large',
+        },
+        commentDataContainer: {
+          pad: {
+            top: 'small',
+          },
+          justify: 'between',
         },
         text: {
           header: {
