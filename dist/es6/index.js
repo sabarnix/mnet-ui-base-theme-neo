@@ -3322,6 +3322,9 @@ export var generate = function generate(baseSpacing, scale) {
           },
           border: {
             color: '#F4F6F8'
+          },
+          header: {
+            fontFamily: 'open_sansbold'
           }
         },
         extend: {}
