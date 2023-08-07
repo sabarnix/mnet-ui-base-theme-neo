@@ -3508,7 +3508,8 @@ var generate = function generate(baseSpacing, scale) {
           color: '#000000'
         },
         text: {
-          size: 'large'
+          size: 'large',
+          fontFamily: 'open_sanssemibold'
         },
         hover: {
           background: {
@@ -3520,6 +3521,7 @@ var generate = function generate(baseSpacing, scale) {
             color: '#FFFFFF'
           },
           text: {
+            fontFamily: 'open_sansregular',
             size: 'medium'
           },
           border: {

@@ -3256,6 +3256,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         text: {
           size: 'large',
+          fontFamily: 'open_sanssemibold',
         },
         hover: {
           background: {
@@ -3267,6 +3268,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: '#FFFFFF'
           },
           text: {
+            fontFamily: 'open_sansregular',
             size: 'medium',
           },
           border: {
