@@ -2412,8 +2412,29 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             width: `${baseSpacing * 2}px`,
             round: '50%',
           },
-          text: {
+        },
+        container: {
+          pad: 'large',
+          border: {
+            side: 'top',
+            color: 'border',
+          },
+          gap: 'large',
+        },
+        text: {
+          header: {
+            color: 'dark-7',
             weight: 'bold',
+          },
+          comment: {
+            color: 'dark-7',
+          },
+          initial: {
+            weight: 'bold',
+          },
+          time: {
+            size: 'small',
+            color: 'dark-7',
           },
         },
       },

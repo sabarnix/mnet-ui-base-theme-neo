@@ -2588,9 +2588,30 @@ var generate = function generate(baseSpacing, scale) {
             height: baseSpacing * 2 + "px",
             width: baseSpacing * 2 + "px",
             round: '50%'
+          }
+        },
+        container: {
+          pad: 'large',
+          border: {
+            side: 'top',
+            color: 'border'
           },
-          text: {
+          gap: 'large'
+        },
+        text: {
+          header: {
+            color: 'dark-7',
             weight: 'bold'
+          },
+          comment: {
+            color: 'dark-7'
+          },
+          initial: {
+            weight: 'bold'
+          },
+          time: {
+            size: 'small',
+            color: 'dark-7'
           }
         }
       },
