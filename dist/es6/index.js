@@ -2531,6 +2531,53 @@ export var generate = function generate(baseSpacing, scale) {
         }
       }
     },
+    comments: {
+      container: {
+        border: {
+          width: '1px',
+          color: 'border'
+        },
+        round: 'small'
+      },
+      addComment: {
+        container: {
+          pad: 'large'
+        },
+        textAreaContainer: {
+          pad: {
+            bottom: 'large'
+          },
+          height: baseSpacing * 5 + "px"
+        }
+      },
+      comment: {
+        initial: {
+          container: {
+            height: baseSpacing * 2 + "px",
+            width: baseSpacing * 2 + "px",
+            round: '50%'
+          },
+          text: {
+            weight: 'bold'
+          }
+        }
+      },
+      viewMore: {
+        container: {
+          align: 'center',
+          pad: 'large',
+          border: {
+            side: 'top',
+            color: 'border'
+          },
+          text: {
+            weight: 'bold',
+            size: 'medium',
+            color: 'brand'
+          }
+        }
+      }
+    },
     datePicker: {
       tag: {
         cursor: 'pointer',
