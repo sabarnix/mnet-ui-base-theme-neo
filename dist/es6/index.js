@@ -2531,6 +2531,98 @@ export var generate = function generate(baseSpacing, scale) {
         }
       }
     },
+    comments: {
+      container: {
+        border: {
+          width: '1px',
+          color: 'border'
+        },
+        round: 'small'
+      },
+      commentsContainer: {
+        height: {
+          max: '300px'
+        }
+      },
+      addComment: {
+        container: {
+          pad: 'large'
+        },
+        textAreaContainer: {
+          pad: {
+            bottom: 'large'
+          },
+          height: baseSpacing * 5 + "px"
+        }
+      },
+      comment: {
+        initial: {
+          container: {
+            height: baseSpacing * 2 + "px",
+            width: baseSpacing * 2 + "px",
+            round: '50%'
+          },
+          color: {
+            provider: {
+              background: 'dark-4',
+              text: 'dark-7'
+            },
+            publisher: {
+              background: 'light-4',
+              text: 'dark-7'
+            }
+          }
+        },
+        container: {
+          pad: 'large',
+          border: {
+            side: 'top',
+            color: 'border'
+          },
+          gap: 'large'
+        },
+        commentDataContainer: {
+          pad: {
+            top: 'small'
+          },
+          justify: 'between',
+          flex: {
+            grow: 1
+          }
+        },
+        text: {
+          header: {
+            color: 'dark-7',
+            weight: 'bold'
+          },
+          comment: {
+            color: 'dark-7'
+          },
+          initial: {
+            weight: 'bold'
+          },
+          time: {
+            size: 'small',
+            color: 'dark-7'
+          }
+        }
+      },
+      viewMore: {
+        container: {
+          align: 'center',
+          pad: 'large',
+          border: {
+            side: 'top',
+            color: 'border'
+          }
+        },
+        text: {
+          weight: 'bold',
+          size: 'medium',
+          color: 'brand'
+        }
+      }
+    },
     datePicker: {
       tag: {
         cursor: 'pointer',
