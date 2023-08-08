@@ -2418,8 +2418,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             round: '50%',
           },
           color: {
-            customer: 'border',
-            publisher: 'status-critical',
+            provider: {
+              background: 'dark-4',
+              text: 'dark-7',
+            },
+            publisher: {
+              background: 'light-4',
+              text: 'dark-7',
+            },
           },
         },
         container: {

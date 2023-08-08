@@ -2595,8 +2595,14 @@ var generate = function generate(baseSpacing, scale) {
             round: '50%'
           },
           color: {
-            customer: 'border',
-            publisher: 'status-critical'
+            provider: {
+              background: 'dark-4',
+              text: 'dark-7'
+            },
+            publisher: {
+              background: 'light-4',
+              text: 'dark-7'
+            }
           }
         },
         container: {
