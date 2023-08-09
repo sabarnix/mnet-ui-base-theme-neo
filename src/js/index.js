@@ -1543,7 +1543,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         extend: ({ theme }) => ({
           color: normalizeColor('dark-7', theme),
           fontWeight: 400,
-          opacity: 1,
         }),
       },
       border: {
