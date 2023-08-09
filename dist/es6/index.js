@@ -4,7 +4,7 @@ function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.s
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import { margin, rgba } from 'polished';
+import { rgba } from 'polished';
 import { add as addGoogleFont } from 'google-fonts';
 import { Close } from "mnet-icons/dist/es6/icons/neo/Close";
 import { Down } from "mnet-icons/dist/es6/icons/neo/Down";
@@ -3431,7 +3431,78 @@ export var generate = function generate(baseSpacing, scale) {
         }
       }
     },
-    userAccountMenu: {},
+    userAccountMenu: {
+      background: {
+        color: '#FFFFFF'
+      },
+      initialCircle: {
+        first: {
+          background: {
+            color: 'status-critical'
+          },
+          text: {
+            color: '#FFFFFF'
+          }
+        },
+        second: {
+          background: {
+            color: '#F5879D'
+          },
+          text: {
+            color: '#FFFFFF'
+          }
+        },
+        count: {
+          background: {
+            color: 'light-8'
+          },
+          text: {
+            color: '#000000'
+          }
+        }
+      },
+      text: {
+        color: '#333333',
+        fontFamily: 'open_sanssemibold'
+      },
+      icon: {
+        dropOpenIcon: Up,
+        dropCloseIcon: Down,
+        size: 'small'
+      },
+      drop: {
+        background: {
+          color: '#FFFFFF'
+        },
+        text: {
+          color: '#333333'
+        },
+        accountList: {
+          hover: {
+            background: {
+              color: '#F4F6F8'
+            },
+            icon: {
+              size: 'xsmall',
+              name: AccountLogin
+            }
+          }
+        },
+        mergeAccount: {
+          icon: {
+            name: MergedView
+          }
+        },
+        icon: {
+          color: '#333333'
+        },
+        logout: {
+          text: {
+            color: '#5B8BF2'
+          }
+        }
+      }
+    },
     sideBar: {
       border: {
         color: 'light-21'

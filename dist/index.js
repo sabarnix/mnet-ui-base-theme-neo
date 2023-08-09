@@ -3463,7 +3463,78 @@ var generate = function generate(baseSpacing, scale) {
         }
       }
     },
-    userAccountMenu: {},
+    userAccountMenu: {
+      background: {
+        color: '#FFFFFF'
+      },
+      initialCircle: {
+        first: {
+          background: {
+            color: 'status-critical'
+          },
+          text: {
+            color: '#FFFFFF'
+          }
+        },
+        second: {
+          background: {
+            color: '#F5879D'
+          },
+          text: {
+            color: '#FFFFFF'
+          }
+        },
+        count: {
+          background: {
+            color: 'light-8'
+          },
+          text: {
+            color: '#000000'
+          }
+        }
+      },
+      text: {
+        color: '#333333',
+        fontFamily: 'open_sanssemibold'
+      },
+      icon: {
+        dropOpenIcon: _Up.Up,
+        dropCloseIcon: _Down.Down,
+        size: 'small'
+      },
+      drop: {
+        background: {
+          color: '#FFFFFF'
+        },
+        text: {
+          color: '#333333'
+        },
+        accountList: {
+          hover: {
+            background: {
+              color: '#F4F6F8'
+            },
+            icon: {
+              size: 'xsmall',
+              name: _AccountLogin.AccountLogin
+            }
+          }
+        },
+        mergeAccount: {
+          icon: {
+            name: _MergedView.MergedView
+          }
+        },
+        icon: {
+          color: '#333333'
+        },
+        logout: {
+          text: {
+            color: '#5B8BF2'
+          }
+        }
+      }
+    },
     sideBar: {
       border: {
         color: 'light-21'
