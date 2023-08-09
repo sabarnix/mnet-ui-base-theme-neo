@@ -1,4 +1,4 @@
-import { margin, rgba } from 'polished';
+import { rgba } from 'polished';
 import { add as addGoogleFont } from 'google-fonts';
 import {
   Close,
@@ -20,6 +20,8 @@ import {
   Help,
   AlertTriangle,
   Search,
+  AccountLogin,
+  MergedView,
 } from 'mnet-icons/neo';
 import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
@@ -3058,7 +3060,76 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
     },
     userAccountMenu: {
-
+      background: {
+        color: '#FFFFFF',
+      },
+      initialCircle: {
+        first: {
+          background: {
+            color: 'status-critical',
+          },
+          text: {
+            color: '#FFFFFF',
+          },
+        },
+        second: {
+          background: {
+            color: '#F5879D',
+          },
+          text: {
+            color: '#FFFFFF',
+          },
+        },
+        count: {
+          background: {
+            color: 'light-8',
+          },
+          text: {
+            color: '#000000',
+          },
+        },
+      },
+      text: {
+        color: '#333333',
+        fontFamily: 'open_sanssemibold',
+      },
+      icon: {
+        dropOpenIcon: Up,
+        dropCloseIcon: Down,
+        size: 'small',
+      },
+      drop: {
+        background: {
+          color: '#FFFFFF',
+        },
+        text: {
+          color: '#333333',
+        },
+        accountList: {
+          hover: {
+            background: {
+              color: '#F4F6F8',
+            },
+            icon: {
+              size: 'xsmall',
+              name: AccountLogin,
+            },
+          },
+        },
+        mergeAccount: {
+          icon: {
+            name: MergedView,
+          },
+        },
+        icon: {
+          color: '#333333',
+        },
+        logout: {
+          text: {
+            color: '#5B8BF2',
+          },
+        },
+      },
     },
     sideBar: {
       border: {
