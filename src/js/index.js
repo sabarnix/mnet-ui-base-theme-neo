@@ -3395,3 +3395,4 @@ export const generate = (baseSpacing = 24, scale = 6) => {
 };
 
 export const neo = generate(16);
+export default neo;

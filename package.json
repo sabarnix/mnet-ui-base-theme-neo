@@ -15,6 +15,10 @@
   "engines": {
     "node": ">=12"
   },
+  "exports": {
+    "./neo": "./dist/index.js",
+    "./yahoo": "./dist/yahoo.js"
+  },
   "peerDependencies": {
     "grommet": "^2.19.1",
     "mnet-icons": "git+ssh://git@tree.mn:react-ui/mnet-icons.git",
