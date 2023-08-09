@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.neo = exports.generate = void 0;
+exports.neo = exports.generate = exports["default"] = void 0;
 
 var _polished = require("polished");
 
@@ -3621,3 +3621,5 @@ var generate = function generate(baseSpacing, scale) {
 exports.generate = generate;
 var neo = generate(16);
 exports.neo = neo;
+var _default = neo;
+exports["default"] = _default;

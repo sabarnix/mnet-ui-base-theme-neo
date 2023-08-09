@@ -3584,3 +3584,4 @@ export var generate = function generate(baseSpacing, scale) {
   return deepFreeze(result);
 };
 export var neo = generate(16);
+export default neo;
