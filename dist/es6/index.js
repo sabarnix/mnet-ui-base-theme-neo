@@ -3500,6 +3500,13 @@ export var generate = function generate(baseSpacing, scale) {
           text: {
             color: '#5B8BF2'
           }
+        },
+        search: {
+          icon: Search,
+          border: {
+            side: 'bottom',
+            size: 'small'
+          }
         }
       }
     },

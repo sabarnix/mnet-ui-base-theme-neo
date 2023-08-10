@@ -3532,6 +3532,13 @@ var generate = function generate(baseSpacing, scale) {
           text: {
             color: '#5B8BF2'
           }
+        },
+        search: {
+          icon: _Search.Search,
+          border: {
+            side: 'bottom',
+            size: 'small'
+          }
         }
       }
     },

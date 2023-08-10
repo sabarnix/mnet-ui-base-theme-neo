@@ -3280,6 +3280,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: '#5B8BF2',
           },
         },
+        search: {
+          icon: Search,
+          border: {
+            side: 'bottom',
+            size: 'small',
+          },
+        },
       },
     },
     sideBar: {
