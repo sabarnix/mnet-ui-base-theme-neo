@@ -160,6 +160,7 @@ export var generate = function generate(baseSpacing, scale) {
   var borderWidth = 0;
   var controlBorderWidth = 1;
   var result = {
+    title: 'Media.net',
     global: {
       active: {
         background: {
