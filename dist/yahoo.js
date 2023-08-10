@@ -10,6 +10,5 @@ var _ = require(".");
 var neo = (0, _utils.deepMerge)(_.neo, {
   title: 'Yahoo'
 });
-console.log('NEO', neo.title);
 var _default = neo;
 exports["default"] = _default;

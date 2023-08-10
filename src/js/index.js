@@ -221,6 +221,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
   const controlBorderWidth = 1;
 
   const result = {
+    title: 'Media.net',
     global: {
       active: {
         background: {
