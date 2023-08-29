@@ -3508,6 +3508,10 @@ export var generate = function generate(baseSpacing, scale) {
             side: 'bottom',
             size: 'small'
           }
+        },
+        loader: {
+          mainColor: '#F4F6F8',
+          loadColor: '#333333'
         }
       }
     },

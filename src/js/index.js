@@ -3288,6 +3288,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             size: 'small',
           },
         },
+        loader: {
+          mainColor: '#F4F6F8',
+          loadColor: '#333333',
+        },
       },
     },
     sideBar: {
