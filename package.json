@@ -17,7 +17,7 @@
   },
   "exports": {
     "./neo": "./dist/index.js",
-    "./yahoo": "./dist/yahoo.js"
+    "./adtech": "./dist/adtech.js"
   },
   "peerDependencies": {
     "grommet": "^2.19.1",
