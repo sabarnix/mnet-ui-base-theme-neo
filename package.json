@@ -49,7 +49,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "cross-env babel ./src/js/ --out-dir ./dist --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --out-dir ./dist/es6 --copy-files",
+    "build": "cross-env babel ./src/js/ --out-dir ./dist --copy-files && babel ./assets/ --out-dir ./dist/assets/ --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --out-dir ./dist/es6 --copy-files && babel ./assets/ --out-dir ./dist/es6/assets/ --copy-files",
     "watch": "cross-env babel ./src/js/ --out-dir ./dist --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --watch --out-dir ./dist/es6 --copy-files",
     "lint": "eslint src"
   },
