@@ -28,6 +28,7 @@ import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
 import { normalizeColor } from 'grommet/utils/colors';
 import { parseMetricToNum } from 'grommet/utils/mixins';
+import HeaderLogoSrc from './assets/neo/header-logo.svg';
 
 Tick.notSvg = true;
 
@@ -3196,6 +3197,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
     },
     header: {
+      logo: HeaderLogoSrc,
       background: {
         color: '#FFFFFF',
       },

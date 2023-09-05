@@ -3417,6 +3417,7 @@ export var generate = function generate(baseSpacing, scale) {
       }
     },
     header: {
+      logo: HeaderLogoSrc,
       background: {
         color: '#FFFFFF'
       },

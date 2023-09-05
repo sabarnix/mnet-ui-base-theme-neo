@@ -7,8 +7,15 @@ var _utils = require("grommet/utils");
 
 var _ = require(".");
 
+var _headerLogo = _interopRequireDefault(require("./assets/adtech/header-logo.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 var neo = (0, _utils.deepMerge)(_.neo, {
   title: "Ad.Tech",
+  header: {
+    logo: _headerLogo["default"]
+  },
   userAccountMenu: {
     initialCircle: {
       first: {

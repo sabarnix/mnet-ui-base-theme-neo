@@ -57,6 +57,8 @@ var _mixins = require("grommet/utils/mixins");
 
 var _templateObject, _templateObject2;
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -3449,6 +3451,7 @@ var generate = function generate(baseSpacing, scale) {
       }
     },
     header: {
+      logo: _headerLogo["default"],
       background: {
         color: '#FFFFFF'
       },

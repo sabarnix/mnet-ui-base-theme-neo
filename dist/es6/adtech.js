@@ -1,7 +1,11 @@
 import { deepMerge } from "grommet/utils";
 import { neo as defaultNeo } from ".";
+import HeaderLogoSrc from './assets/adtech/header-logo.svg';
 var neo = deepMerge(defaultNeo, {
   title: "Ad.Tech",
+  header: {
+    logo: HeaderLogoSrc
+  },
   userAccountMenu: {
     initialCircle: {
       first: {
