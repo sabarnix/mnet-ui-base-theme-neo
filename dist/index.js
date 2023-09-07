@@ -1673,6 +1673,10 @@ var generate = function generate(baseSpacing, scale) {
             };
           }
         }
+      },
+      noResult: {
+        justify: "center",
+        pad: "large"
       }
     },
     paragraph: {

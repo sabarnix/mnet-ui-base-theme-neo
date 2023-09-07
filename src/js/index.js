@@ -1546,6 +1546,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           }),
         },
       },
+      noResult: { 
+        justify:"center", 
+        pad:"large",
+      },
     },
     paragraph: {
       small: { ...fontSizing(-1) },
