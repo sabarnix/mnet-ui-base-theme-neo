@@ -1614,6 +1614,33 @@ export var generate = function generate(baseSpacing, scale) {
           color: 'dark-6'
         },
         round: 'small'
+      },
+      selectAll: {
+        container: {
+          pad: {
+            horizontal: 'medium',
+            vertical: baseSpacing * 0.75 + 0.5 + "px"
+          },
+          border: {
+            side: 'bottom',
+            size: '1px',
+            color: 'border'
+          },
+          flex: {
+            shrink: 0
+          }
+        },
+        text: {
+          weight: 'bold',
+          color: 'brand',
+          extend: function extend() {
+            return {
+              '&:hover': {
+                'text-decoration': 'underline'
+              }
+            };
+          }
+        }
       }
     },
     paragraph: {
