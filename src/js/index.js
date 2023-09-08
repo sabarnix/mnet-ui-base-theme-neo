@@ -1530,6 +1530,21 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         round: 'small',
       },
+      selectAll: {
+        container: {
+          pad: { horizontal: 'medium', vertical: `${(baseSpacing * 0.5) - 1}px` },
+          border: { side: 'bottom', size: '1px', color: 'border' },
+          flex: { shrink: 0 },
+        },
+        text: {
+          weight: 'bold',
+          color: 'brand',
+        },
+      },
+      noResult: {
+        justify: 'center',
+        pad: 'large',
+      },
     },
     paragraph: {
       small: { ...fontSizing(-1) },
