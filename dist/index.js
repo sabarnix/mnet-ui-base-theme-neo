@@ -1651,7 +1651,7 @@ var generate = function generate(baseSpacing, scale) {
         container: {
           pad: {
             horizontal: 'medium',
-            vertical: baseSpacing * 0.75 + 0.5 + "px"
+            vertical: baseSpacing * 0.5 - 1 + "px"
           },
           border: {
             side: 'bottom',
@@ -1664,19 +1664,12 @@ var generate = function generate(baseSpacing, scale) {
         },
         text: {
           weight: 'bold',
-          color: 'brand',
-          extend: function extend() {
-            return {
-              '&:hover': {
-                'text-decoration': 'underline'
-              }
-            };
-          }
+          color: 'brand'
         }
       },
       noResult: {
-        justify: "center",
-        pad: "large"
+        justify: 'center',
+        pad: 'large'
       }
     },
     paragraph: {

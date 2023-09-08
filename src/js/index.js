@@ -1532,23 +1532,18 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       selectAll: {
         container: {
-          pad: { horizontal: 'medium', vertical: `${(baseSpacing * 0.75) + 0.5}px` },
+          pad: { horizontal: 'medium', vertical: `${(baseSpacing * 0.5) - 1}px` },
           border: { side: 'bottom', size: '1px', color: 'border' },
           flex: { shrink: 0 },
         },
         text: {
           weight: 'bold',
           color: 'brand',
-          extend: () => ({
-            '&:hover': {
-              'text-decoration': 'underline',
-            },
-          }),
         },
       },
-      noResult: { 
-        justify:"center", 
-        pad:"large",
+      noResult: {
+        justify: 'center',
+        pad: 'large',
       },
     },
     paragraph: {
