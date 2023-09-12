@@ -3656,73 +3656,95 @@ var generate = function generate(baseSpacing, scale) {
       }
     },
     sideBar: {
-      border: {
-        color: 'light-21'
-      },
-      background: {
-        color: '#FFFFFF'
-      }
-    },
-    navBar: {
-      background: {
-        color: '#FFFFFF'
-      },
-      navItem: {
-        border: {
-          color: '#FFFFFF',
-          active: {
-            color: '#FC564F'
-          }
+      container: {
+        background: {
+          color: "#FFFFFF"
         },
-        icons: {
-          color: 'dark-8',
-          linkIcon: {
-            size: 'large',
+        border: {
+          side: "right",
+          size: "xsmall",
+          color: "light-21"
+        }
+      },
+      navBar: {
+        background: {
+          color: '#FFFFFF'
+        },
+        navItem: {
+          border: {
+            color: '#FFFFFF',
             active: {
               color: '#FC564F'
             }
           },
-          accordianIcon: {
-            size: 'small',
-            active: {
-              color: '#000000'
+          icons: {
+            color: 'dark-8',
+            linkIcon: {
+              size: 'large',
+              active: {
+                color: '#FC564F'
+              }
+            },
+            tickIcon: {
+              icon: _Tick.Tick,
+              size: 'small',
+              active: {
+                color: '#000000'
+              }
+            },
+            subMenuToggleIcon: {
+              open: {
+                icon: _Up.Up,
+                size: 'small'
+              },
+              close: {
+                icon: _Down.Down,
+                size: 'small',
+                color: '#000000'
+              }
             }
           },
-          tickIcon: {
-            size: 'small',
-            active: {
+          tooltipText: {
+            background: {
               color: '#000000'
-            }
-          }
-        },
-        tooltipText: {
-          color: '#000000'
-        },
-        text: {
-          size: 'large',
-          fontFamily: 'open_sanssemibold'
-        },
-        hover: {
-          background: {
-            color: '#F4F6F8'
-          }
-        },
-        subMenu: {
-          background: {
-            color: '#FFFFFF'
+            },
+            pad: {
+              vertical: 'xsmall',
+              horizontal: 'medium'
+            },
+            margin: {
+              left: 'small',
+              top: 'small'
+            },
+            round: 'small',
+            color: '#000000'
           },
           text: {
-            fontFamily: 'open_sansregular',
-            size: 'medium'
+            size: 'large',
+            weight: 600
           },
-          border: {
-            color: '#F4F6F8'
+          hover: {
+            background: {
+              color: '#F4F6F8'
+            }
           },
-          header: {
-            fontFamily: 'open_sansbold'
-          }
-        },
-        extend: {}
+          subMenu: {
+            background: {
+              color: '#FFFFFF'
+            },
+            text: {
+              weight: 400,
+              size: 'medium'
+            },
+            border: {
+              color: '#F4F6F8'
+            },
+            header: {
+              weight: 700
+            }
+          },
+          extend: {}
+        }
       }
     },
     main: {
