@@ -47,6 +47,10 @@ var _Search = require("mnet-icons/dist/es6/icons/neo/Search");
 
 var _Excluded = require("mnet-icons/dist/es6/icons/neo/Excluded");
 
+var _BurgerMenu = require("mnet-icons/dist/es6/icons/neo/BurgerMenu");
+
+var _Clock = require("mnet-icons/dist/es6/icons/neo/Clock");
+
 var _styledComponents = require("styled-components");
 
 var _object = require("grommet/utils/object");
@@ -3451,19 +3455,120 @@ var generate = function generate(baseSpacing, scale) {
       }
     },
     header: {
-      logo: _headerLogo["default"],
-      background: {
-        color: '#FFFFFF'
-      },
-      border: {
-        color: 'light-21'
-      },
-      burgerMenu: {
-        color: 'dark-8'
-      },
-      timer: {
+      container: {
         background: {
-          color: 'light-8'
+          color: '#FFFFFF'
+        },
+        border: {
+          size: 'xsmall',
+          color: 'light-21',
+          side: 'bottom'
+        },
+        direction: 'row',
+        pad: {
+          vertical: 'large',
+          right: 'xlarge',
+          left: 'large'
+        },
+        justify: 'between',
+        align: 'center'
+      },
+      sideBarToggleIcon: {
+        icon: _BurgerMenu.BurgerMenu,
+        color: 'dark-8',
+        size: 'large'
+      },
+      headerLogo: {
+        logo: _headerLogo["default"]
+      },
+      prebidFeature: {
+        label: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            justify: 'between',
+            gap: 'large',
+            background: {
+              color: '#F4F6F8'
+            },
+            border: {
+              size: 'xsmall',
+              color: 'light-21'
+            },
+            round: 'small',
+            pad: {
+              horizontal: 'medium',
+              vertical: 'xsmall'
+            }
+          },
+          text: {
+            size: 'medium',
+            weight: 600
+          },
+          dropToggleIcon: {
+            open: {
+              icon: _Up.Up,
+              size: 'small'
+            },
+            close: {
+              icon: _Down.Down,
+              size: 'small',
+              color: 'dark-8'
+            }
+          }
+        },
+        drop: {
+          prebidItem: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              gap: 'xlarge',
+              pad: {
+                horizontal: 'large',
+                vertical: 'small'
+              },
+              hoverIndicator: {
+                color: '#F4F6F8'
+              },
+              margin: {
+                bottom: 'small'
+              },
+              style: {
+                cursor: 'pointer',
+                color: 'inherit'
+              }
+            },
+            text: {
+              size: 'large',
+              weight: 400
+            },
+            selectedPrebidItemIcon: {
+              icon: _Tick.Tick,
+              size: 'small'
+            }
+          }
+        }
+      },
+      serverTime: {
+        container: {
+          margin: {
+            horizontal: 'large'
+          },
+          background: {
+            color: 'light-8'
+          },
+          pad: {
+            horizontal: 'medium',
+            vertical: 'small'
+          },
+          round: 'small',
+          direction: 'row',
+          align: 'center'
+        },
+        clockIcon: {
+          icon: _Clock.Clock,
+          size: 'medium'
         }
       }
     },
@@ -3623,30 +3728,6 @@ var generate = function generate(baseSpacing, scale) {
     main: {
       background: {
         color: '#F8FAFE'
-      }
-    },
-    prebidApp: {
-      fontFamily: 'open_sanssemibold',
-      border: {
-        color: 'light-21'
-      },
-      background: {
-        color: '#F4F6F8'
-      },
-      icon: {
-        down: {
-          color: 'dark-8'
-        }
-      },
-      drop: {
-        item: {
-          fontFamily: 'open_sansregular',
-          hover: {
-            background: {
-              color: '#F4F6F8'
-            }
-          }
-        }
       }
     }
   };

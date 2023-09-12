@@ -3417,19 +3417,120 @@ export var generate = function generate(baseSpacing, scale) {
       }
     },
     header: {
-      logo: HeaderLogoSrc,
-      background: {
-        color: '#FFFFFF'
-      },
-      border: {
-        color: 'light-21'
-      },
-      burgerMenu: {
-        color: 'dark-8'
-      },
-      timer: {
+      container: {
         background: {
-          color: 'light-8'
+          color: '#FFFFFF'
+        },
+        border: {
+          size: 'xsmall',
+          color: 'light-21',
+          side: 'bottom'
+        },
+        direction: 'row',
+        pad: {
+          vertical: 'large',
+          right: 'xlarge',
+          left: 'large'
+        },
+        justify: 'between',
+        align: 'center'
+      },
+      sideBarToggleIcon: {
+        icon: BurgerMenu,
+        color: 'dark-8',
+        size: 'large'
+      },
+      headerLogo: {
+        logo: HeaderLogoSrc
+      },
+      prebidFeature: {
+        label: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            justify: 'between',
+            gap: 'large',
+            background: {
+              color: '#F4F6F8'
+            },
+            border: {
+              size: 'xsmall',
+              color: 'light-21'
+            },
+            round: 'small',
+            pad: {
+              horizontal: 'medium',
+              vertical: 'xsmall'
+            }
+          },
+          text: {
+            size: 'medium',
+            weight: 600
+          },
+          dropToggleIcon: {
+            open: {
+              icon: Up,
+              size: 'small'
+            },
+            close: {
+              icon: Down,
+              size: 'small',
+              color: 'dark-8'
+            }
+          }
+        },
+        drop: {
+          prebidItem: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              gap: 'xlarge',
+              pad: {
+                horizontal: 'large',
+                vertical: 'small'
+              },
+              hoverIndicator: {
+                color: '#F4F6F8'
+              },
+              margin: {
+                bottom: 'small'
+              },
+              style: {
+                cursor: 'pointer',
+                color: 'inherit'
+              }
+            },
+            text: {
+              size: 'large',
+              weight: 400
+            },
+            selectedPrebidItemIcon: {
+              icon: Tick,
+              size: 'small'
+            }
+          }
+        }
+      },
+      serverTime: {
+        container: {
+          margin: {
+            horizontal: 'large'
+          },
+          background: {
+            color: 'light-8'
+          },
+          pad: {
+            horizontal: 'medium',
+            vertical: 'small'
+          },
+          round: 'small',
+          direction: 'row',
+          align: 'center'
+        },
+        clockIcon: {
+          icon: Clock,
+          size: 'medium'
         }
       }
     },
@@ -3589,30 +3690,6 @@ export var generate = function generate(baseSpacing, scale) {
     main: {
       background: {
         color: '#F8FAFE'
-      }
-    },
-    prebidApp: {
-      fontFamily: 'open_sanssemibold',
-      border: {
-        color: 'light-21'
-      },
-      background: {
-        color: '#F4F6F8'
-      },
-      icon: {
-        down: {
-          color: 'dark-8'
-        }
-      },
-      drop: {
-        item: {
-          fontFamily: 'open_sansregular',
-          hover: {
-            background: {
-              color: '#F4F6F8'
-            }
-          }
-        }
       }
     }
   };
