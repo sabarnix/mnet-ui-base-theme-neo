@@ -3289,80 +3289,172 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
     },
     userAccountMenu: {
-      background: {
-        color: '#FFFFFF',
-      },
-      initialCircle: {
-        first: {
-          background: {
-            color: 'status-critical',
-          },
-          text: {
-            color: '#FFFFFF',
-          },
+      label: {
+        container: {
+          direction: "row",
+          align: "center",
+          justify: "between",
+          gap: "xlarge",
+          background: { color: "#333333" },
         },
-        second: {
-          background: {
-            color: '#F5879D',
+        initialCircle: {
+          first: {
+            background: {
+              color: "status-critical",
+            },
+            text: {
+              color: "#FFFFFF",
+            },
           },
-          text: {
-            color: '#FFFFFF',
+          second: {
+            background: {
+              color: "#F5879D",
+            },
+            text: {
+              color: "#FFFFFF",
+            },
           },
-        },
-        count: {
-          background: {
-            color: 'light-8',
+          count: {
+            background: {
+              color: "light-8",
+            },
+            text: {
+              color: "#000000",
+            },
           },
-          text: {
-            color: '#000000',
-          },
-        },
-      },
-      text: {
-        color: '#333333',
-        fontFamily: 'open_sanssemibold',
-      },
-      icon: {
-        dropOpenIcon: Up,
-        dropCloseIcon: Down,
-        size: 'small',
-      },
-      drop: {
-        background: {
-          color: '#FFFFFF',
         },
         text: {
-          color: '#333333',
+          color: "#333333",
+          weight: 600,
         },
-        accountList: {
-          hover: {
-            background: {
-              color: '#F4F6F8',
+        dropToggleIcon: {
+          open: {
+            icon: Up,
+            size: "small",
+          },
+          close: {
+            icon: Down,
+            size: "small",
+          },
+        },
+      },
+      drop: {
+        container: {
+          background: {
+            color: '#FFFFFF',
+          },
+        },
+        selectedAccountDetail: {
+          initialCircle: {
+            container: {
+              background: {
+                color: 'status-critical',
+              },
             },
-            icon: {
+            text: {
+              color: '#FFFFFF',
+              size: 'large',
+              weight: 600,
+            },
+          },
+          name: {
+            color: '#333333',
+            size: 'large',
+            weight: 700,
+          },
+          email: {
+            color: '#333333',
+            size: 'large',
+          },
+        },
+        search: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            border: { side: 'bottom', size: 'small' },
+          },
+          text: {
+            color: '#333333',
+          },
+          icon: {
+            search: Search,
+            size: 'small',
+          },
+        },
+        accList: {
+          container: {
+            height: { max: 'medium' },
+            style: { display: 'block', overflow: 'auto' },
+            margin: { top: 'small' },
+          },
+          account: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              pad: { horizontal: 'large', vertical: 'small' },
+              margin: { vertical: 'xsmall' },
+              hoverIndicator: {
+                background: { color: '#F4F6F8' },
+              },
+            },
+            name: {
+              color: '#333333',
+              size: 'large',
+              weight: 700,
+            },
+            hoverIcon: {
+              icon: AccountLogin,
               size: 'xsmall',
-              name: AccountLogin,
+              color: '#333333',
+            },
+            noAccFound: {
+              text: {
+                color: '#333333',
+              },
             },
           },
         },
         mergeAccount: {
-          icon: {
-            name: MergedView,
+          container: {
+            direction: 'row',
+            justify: 'between',
+            align: 'center',
+            gap: 'medium',
+            pad: 'large',
+            border: [
+              {
+                side: 'top',
+                size: '1px',
+                color: 'border',
+              },
+            ],
           },
-        },
-        icon: {
-          color: '#333333',
+          text: {
+            color: '#333333',
+            size: 'large',
+            weight: 700,
+          },
+          mergeIcon: {
+            icon: MergedView,
+            color: '#333333',
+          },
         },
         logout: {
-          text: {
-            color: '#5B8BF2',
+          container: {
+            border: [
+              {
+                side: 'top',
+                size: '1px',
+                color: 'border',
+              },
+            ],
+            pad: 'large',
           },
-        },
-        search: {
-          icon: Search,
-          border: {
-            side: 'bottom',
-            size: 'small',
+          text: {
+            size: 'large',
+            weight: 700,
+            color: '#5B8BF2',
           },
         },
         loader: {
@@ -3410,11 +3502,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               open: {
                 icon: Up,
                 size: 'small',
+                color: '#000000',
               },
               close: {
                 icon: Down,
                 size: 'small',
-                color: '#000000',
               },
             },
           },

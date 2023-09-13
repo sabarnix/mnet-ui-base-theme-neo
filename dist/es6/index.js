@@ -3535,80 +3535,187 @@ export var generate = function generate(baseSpacing, scale) {
       }
     },
     userAccountMenu: {
-      background: {
-        color: '#FFFFFF'
-      },
-      initialCircle: {
-        first: {
+      label: {
+        container: {
+          direction: "row",
+          align: "center",
+          justify: "between",
+          gap: "xlarge",
           background: {
-            color: 'status-critical'
-          },
-          text: {
-            color: '#FFFFFF'
+            color: "#333333"
           }
         },
-        second: {
-          background: {
-            color: '#F5879D'
+        initialCircle: {
+          first: {
+            background: {
+              color: "status-critical"
+            },
+            text: {
+              color: "#FFFFFF"
+            }
           },
-          text: {
-            color: '#FFFFFF'
+          second: {
+            background: {
+              color: "#F5879D"
+            },
+            text: {
+              color: "#FFFFFF"
+            }
+          },
+          count: {
+            background: {
+              color: "light-8"
+            },
+            text: {
+              color: "#000000"
+            }
           }
         },
-        count: {
-          background: {
-            color: 'light-8'
+        text: {
+          color: "#333333",
+          weight: 600
+        },
+        dropToggleIcon: {
+          open: {
+            icon: Up,
+            size: "small"
           },
-          text: {
-            color: '#000000'
+          close: {
+            icon: Down,
+            size: "small"
           }
         }
       },
-      text: {
-        color: '#333333',
-        fontFamily: 'open_sanssemibold'
-      },
-      icon: {
-        dropOpenIcon: Up,
-        dropCloseIcon: Down,
-        size: 'small'
-      },
       drop: {
-        background: {
-          color: '#FFFFFF'
+        container: {
+          background: {
+            color: '#FFFFFF'
+          }
         },
-        text: {
-          color: '#333333'
-        },
-        accountList: {
-          hover: {
-            background: {
-              color: '#F4F6F8'
+        selectedAccountDetail: {
+          initialCircle: {
+            container: {
+              background: {
+                color: 'status-critical'
+              }
             },
-            icon: {
+            text: {
+              color: '#FFFFFF',
+              size: 'large',
+              weight: 600
+            }
+          },
+          name: {
+            color: '#333333',
+            size: 'large',
+            weight: 700
+          },
+          email: {
+            color: '#333333',
+            size: 'large'
+          }
+        },
+        search: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            border: {
+              side: 'bottom',
+              size: 'small'
+            }
+          },
+          text: {
+            color: '#333333'
+          },
+          icon: {
+            search: Search,
+            size: 'small'
+          }
+        },
+        accList: {
+          container: {
+            height: {
+              max: 'medium'
+            },
+            style: {
+              display: 'block',
+              overflow: 'auto'
+            },
+            margin: {
+              top: 'small'
+            }
+          },
+          account: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              pad: {
+                horizontal: 'large',
+                vertical: 'small'
+              },
+              margin: {
+                vertical: 'xsmall'
+              },
+              hoverIndicator: {
+                background: {
+                  color: '#F4F6F8'
+                }
+              }
+            },
+            name: {
+              color: '#333333',
+              size: 'large',
+              weight: 700
+            },
+            hoverIcon: {
+              icon: AccountLogin,
               size: 'xsmall',
-              name: AccountLogin
+              color: '#333333'
+            },
+            noAccFound: {
+              text: {
+                color: '#333333'
+              }
             }
           }
         },
         mergeAccount: {
-          icon: {
-            name: MergedView
+          container: {
+            direction: 'row',
+            justify: 'between',
+            align: 'center',
+            gap: 'medium',
+            pad: 'large',
+            border: [{
+              side: 'top',
+              size: '1px',
+              color: 'border'
+            }]
+          },
+          text: {
+            color: '#333333',
+            size: 'large',
+            weight: 700
+          },
+          mergeIcon: {
+            icon: MergedView,
+            color: '#333333'
           }
-        },
-        icon: {
-          color: '#333333'
         },
         logout: {
+          container: {
+            border: [{
+              side: 'top',
+              size: '1px',
+              color: 'border'
+            }],
+            pad: 'large'
+          },
           text: {
+            size: 'large',
+            weight: 700,
             color: '#5B8BF2'
-          }
-        },
-        search: {
-          icon: Search,
-          border: {
-            side: 'bottom',
-            size: 'small'
           }
         },
         loader: {
@@ -3657,12 +3764,12 @@ export var generate = function generate(baseSpacing, scale) {
             subMenuToggleIcon: {
               open: {
                 icon: Up,
-                size: 'small'
+                size: 'small',
+                color: '#000000'
               },
               close: {
                 icon: Down,
-                size: 'small',
-                color: '#000000'
+                size: 'small'
               }
             }
           },
