@@ -14,33 +14,50 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var neo = (0, _utils.deepMerge)(_.neo, {
   title: "Ad.Tech",
   header: {
-    logo: _headerLogo["default"]
+    headerLogo: {
+      logo: _headerLogo["default"]
+    }
   },
   userAccountMenu: {
-    initialCircle: {
-      first: {
-        background: {
-          color: "#6566EF"
+    label: {
+      initialCircle: {
+        first: {
+          background: {
+            color: "#6566EF"
+          }
+        },
+        second: {
+          background: {
+            color: "#9396f3"
+          }
         }
-      },
-      second: {
-        background: {
-          color: "#9396f3"
+      }
+    },
+    drop: {
+      selectedAccountDetail: {
+        initialCircle: {
+          container: {
+            background: {
+              color: "#6566EF"
+            }
+          }
         }
       }
     }
   },
-  navBar: {
-    navItem: {
-      border: {
-        active: {
-          color: "#6566EF"
-        }
-      },
-      icons: {
-        linkIcon: {
+  sideBar: {
+    navBar: {
+      navItem: {
+        border: {
           active: {
             color: "#6566EF"
+          }
+        },
+        icons: {
+          linkIcon: {
+            active: {
+              color: "#6566EF"
+            }
           }
         }
       }
