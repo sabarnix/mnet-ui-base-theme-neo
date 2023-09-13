@@ -3295,7 +3295,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           align: "center",
           justify: "between",
           gap: "xlarge",
-          background: { color: "#333333" },
+          background: { color: "#FFFFFF" },
         },
         initialCircle: {
           first: {

@@ -3542,7 +3542,7 @@ export var generate = function generate(baseSpacing, scale) {
           justify: "between",
           gap: "xlarge",
           background: {
-            color: "#333333"
+            color: "#FFFFFF"
           }
         },
         initialCircle: {
