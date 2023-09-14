@@ -3457,7 +3457,7 @@ var generate = function generate(baseSpacing, scale) {
     header: {
       container: {
         background: {
-          color: "#FFFFFF"
+          color: colors.white
         },
         border: {
           size: "xsmall",
@@ -3489,7 +3489,7 @@ var generate = function generate(baseSpacing, scale) {
             justify: "between",
             gap: "large",
             background: {
-              color: "#F4F6F8"
+              color: "light-8"
             },
             border: {
               size: "xsmall",
@@ -3529,7 +3529,7 @@ var generate = function generate(baseSpacing, scale) {
                 vertical: "small"
               },
               hoverIndicator: {
-                color: "#F4F6F8"
+                color: "light-8"
               },
               margin: {
                 bottom: "small"
@@ -3580,7 +3580,7 @@ var generate = function generate(baseSpacing, scale) {
           justify: "between",
           gap: "xlarge",
           background: {
-            color: "#FFFFFF"
+            color: colors.white
           }
         },
         initialCircle: {
@@ -3589,7 +3589,7 @@ var generate = function generate(baseSpacing, scale) {
               color: "status-critical"
             },
             text: {
-              color: "#FFFFFF"
+              color: colors.white
             }
           },
           second: {
@@ -3597,7 +3597,7 @@ var generate = function generate(baseSpacing, scale) {
               color: "#F5879D"
             },
             text: {
-              color: "#FFFFFF"
+              color: colors.white
             }
           },
           count: {
@@ -3605,12 +3605,12 @@ var generate = function generate(baseSpacing, scale) {
               color: "light-8"
             },
             text: {
-              color: "#000000"
+              color: colors.black
             }
           }
         },
         text: {
-          color: "#333333",
+          color: colors.text.light,
           weight: 600
         },
         dropToggleIcon: {
@@ -3621,14 +3621,14 @@ var generate = function generate(baseSpacing, scale) {
           close: {
             icon: _Down.Down,
             size: "small",
-            color: "#898FA2"
+            color: statusColors.notStarted
           }
         }
       },
       drop: {
         container: {
           background: {
-            color: "#FFFFFF"
+            color: colors.white
           }
         },
         selectedAccountDetail: {
@@ -3645,12 +3645,12 @@ var generate = function generate(baseSpacing, scale) {
             }
           },
           name: {
-            color: "#333333",
+            color: colors.text.light,
             size: "large",
             weight: 700
           },
           email: {
-            color: "#333333",
+            color: colors.text.light,
             size: "large"
           }
         },
@@ -3664,7 +3664,7 @@ var generate = function generate(baseSpacing, scale) {
             }
           },
           text: {
-            color: "#333333"
+            color: colors.text.light
           },
           icon: {
             search: _Search.Search,
@@ -3698,23 +3698,23 @@ var generate = function generate(baseSpacing, scale) {
               },
               hoverIndicator: {
                 background: {
-                  color: "#F4F6F8"
+                  color: "light-8"
                 }
               }
             },
             name: {
-              color: "#333333",
+              color: colors.text.light,
               size: "large",
               weight: 700
             },
             hoverIcon: {
               icon: _AccountLogin.AccountLogin,
               size: "xsmall",
-              color: "#333333"
+              color: colors.text.light
             },
             noAccFound: {
               text: {
-                color: "#333333"
+                color: colors.text.light
               }
             }
           }
@@ -3733,13 +3733,13 @@ var generate = function generate(baseSpacing, scale) {
             }]
           },
           text: {
-            color: "#333333",
+            color: colors.text.light,
             size: "large",
             weight: 700
           },
           mergeIcon: {
             icon: _MergedView.MergedView,
-            color: "#333333"
+            color: colors.text.light
           }
         },
         logout: {
@@ -3754,19 +3754,19 @@ var generate = function generate(baseSpacing, scale) {
           text: {
             size: "large",
             weight: 700,
-            color: "#5B8BF2"
+            color: "accent-12"
           }
         },
         loader: {
-          mainColor: "#F4F6F8",
-          loadColor: "#333333"
+          mainColor: "light-8",
+          loadColor: colors.text.light
         }
       }
     },
     sideBar: {
       container: {
         background: {
-          color: "#FFFFFF"
+          color: colors.white
         },
         border: {
           side: "right",
@@ -3776,13 +3776,13 @@ var generate = function generate(baseSpacing, scale) {
       },
       navBar: {
         background: {
-          color: "#FFFFFF"
+          color: colors.white
         },
         navItem: {
           border: {
-            color: "#FFFFFF",
+            color: colors.white,
             active: {
-              color: "#FC564F"
+              color: "status-critical"
             }
           },
           icons: {
@@ -3790,32 +3790,32 @@ var generate = function generate(baseSpacing, scale) {
             linkIcon: {
               size: "large",
               active: {
-                color: "#FC564F"
+                color: "status-critical"
               }
             },
             tickIcon: {
               icon: _Tick.Tick,
               size: "small",
               active: {
-                color: "#000000"
+                color: colors.black
               }
             },
             subMenuToggleIcon: {
               open: {
                 icon: _Up.Up,
                 size: "small",
-                color: "#000000"
+                color: colors.black
               },
               close: {
                 icon: _Down.Down,
                 size: "small",
-                color: "#898FA2"
+                color: "dark-8"
               }
             }
           },
           tooltipText: {
             background: {
-              color: "#000000"
+              color: colors.black
             },
             pad: {
               vertical: "xsmall",
@@ -3826,7 +3826,7 @@ var generate = function generate(baseSpacing, scale) {
               top: "small"
             },
             round: "small",
-            color: "#000000"
+            color: colors.black
           },
           text: {
             size: "large",
@@ -3834,19 +3834,19 @@ var generate = function generate(baseSpacing, scale) {
           },
           hover: {
             background: {
-              color: "#F4F6F8"
+              color: "light-8"
             }
           },
           subMenu: {
             background: {
-              color: "#FFFFFF"
+              color: colors.white
             },
             text: {
               weight: 400,
               size: "medium"
             },
             border: {
-              color: "#F4F6F8"
+              color: "light-8"
             },
             header: {
               weight: 700
@@ -3858,7 +3858,7 @@ var generate = function generate(baseSpacing, scale) {
     },
     main: {
       background: {
-        color: "#F8FAFE"
+        color: "light-22"
       }
     }
   };

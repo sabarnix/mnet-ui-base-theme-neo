@@ -3236,7 +3236,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     header: {
       container: {
-        background: { color: "#FFFFFF" },
+        background: { color: colors.white },
         border: {
           size: "xsmall",
           color: "light-21",
@@ -3262,7 +3262,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             align: "center",
             justify: "between",
             gap: "large",
-            background: { color: "#F4F6F8" },
+            background: { color: "light-8" },
             border: {
               size: "xsmall",
               color: "light-21",
@@ -3294,7 +3294,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               justify: "between",
               gap: "xlarge",
               pad: { horizontal: "large", vertical: "small" },
-              hoverIndicator: { color: "#F4F6F8" },
+              hoverIndicator: { color: "light-8" },
               margin: { bottom: "small" },
               style: { cursor: "pointer", color: "inherit" },
             },
@@ -3331,7 +3331,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           align: "center",
           justify: "between",
           gap: "xlarge",
-          background: { color: "#FFFFFF" },
+          background: { color: colors.white },
         },
         initialCircle: {
           first: {
@@ -3339,7 +3339,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               color: "status-critical",
             },
             text: {
-              color: "#FFFFFF",
+              color: colors.white,
             },
           },
           second: {
@@ -3347,7 +3347,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               color: "#F5879D",
             },
             text: {
-              color: "#FFFFFF",
+              color: colors.white,
             },
           },
           count: {
@@ -3355,12 +3355,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               color: "light-8",
             },
             text: {
-              color: "#000000",
+              color: colors.black,
             },
           },
         },
         text: {
-          color: "#333333",
+          color: colors.text.light,
           weight: 600,
         },
         dropToggleIcon: {
@@ -3371,14 +3371,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           close: {
             icon: Down,
             size: "small",
-            color: "#898FA2",
+            color: statusColors.notStarted,
           },
         },
       },
       drop: {
         container: {
           background: {
-            color: "#FFFFFF",
+            color: colors.white,
           },
         },
         selectedAccountDetail: {
@@ -3395,12 +3395,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             },
           },
           name: {
-            color: "#333333",
+            color: colors.text.light,
             size: "large",
             weight: 700,
           },
           email: {
-            color: "#333333",
+            color: colors.text.light,
             size: "large",
           },
         },
@@ -3411,7 +3411,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             border: { side: "bottom", size: "small" },
           },
           text: {
-            color: "#333333",
+            color: colors.text.light,
           },
           icon: {
             search: Search,
@@ -3432,22 +3432,22 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               pad: { horizontal: "large", vertical: "small" },
               margin: { vertical: "xsmall" },
               hoverIndicator: {
-                background: { color: "#F4F6F8" },
+                background: { color: "light-8" },
               },
             },
             name: {
-              color: "#333333",
+              color: colors.text.light,
               size: "large",
               weight: 700,
             },
             hoverIcon: {
               icon: AccountLogin,
               size: "xsmall",
-              color: "#333333",
+              color: colors.text.light,
             },
             noAccFound: {
               text: {
-                color: "#333333",
+                color: colors.text.light,
               },
             },
           },
@@ -3468,13 +3468,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             ],
           },
           text: {
-            color: "#333333",
+            color: colors.text.light,
             size: "large",
             weight: 700,
           },
           mergeIcon: {
             icon: MergedView,
-            color: "#333333",
+            color: colors.text.light,
           },
         },
         logout: {
@@ -3491,18 +3491,18 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           text: {
             size: "large",
             weight: 700,
-            color: "#5B8BF2",
+            color: "accent-12",
           },
         },
         loader: {
-          mainColor: "#F4F6F8",
-          loadColor: "#333333",
+          mainColor: "light-8",
+          loadColor: colors.text.light,
         },
       },
     },
     sideBar: {
       container: {
-        background: { color: "#FFFFFF" },
+        background: { color: colors.white },
         border: {
           side: "right",
           size: "xsmall",
@@ -3511,13 +3511,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       navBar: {
         background: {
-          color: "#FFFFFF",
+          color: colors.white,
         },
         navItem: {
           border: {
-            color: "#FFFFFF",
+            color: colors.white,
             active: {
-              color: "#FC564F",
+              color: "status-critical",
             },
           },
           icons: {
@@ -3525,38 +3525,38 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             linkIcon: {
               size: "large",
               active: {
-                color: "#FC564F",
+                color: "status-critical",
               },
             },
             tickIcon: {
               icon: Tick,
               size: "small",
               active: {
-                color: "#000000",
+                color: colors.black,
               },
             },
             subMenuToggleIcon: {
               open: {
                 icon: Up,
                 size: "small",
-                color: "#000000",
+                color: colors.black,
               },
               close: {
                 icon: Down,
                 size: "small",
-                color: "#898FA2",
+                color: "dark-8",
               },
             },
           },
           tooltipText: {
-            background: { color: "#000000" },
+            background: { color: colors.black },
             pad: {
               vertical: "xsmall",
               horizontal: "medium",
             },
             margin: { left: "small", top: "small" },
             round: "small",
-            color: "#000000",
+            color: colors.black,
           },
           text: {
             size: "large",
@@ -3564,19 +3564,19 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           },
           hover: {
             background: {
-              color: "#F4F6F8",
+              color: "light-8",
             },
           },
           subMenu: {
             background: {
-              color: "#FFFFFF",
+              color: colors.white,
             },
             text: {
               weight: 400,
               size: "medium",
             },
             border: {
-              color: "#F4F6F8",
+              color: "light-8",
             },
             header: {
               weight: 700,
@@ -3588,7 +3588,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     },
     main: {
       background: {
-        color: "#F8FAFE",
+        color: "light-22",
       },
     },
   };
