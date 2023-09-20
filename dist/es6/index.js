@@ -26,10 +26,15 @@ import { Help } from "mnet-icons/dist/es6/icons/neo/Help";
 import { AlertTriangle } from "mnet-icons/dist/es6/icons/neo/AlertTriangle";
 import { Search } from "mnet-icons/dist/es6/icons/neo/Search";
 import { Excluded } from "mnet-icons/dist/es6/icons/neo/Excluded";
-import { css } from 'styled-components';
-import { deepFreeze } from 'grommet/utils/object';
-import { normalizeColor } from 'grommet/utils/colors';
-import { parseMetricToNum } from 'grommet/utils/mixins';
+import { AccountLogin } from "mnet-icons/dist/es6/icons/neo/AccountLogin";
+import { MergedView } from "mnet-icons/dist/es6/icons/neo/MergedView";
+import { BurgerMenu } from "mnet-icons/dist/es6/icons/neo/BurgerMenu";
+import { Clock } from "mnet-icons/dist/es6/icons/neo/Clock";
+import { css } from "styled-components";
+import { deepFreeze } from "grommet/utils/object";
+import { normalizeColor } from "grommet/utils/colors";
+import { parseMetricToNum } from "grommet/utils/mixins";
+import HeaderLogoSrc from "./assets/neo/header-logo.svg";
 Tick.notSvg = true;
 addGoogleFont({
   "Open Sans": ["400", "600", "700"]
@@ -56,8 +61,8 @@ var darkColors = ["#29313D", "#2F3A4A", "#575F7D", "#898EA2", "#BABDCA", "#DEDED
 
 var lightColors = ['#fbfbfb', '#f5f6f8', '#E7EAF1', '#e1e3ef', '#dfdfdf', '#DADADA', '#F5F7FD', '#F4F6F8', '#D9DBE5', '#E8E7E7', '#F5F6FA', '#CCCCCC', '#E0E4ED', '#edfff2', '#EDF6FF', '#BED1FA', '#F2F6FF', '#F9F9F9', '#BDD1FA', '#898FA2', '#DCDFE7', '#F8FAFE', '#D5D7DB', '#C9CCD5', '#E4ECFF'];
 var chartColors = ['#FC564F', '#5B8BF2', '#38C18B', '#FC90C9', '#F5B473', '#7371D9', '#98DB98', '#FC805A', '#3165B0', '#5DD8EB', '#FCD743', '#C94F78', '#AFA392', '#F5938C', '#6A3A27', '#DB2001', '#3C9678', '#575F7D', '#650B7C', '#9F7D56'];
-var focusColor = '#B1C2FE';
-var borderColor = '#DCDFE7';
+var focusColor = "#B1C2FE";
+var borderColor = "#DCDFE7";
 var colors = {
   active: "#F4F6F8",
   "background-back": {
@@ -1045,9 +1050,9 @@ export var generate = function generate(baseSpacing, scale) {
           color: "dark-6",
           size: "xsmall"
         }, {
-          side: 'right',
-          color: 'dark-6',
-          size: 'xsmall'
+          side: "right",
+          color: "dark-6",
+          size: "xsmall"
         }],
         round: {
           size: baseSpacing * 0.25 + "px",
@@ -1067,9 +1072,9 @@ export var generate = function generate(baseSpacing, scale) {
           color: "dark-6",
           size: "xsmall"
         }, {
-          side: 'left',
-          color: 'dark-6',
-          size: 'xsmall'
+          side: "left",
+          color: "dark-6",
+          size: "xsmall"
         }],
         round: {
           size: baseSpacing * 0.25 + "px",
@@ -1344,7 +1349,7 @@ export var generate = function generate(baseSpacing, scale) {
             var theme = _ref9.theme,
                 twoColumnLayout = _ref9.twoColumnLayout;
             return {
-              width: twoColumnLayout ? "100%" : "auto",
+              width: twoColumnLayout ? '100%' : 'auto',
               margin: twoColumnLayout ? 0 : baseSpacing / (1.618 * 2) + "px",
               background: normalizeColor(twoColumnLayout ? 'white' : 'light-10', theme),
               // This alignment to be solved when the entire multiselect alignment is solved
@@ -1436,7 +1441,7 @@ export var generate = function generate(baseSpacing, scale) {
         placeholder: {
           color: 'dark-7',
           weight: 400,
-          size: "medium",
+          size: 'medium',
           margin: {
             left: '0'
           }
@@ -1614,7 +1619,7 @@ export var generate = function generate(baseSpacing, scale) {
         border: {
           color: "dark-6"
         },
-        round: 'small'
+        round: "small"
       },
       selectAll: {
         container: {
@@ -1653,7 +1658,7 @@ export var generate = function generate(baseSpacing, scale) {
         extend: function extend(_ref12) {
           var theme = _ref12.theme;
           return {
-            color: normalizeColor('dark-7', theme),
+            color: normalizeColor("dark-7", theme),
             fontWeight: 400,
             opacity: 1
           };
@@ -2127,9 +2132,9 @@ export var generate = function generate(baseSpacing, scale) {
           background: "brand",
           color: "white",
           border: {
-            width: '1px',
-            color: 'brand',
-            radius: 'inherit'
+            width: "1px",
+            color: "brand",
+            radius: "inherit"
           },
           extend: function extend(props) {
             return css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteralLoose(["\n            &:hover{\n              background-color: ", " !important;\n              color: white !important;\n              height: inherit !important;\n            }\n          "])), normalizeColor('brand', props.theme));
@@ -2998,7 +3003,7 @@ export var generate = function generate(baseSpacing, scale) {
             }
           },
           dropdown: {
-            width: 'medium'
+            width: "medium"
           },
           // To be remvoed when we add Drag and drop for filter Tag
           menu: {
@@ -3113,8 +3118,8 @@ export var generate = function generate(baseSpacing, scale) {
                 overflow: "hidden"
               },
               item: {
-                align: 'center',
-                pad: 'medium',
+                align: "center",
+                pad: "medium",
                 extend: function extend(_ref26) {
                   var isActive = _ref26.isActive,
                       theme = _ref26.theme;
@@ -3130,7 +3135,7 @@ export var generate = function generate(baseSpacing, scale) {
             radioContainer: {
               pad: "medium",
               item: {
-                gap: 'medium',
+                gap: "medium",
                 extend: function extend(_ref27) {
                   var theme = _ref27.theme;
                   return {
@@ -3163,8 +3168,8 @@ export var generate = function generate(baseSpacing, scale) {
                 item: {
                   "switch": {
                     option: {
-                      width: '100%',
-                      pad: 'large',
+                      width: "100%",
+                      pad: "large",
                       extend: function extend(_ref28) {
                         var checked = _ref28.checked,
                             theme = _ref28.theme;
@@ -3249,7 +3254,7 @@ export var generate = function generate(baseSpacing, scale) {
                 icons: {
                   prev: Left,
                   next: Right,
-                  color: 'dark-8',
+                  color: "dark-8",
                   hover: function hover(_ref29) {
                     var theme = _ref29.theme;
                     return {
