@@ -480,8 +480,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             radius: `${baseSpacing * 0.25}px`, // 4px
           },
           pad: {
-            vertical: `${baseSpacing * 0.125}px`,
-            horizontal: `${baseSpacing * 0.5}px`,
+            vertical: `${baseSpacing * 0.125 + 1}px`, // 3px
+            horizontal: `${baseSpacing * 0.5}px`, // 8px
+          },
+          iconOnly: {
+            pad: `${baseSpacing * 0.5 - 2}px`, // 6px
           },
         },
         medium: {
@@ -489,8 +492,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             radius: `${baseSpacing * 0.25}px`,
           },
           pad: {
-            vertical: `${baseSpacing * 0.375}px`,
-            horizontal: `${baseSpacing}px`,
+            vertical: `${baseSpacing * 0.375}px`, // 6px
+            horizontal: `${baseSpacing}px`, // 16px
+          },
+          iconOnly: {
+            pad: `${baseSpacing * 0.5 + 1}px`, // 9px
           },
         },
         large: {
@@ -498,8 +504,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             radius: `${baseSpacing * 0.25}px`,
           },
           pad: {
-            vertical: `${baseSpacing * 0.5}px`,
-            horizontal: `${baseSpacing * 1.5}px`,
+            vertical: `${baseSpacing * 0.5 + 1}px`, // 9px
+            horizontal: `${baseSpacing * 1.5}px`, // 24px
+          },
+          iconOnly: {
+            pad: `${baseSpacing * 0.75}px`, // 12px
           },
         },
       },
@@ -664,28 +673,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           styles.push('opacity: 0.6;');
         }
 
-        switch (props.sizeProp) {
-          case 'large':
-            styles.push({
-              fontSize: `${baseFontSize * 1.16}px`,
-              height: `${baseSpacing * 2.5}px`,
-            });
-            break;
-
-          case 'medium':
-            styles.push({
-              fontSize: `${baseFontSize}px`,
-              height: `${baseSpacing * 2}px`,
-            });
-            break;
-          case 'small':
-            styles.push({
-              fontSize: `${baseFontSize * 0.83}px`,
-              height: `${baseSpacing * 1.5}px`,
-            });
-            break;
-          default:
-        }
         return styles;
       },
     },
