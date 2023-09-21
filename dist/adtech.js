@@ -12,7 +12,7 @@ var _headerLogo = _interopRequireDefault(require("./assets/adtech/header-logo.sv
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var neo = (0, _utils.deepMerge)(_.neo, {
-  title: "Ad.Tech",
+  title: 'Ad.Tech',
   header: {
     headerLogo: {
       logo: _headerLogo["default"]
@@ -23,12 +23,12 @@ var neo = (0, _utils.deepMerge)(_.neo, {
       initialCircle: {
         first: {
           background: {
-            color: "#6566EF"
+            color: '#6566EF'
           }
         },
         second: {
           background: {
-            color: "#9396f3"
+            color: '#9396f3'
           }
         }
       }
@@ -38,7 +38,7 @@ var neo = (0, _utils.deepMerge)(_.neo, {
         initialCircle: {
           container: {
             background: {
-              color: "#6566EF"
+              color: '#6566EF'
             }
           }
         }
@@ -50,13 +50,13 @@ var neo = (0, _utils.deepMerge)(_.neo, {
       navItem: {
         border: {
           active: {
-            color: "#6566EF"
+            color: '#6566EF'
           }
         },
         icons: {
           linkIcon: {
             active: {
-              color: "#6566EF"
+              color: '#6566EF'
             }
           }
         }

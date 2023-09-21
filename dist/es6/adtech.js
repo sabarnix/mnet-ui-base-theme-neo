@@ -1,8 +1,8 @@
-import { deepMerge } from "grommet/utils";
-import { neo as defaultNeo } from ".";
-import HeaderLogoSrc from "./assets/adtech/header-logo.svg";
+import { deepMerge } from 'grommet/utils';
+import { neo as defaultNeo } from '.';
+import HeaderLogoSrc from './assets/adtech/header-logo.svg';
 var neo = deepMerge(defaultNeo, {
-  title: "Ad.Tech",
+  title: 'Ad.Tech',
   header: {
     headerLogo: {
       logo: HeaderLogoSrc
@@ -13,12 +13,12 @@ var neo = deepMerge(defaultNeo, {
       initialCircle: {
         first: {
           background: {
-            color: "#6566EF"
+            color: '#6566EF'
           }
         },
         second: {
           background: {
-            color: "#9396f3"
+            color: '#9396f3'
           }
         }
       }
@@ -28,7 +28,7 @@ var neo = deepMerge(defaultNeo, {
         initialCircle: {
           container: {
             background: {
-              color: "#6566EF"
+              color: '#6566EF'
             }
           }
         }
@@ -40,13 +40,13 @@ var neo = deepMerge(defaultNeo, {
       navItem: {
         border: {
           active: {
-            color: "#6566EF"
+            color: '#6566EF'
           }
         },
         icons: {
           linkIcon: {
             active: {
-              color: "#6566EF"
+              color: '#6566EF'
             }
           }
         }
