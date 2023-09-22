@@ -15,6 +15,10 @@
   "engines": {
     "node": ">=12"
   },
+  "exports": {
+    "./neo": "./dist/index.js",
+    "./adtech": "./dist/adtech.js"
+  },
   "peerDependencies": {
     "grommet": "^2.19.1",
     "mnet-icons": "git+ssh://git@tree.mn:react-ui/mnet-icons.git",
@@ -45,7 +49,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "cross-env babel ./src/js/ --out-dir ./dist --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --out-dir ./dist/es6 --copy-files",
+    "build": "cross-env babel ./src/js/ --out-dir ./dist --copy-files && babel ./assets/ --out-dir ./dist/assets/ --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --out-dir ./dist/es6 --copy-files && babel ./assets/ --out-dir ./dist/es6/assets/ --copy-files",
     "watch": "cross-env babel ./src/js/ --out-dir ./dist --copy-files && cross-env BABEL_ENV=es6 babel ./src/js/ --watch --out-dir ./dist/es6 --copy-files",
     "lint": "eslint src"
   },
@@ -54,6 +58,7 @@
   ],
   "dependencies": {
     "google-fonts": "^1.0.0",
-    "grommet-icons": "^4.7.0"
+    "grommet-icons": "^4.7.0",
+    "mnet-ui-base-theme-neo": "sabarnix/mnet-ui-base-theme-neo"
   }
 }

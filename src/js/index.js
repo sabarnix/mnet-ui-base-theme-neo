@@ -21,11 +21,16 @@ import {
   AlertTriangle,
   Search,
   Excluded,
+  AccountLogin,
+  MergedView,
+  BurgerMenu,
+  Clock,
 } from 'mnet-icons/neo';
 import { css } from 'styled-components';
 import { deepFreeze } from 'grommet/utils/object';
 import { normalizeColor } from 'grommet/utils/colors';
 import { parseMetricToNum } from 'grommet/utils/mixins';
+import HeaderLogoSrc from './assets/neo/header-logo.svg';
 
 Tick.notSvg = true;
 
@@ -219,6 +224,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
   const controlBorderWidth = 1;
 
   const result = {
+    title: 'Media.net',
     global: {
       active: {
         background: {
@@ -1277,9 +1283,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
               ? 0
               : `${baseSpacing / (1.618 * 2)}px`,
             borderBottom: 'none',
-            justifyContent: twoColumnLayout
-              ? 'space-between'
-              : 'flex-start',
+            justifyContent: twoColumnLayout ? 'space-between' : 'flex-start',
           }),
         },
         label: {
@@ -1348,14 +1352,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             position: 'relative',
           },
           extend: ({ layout, theme }) => ({
-            background:
-              layout === 'double-column' ? 'white' : lightColors[1],
-            flexDirection:
-              layout === 'double-column' ? 'row-reverse' : 'row',
+            background: layout === 'double-column' ? 'white' : lightColors[1],
+            flexDirection: layout === 'double-column' ? 'row-reverse' : 'row',
             paddingLeft:
               layout === 'double-column' ? `${baseSpacing / 1.618}px` : 0,
             borderBottom:
-              layout === 'double-column' ? `1px solid ${normalizeColor('light-9', theme)}` : 'none',
+              layout === 'double-column'
+                ? `1px solid ${normalizeColor('light-9', theme)}`
+                : 'none',
           }),
         },
         placeholder: {
@@ -1412,7 +1416,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         container: {
           extend: ({ isEmpty }) => ({
-            padding: `${isEmpty ? `${baseSpacing / 1.6}` : '0'}px ${isEmpty ? `${baseSpacing}` : '0'}px`,
+            padding: `${isEmpty ? `${baseSpacing / 1.6}` : '0'}px ${
+              isEmpty ? `${baseSpacing}` : '0'
+            }px`,
           }),
         },
       },
@@ -1633,13 +1639,11 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       control: {
         color: 'dark-7',
-        open: ({ callerPlain: plain }) => !plain && ({
+        open: ({ callerPlain: plain }) => !plain && {
           borderBottomColor: accentColors[11],
           backgroundColor: lightColors[21],
-        }),
-        extend: ({
-          theme, disabled, callerPlain: plain,
-        }) => ({
+        },
+        extend: ({ theme, disabled, callerPlain: plain }) => ({
           border: !plain && `1px solid ${normalizeColor('dark-6', theme)}`,
           input: {
             color: normalizeColor('dark-7', theme),
@@ -1656,11 +1660,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           padding: `${baseSpacing * 0.5 - 1.5}px ${baseSpacing}px`,
           background: disabled ? normalizeColor('light-1', theme) : null,
           borderBottomWidth: !plain && theme.global.borderSize.small,
-          ...(!disabled ? {
-            '&:hover': {
-              borderBottomColor: accentColors[11],
-            },
-          } : {}),
+          ...(!disabled
+            ? {
+              '&:hover': {
+                borderBottomColor: accentColors[11],
+              },
+            }
+            : {}),
         }),
       },
       options: {
@@ -1915,7 +1921,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       small: { ...fontSizing(-0.75) },
       medium: { ...fontSizing(0) }, // 18px
       large: { ...fontSizing(0.75) }, // 22px
-      xlarge: { ...fontSizing(1.50) },
+      xlarge: { ...fontSizing(1.5) },
       xxlarge: { ...fontSizing(2.25) },
       xxxlarge: { ...fontSizing(3.75) },
       xxxxlarge: { ...fontSizing(4.5) },
@@ -1948,7 +1954,14 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         opacity: 0.4,
       },
       extend: ({
-        plain, focus, reverse, icon, theme, readOnly = false, disabled, error,
+        plain,
+        focus,
+        reverse,
+        icon,
+        theme,
+        readOnly = false,
+        disabled,
+        error,
       }) => ({
         padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
         boxShadow: 'none',
@@ -1958,19 +1971,29 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         fontWeight: 400,
         color: normalizeColor('dark-7', theme),
         paddingLeft: !reverse && icon && `${baseSpacing / 0.64}px`,
-        borderColor: error ? 'transparent' : !plain && normalizeColor('border', theme),
+        borderColor: error
+          ? 'transparent'
+          : !plain && normalizeColor('border', theme),
         ...(!plain && { minHeight: `${baseSpacing * 2.5}px` }),
-        ...(focus && !readOnly ? {
-          borderColor: normalizeColor('border', theme),
-          borderBottom: `${theme.global.borderSize.small} solid ${normalizeColor('accent-12', theme)}`,
-          background: `${normalizeColor('background-back', theme)}`,
-        } : {}),
-        ...(readOnly ? { backgroundColor: normalizeColor('background-contrast', theme) } : {}),
-        ...((!readOnly && !error && !disabled) ? {
-          '&:hover': {
-            borderBottomColor: normalizeColor('accent-12', theme),
-          },
-        } : {}),
+        ...(focus && !readOnly
+          ? {
+            borderColor: normalizeColor('border', theme),
+            borderBottom: `${
+              theme.global.borderSize.small
+            } solid ${normalizeColor('accent-12', theme)}`,
+            background: `${normalizeColor('background-back', theme)}`,
+          }
+          : {}),
+        ...(readOnly
+          ? { backgroundColor: normalizeColor('background-contrast', theme) }
+          : {}),
+        ...(!readOnly && !error && !disabled
+          ? {
+            '&:hover': {
+              borderBottomColor: normalizeColor('accent-12', theme),
+            },
+          }
+          : {}),
       }),
     },
     pagination: {
@@ -2112,7 +2135,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           background: 'dark-7',
           direction: 'row',
           width: { max: 'medium' },
-          pad: { horizontal: `${baseSpacing * 0.5}px`, vertical: `${baseSpacing * 0.5}px` },
+          pad: {
+            horizontal: `${baseSpacing * 0.5}px`,
+            vertical: `${baseSpacing * 0.5}px`,
+          },
           round: `${baseSpacing * 0.25}px`,
           height: { max: 'medium' },
           overflow: 'hidden',
@@ -2309,7 +2335,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         justify: 'start',
         gap: `${baseSpacing * 0.5}px`,
         pad: {
-          left: `${baseSpacing}px`, right: `${baseSpacing}px`, top: `${baseSpacing}px`, bottom: `${baseSpacing}px`,
+          left: `${baseSpacing}px`,
+          right: `${baseSpacing}px`,
+          top: `${baseSpacing}px`,
+          bottom: `${baseSpacing}px`,
         },
       },
     },
@@ -2693,7 +2722,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             // },
             extend: ({ disabled, hasTagHover, theme }) => ({
               '&:hover': {
-                ...(!disabled && hasTagHover ? { 'border-color': normalizeColor('light-24', theme) } : {}),
+                ...(!disabled && hasTagHover
+                  ? { 'border-color': normalizeColor('light-24', theme) }
+                  : {}),
               },
             }),
           },
@@ -2893,7 +2924,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                 align: 'center',
                 background: 'dark-7',
                 direction: 'row',
-                pad: { horizontal: `${baseSpacing * 0.5}px`, vertical: `${baseSpacing * 0.5}px` },
+                pad: {
+                  horizontal: `${baseSpacing * 0.5}px`,
+                  vertical: `${baseSpacing * 0.5}px`,
+                },
                 round: `${baseSpacing * 0.25}px`,
                 width: 'medium',
                 extend: {
@@ -2924,7 +2958,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                   fontSize: `${baseSpacing * 0.875}px`,
                   fontWeight: '600',
                   color: normalizeColor(isActive ? 'brand' : 'dark-7', theme),
-                  borderBottom: `3px solid ${normalizeColor(isActive ? 'brand' : 'transparent', theme)}`,
+                  borderBottom: `3px solid ${normalizeColor(
+                    isActive ? 'brand' : 'transparent',
+                    theme
+                  )}`,
                 }),
               },
             },
@@ -2964,8 +3001,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
                       width: '100%',
                       pad: 'large',
                       extend: ({ checked, theme }) => ({
-                        borderLeft: checked ? `3px solid ${normalizeColor('brand', theme)}` : '0',
-                        borderBottom: `1px solid ${normalizeColor('border', theme)}`,
+                        borderLeft: checked
+                          ? `3px solid ${normalizeColor('brand', theme)}`
+                          : '0',
+                        borderBottom: `1px solid ${normalizeColor(
+                          'border',
+                          theme
+                        )}`,
                         '&:hover': {
                           background: normalizeColor('active', theme),
                         },
@@ -3192,9 +3234,367 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
       },
     },
+    header: {
+      container: {
+        background: { color: colors.white },
+        border: {
+          size: 'xsmall',
+          color: 'light-21',
+          side: 'bottom',
+        },
+        direction: 'row',
+        pad: { vertical: 'large', right: 'xlarge', left: 'large' },
+        justify: 'between',
+        align: 'center',
+      },
+      sideBarToggleIcon: {
+        icon: BurgerMenu,
+        color: 'dark-8',
+        size: 'large',
+      },
+      headerLogo: {
+        logo: HeaderLogoSrc,
+      },
+      prebidFeature: {
+        label: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            justify: 'between',
+            gap: 'large',
+            background: { color: 'light-8' },
+            border: {
+              size: 'xsmall',
+              color: 'light-21',
+            },
+            round: 'small',
+            pad: { horizontal: 'medium', vertical: 'xsmall' },
+          },
+          text: {
+            size: 'medium',
+            weight: 600,
+          },
+          dropToggleIcon: {
+            open: {
+              icon: Up,
+              size: 'small',
+            },
+            close: {
+              icon: Down,
+              size: 'small',
+              color: 'dark-8',
+            },
+          },
+        },
+        drop: {
+          prebidItem: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              gap: 'xlarge',
+              pad: { horizontal: 'large', vertical: 'small' },
+              hoverIndicator: { color: 'light-8' },
+              margin: { bottom: 'small' },
+              style: { cursor: 'pointer', color: 'inherit' },
+            },
+            text: {
+              size: 'large',
+              weight: 400,
+            },
+            selectedPrebidItemIcon: {
+              icon: Tick,
+              size: 'small',
+            },
+          },
+        },
+      },
+      serverTime: {
+        container: {
+          margin: { horizontal: 'large' },
+          background: { color: 'light-8' },
+          pad: { horizontal: 'medium', vertical: 'small' },
+          round: 'small',
+          direction: 'row',
+          align: 'center',
+        },
+        clockIcon: {
+          icon: Clock,
+          size: 'medium',
+        },
+      },
+    },
+    userAccountMenu: {
+      label: {
+        container: {
+          direction: 'row',
+          align: 'center',
+          justify: 'between',
+          gap: 'xlarge',
+          background: { color: colors.white },
+        },
+        initialCircle: {
+          first: {
+            background: {
+              color: 'status-critical',
+            },
+            text: {
+              color: colors.white,
+            },
+          },
+          second: {
+            background: {
+              color: '#F5879D',
+            },
+            text: {
+              color: colors.white,
+            },
+          },
+          count: {
+            background: {
+              color: 'light-8',
+            },
+            text: {
+              color: colors.black,
+            },
+          },
+        },
+        text: {
+          color: colors.text.light,
+          weight: 600,
+        },
+        dropToggleIcon: {
+          open: {
+            icon: Up,
+            size: 'small',
+          },
+          close: {
+            icon: Down,
+            size: 'small',
+            color: statusColors.notStarted,
+          },
+        },
+      },
+      drop: {
+        container: {
+          background: {
+            color: colors.white,
+          },
+        },
+        selectedAccountDetail: {
+          initialCircle: {
+            container: {
+              background: {
+                color: 'status-critical',
+              },
+            },
+            text: {
+              color: '#FFFFFF',
+              size: 'large',
+              weight: 600,
+            },
+          },
+          name: {
+            color: colors.text.light,
+            size: 'large',
+            weight: 700,
+          },
+          email: {
+            color: colors.text.light,
+            size: 'large',
+          },
+        },
+        search: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            border: { side: 'bottom', size: 'small' },
+          },
+          text: {
+            color: colors.text.light,
+          },
+          icon: {
+            search: Search,
+            size: 'small',
+          },
+        },
+        accList: {
+          container: {
+            height: { max: 'medium' },
+            style: { display: 'block', overflow: 'auto' },
+            margin: { top: 'small' },
+          },
+          account: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              pad: { horizontal: 'large', vertical: 'small' },
+              margin: { vertical: 'xsmall' },
+              hoverIndicator: {
+                background: { color: 'light-8' },
+              },
+            },
+            name: {
+              color: colors.text.light,
+              size: 'large',
+              weight: 700,
+            },
+            hoverIcon: {
+              icon: AccountLogin,
+              size: 'xsmall',
+              color: colors.text.light,
+            },
+            noAccFound: {
+              text: {
+                color: colors.text.light,
+              },
+            },
+          },
+        },
+        mergeAccount: {
+          container: {
+            direction: 'row',
+            justify: 'between',
+            align: 'center',
+            gap: 'medium',
+            pad: 'large',
+            border: [
+              {
+                side: 'top',
+                size: '1px',
+                color: 'border',
+              },
+            ],
+          },
+          text: {
+            color: colors.text.light,
+            size: 'large',
+            weight: 700,
+          },
+          mergeIcon: {
+            icon: MergedView,
+            color: colors.text.light,
+          },
+        },
+        logout: {
+          container: {
+            border: [
+              {
+                side: 'top',
+                size: '1px',
+                color: 'border',
+              },
+            ],
+            pad: 'large',
+          },
+          text: {
+            size: 'large',
+            weight: 700,
+            color: 'accent-12',
+          },
+        },
+        loader: {
+          mainColor: 'light-8',
+          loadColor: colors.text.light,
+        },
+      },
+    },
+    sideBar: {
+      container: {
+        background: { color: colors.white },
+        border: {
+          side: 'right',
+          size: 'xsmall',
+          color: 'light-21',
+        },
+      },
+      navBar: {
+        background: {
+          color: colors.white,
+        },
+        navItem: {
+          border: {
+            color: colors.white,
+            active: {
+              color: 'status-critical',
+            },
+          },
+          icons: {
+            color: 'dark-8',
+            linkIcon: {
+              size: 'large',
+              active: {
+                color: 'status-critical',
+              },
+            },
+            tickIcon: {
+              icon: Tick,
+              size: 'small',
+              active: {
+                color: colors.black,
+              },
+            },
+            subMenuToggleIcon: {
+              open: {
+                icon: Up,
+                size: 'small',
+                color: colors.black,
+              },
+              close: {
+                icon: Down,
+                size: 'small',
+                color: 'dark-8',
+              },
+            },
+          },
+          tooltipText: {
+            background: { color: colors.black },
+            pad: {
+              vertical: 'xsmall',
+              horizontal: 'medium',
+            },
+            margin: { left: 'small', top: 'small' },
+            round: 'small',
+            color: colors.black,
+          },
+          text: {
+            size: 'large',
+            weight: 600,
+          },
+          hover: {
+            background: {
+              color: 'light-8',
+            },
+          },
+          subMenu: {
+            background: {
+              color: colors.white,
+            },
+            text: {
+              weight: 400,
+              size: 'medium',
+            },
+            border: {
+              color: 'light-8',
+            },
+            header: {
+              weight: 700,
+            },
+          },
+          extend: {},
+        },
+      },
+    },
+    main: {
+      background: {
+        color: 'light-22',
+      },
+    },
   };
 
   return deepFreeze(result);
 };
 
 export const neo = generate(16);
+export default neo;

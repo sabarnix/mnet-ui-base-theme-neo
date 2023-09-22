@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.neo = exports.generate = void 0;
+exports.neo = exports.generate = exports["default"] = void 0;
 
 var _polished = require("polished");
 
@@ -47,6 +47,14 @@ var _Search = require("mnet-icons/dist/es6/icons/neo/Search");
 
 var _Excluded = require("mnet-icons/dist/es6/icons/neo/Excluded");
 
+var _AccountLogin = require("mnet-icons/dist/es6/icons/neo/AccountLogin");
+
+var _MergedView = require("mnet-icons/dist/es6/icons/neo/MergedView");
+
+var _BurgerMenu = require("mnet-icons/dist/es6/icons/neo/BurgerMenu");
+
+var _Clock = require("mnet-icons/dist/es6/icons/neo/Clock");
+
 var _styledComponents = require("styled-components");
 
 var _object = require("grommet/utils/object");
@@ -55,7 +63,11 @@ var _colors = require("grommet/utils/colors");
 
 var _mixins = require("grommet/utils/mixins");
 
+var _headerLogo = _interopRequireDefault(require("./assets/neo/header-logo.svg"));
+
 var _templateObject, _templateObject2;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
@@ -192,6 +204,7 @@ var generate = function generate(baseSpacing, scale) {
   var borderWidth = 0;
   var controlBorderWidth = 1;
   var result = {
+    title: 'Media.net',
     global: {
       active: {
         background: {
@@ -2075,7 +2088,7 @@ var generate = function generate(baseSpacing, scale) {
       // 18px
       large: _extends({}, fontSizing(0.75)),
       // 22px
-      xlarge: _extends({}, fontSizing(1.50)),
+      xlarge: _extends({}, fontSizing(1.5)),
       xxlarge: _extends({}, fontSizing(2.25)),
       xxxlarge: _extends({}, fontSizing(3.75)),
       xxxxlarge: _extends({}, fontSizing(4.5))
@@ -3446,6 +3459,413 @@ var generate = function generate(baseSpacing, scale) {
           }
         }
       }
+    },
+    header: {
+      container: {
+        background: {
+          color: colors.white
+        },
+        border: {
+          size: 'xsmall',
+          color: 'light-21',
+          side: 'bottom'
+        },
+        direction: 'row',
+        pad: {
+          vertical: 'large',
+          right: 'xlarge',
+          left: 'large'
+        },
+        justify: 'between',
+        align: 'center'
+      },
+      sideBarToggleIcon: {
+        icon: _BurgerMenu.BurgerMenu,
+        color: 'dark-8',
+        size: 'large'
+      },
+      headerLogo: {
+        logo: _headerLogo["default"]
+      },
+      prebidFeature: {
+        label: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            justify: 'between',
+            gap: 'large',
+            background: {
+              color: 'light-8'
+            },
+            border: {
+              size: 'xsmall',
+              color: 'light-21'
+            },
+            round: 'small',
+            pad: {
+              horizontal: 'medium',
+              vertical: 'xsmall'
+            }
+          },
+          text: {
+            size: 'medium',
+            weight: 600
+          },
+          dropToggleIcon: {
+            open: {
+              icon: _Up.Up,
+              size: 'small'
+            },
+            close: {
+              icon: _Down.Down,
+              size: 'small',
+              color: 'dark-8'
+            }
+          }
+        },
+        drop: {
+          prebidItem: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              gap: 'xlarge',
+              pad: {
+                horizontal: 'large',
+                vertical: 'small'
+              },
+              hoverIndicator: {
+                color: 'light-8'
+              },
+              margin: {
+                bottom: 'small'
+              },
+              style: {
+                cursor: 'pointer',
+                color: 'inherit'
+              }
+            },
+            text: {
+              size: 'large',
+              weight: 400
+            },
+            selectedPrebidItemIcon: {
+              icon: _Tick.Tick,
+              size: 'small'
+            }
+          }
+        }
+      },
+      serverTime: {
+        container: {
+          margin: {
+            horizontal: 'large'
+          },
+          background: {
+            color: 'light-8'
+          },
+          pad: {
+            horizontal: 'medium',
+            vertical: 'small'
+          },
+          round: 'small',
+          direction: 'row',
+          align: 'center'
+        },
+        clockIcon: {
+          icon: _Clock.Clock,
+          size: 'medium'
+        }
+      }
+    },
+    userAccountMenu: {
+      label: {
+        container: {
+          direction: 'row',
+          align: 'center',
+          justify: 'between',
+          gap: 'xlarge',
+          background: {
+            color: colors.white
+          }
+        },
+        initialCircle: {
+          first: {
+            background: {
+              color: 'status-critical'
+            },
+            text: {
+              color: colors.white
+            }
+          },
+          second: {
+            background: {
+              color: '#F5879D'
+            },
+            text: {
+              color: colors.white
+            }
+          },
+          count: {
+            background: {
+              color: 'light-8'
+            },
+            text: {
+              color: colors.black
+            }
+          }
+        },
+        text: {
+          color: colors.text.light,
+          weight: 600
+        },
+        dropToggleIcon: {
+          open: {
+            icon: _Up.Up,
+            size: 'small'
+          },
+          close: {
+            icon: _Down.Down,
+            size: 'small',
+            color: statusColors.notStarted
+          }
+        }
+      },
+      drop: {
+        container: {
+          background: {
+            color: colors.white
+          }
+        },
+        selectedAccountDetail: {
+          initialCircle: {
+            container: {
+              background: {
+                color: 'status-critical'
+              }
+            },
+            text: {
+              color: '#FFFFFF',
+              size: 'large',
+              weight: 600
+            }
+          },
+          name: {
+            color: colors.text.light,
+            size: 'large',
+            weight: 700
+          },
+          email: {
+            color: colors.text.light,
+            size: 'large'
+          }
+        },
+        search: {
+          container: {
+            direction: 'row',
+            align: 'center',
+            border: {
+              side: 'bottom',
+              size: 'small'
+            }
+          },
+          text: {
+            color: colors.text.light
+          },
+          icon: {
+            search: _Search.Search,
+            size: 'small'
+          }
+        },
+        accList: {
+          container: {
+            height: {
+              max: 'medium'
+            },
+            style: {
+              display: 'block',
+              overflow: 'auto'
+            },
+            margin: {
+              top: 'small'
+            }
+          },
+          account: {
+            container: {
+              direction: 'row',
+              align: 'center',
+              justify: 'between',
+              pad: {
+                horizontal: 'large',
+                vertical: 'small'
+              },
+              margin: {
+                vertical: 'xsmall'
+              },
+              hoverIndicator: {
+                background: {
+                  color: 'light-8'
+                }
+              }
+            },
+            name: {
+              color: colors.text.light,
+              size: 'large',
+              weight: 700
+            },
+            hoverIcon: {
+              icon: _AccountLogin.AccountLogin,
+              size: 'xsmall',
+              color: colors.text.light
+            },
+            noAccFound: {
+              text: {
+                color: colors.text.light
+              }
+            }
+          }
+        },
+        mergeAccount: {
+          container: {
+            direction: 'row',
+            justify: 'between',
+            align: 'center',
+            gap: 'medium',
+            pad: 'large',
+            border: [{
+              side: 'top',
+              size: '1px',
+              color: 'border'
+            }]
+          },
+          text: {
+            color: colors.text.light,
+            size: 'large',
+            weight: 700
+          },
+          mergeIcon: {
+            icon: _MergedView.MergedView,
+            color: colors.text.light
+          }
+        },
+        logout: {
+          container: {
+            border: [{
+              side: 'top',
+              size: '1px',
+              color: 'border'
+            }],
+            pad: 'large'
+          },
+          text: {
+            size: 'large',
+            weight: 700,
+            color: 'accent-12'
+          }
+        },
+        loader: {
+          mainColor: 'light-8',
+          loadColor: colors.text.light
+        }
+      }
+    },
+    sideBar: {
+      container: {
+        background: {
+          color: colors.white
+        },
+        border: {
+          side: 'right',
+          size: 'xsmall',
+          color: 'light-21'
+        }
+      },
+      navBar: {
+        background: {
+          color: colors.white
+        },
+        navItem: {
+          border: {
+            color: colors.white,
+            active: {
+              color: 'status-critical'
+            }
+          },
+          icons: {
+            color: 'dark-8',
+            linkIcon: {
+              size: 'large',
+              active: {
+                color: 'status-critical'
+              }
+            },
+            tickIcon: {
+              icon: _Tick.Tick,
+              size: 'small',
+              active: {
+                color: colors.black
+              }
+            },
+            subMenuToggleIcon: {
+              open: {
+                icon: _Up.Up,
+                size: 'small',
+                color: colors.black
+              },
+              close: {
+                icon: _Down.Down,
+                size: 'small',
+                color: 'dark-8'
+              }
+            }
+          },
+          tooltipText: {
+            background: {
+              color: colors.black
+            },
+            pad: {
+              vertical: 'xsmall',
+              horizontal: 'medium'
+            },
+            margin: {
+              left: 'small',
+              top: 'small'
+            },
+            round: 'small',
+            color: colors.black
+          },
+          text: {
+            size: 'large',
+            weight: 600
+          },
+          hover: {
+            background: {
+              color: 'light-8'
+            }
+          },
+          subMenu: {
+            background: {
+              color: colors.white
+            },
+            text: {
+              weight: 400,
+              size: 'medium'
+            },
+            border: {
+              color: 'light-8'
+            },
+            header: {
+              weight: 700
+            }
+          },
+          extend: {}
+        }
+      }
+    },
+    main: {
+      background: {
+        color: 'light-22'
+      }
     }
   };
   return (0, _object.deepFreeze)(result);
@@ -3454,3 +3874,5 @@ var generate = function generate(baseSpacing, scale) {
 exports.generate = generate;
 var neo = generate(16);
 exports.neo = neo;
+var _default = neo;
+exports["default"] = _default;
