@@ -817,7 +817,7 @@ export var generate = function generate(baseSpacing, scale) {
           var checked = _ref5.checked,
               theme = _ref5.theme;
           return {
-            background: checked ? normalizeColor('accent-12', theme) : 'white',
+            background: checked || indeterminate ? normalizeColor('accent-12', theme) : 'white',
             border: checked && 'unset',
             boxShadow: 'unset',
             borderRadius: '2px',

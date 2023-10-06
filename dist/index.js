@@ -849,7 +849,7 @@ var generate = function generate(baseSpacing, scale) {
           var checked = _ref5.checked,
               theme = _ref5.theme;
           return {
-            background: checked ? (0, _colors.normalizeColor)('accent-12', theme) : 'white',
+            background: checked || indeterminate ? (0, _colors.normalizeColor)('accent-12', theme) : 'white',
             border: checked && 'unset',
             boxShadow: 'unset',
             borderRadius: '2px',
