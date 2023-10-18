@@ -218,6 +218,50 @@ export const generate = (baseSpacing = 24, scale = 6) => {
   const borderWidth = 0;
   const controlBorderWidth = 1;
 
+  const inputStyles = {
+    container: {
+      extend: {
+        height: '100%',
+      },
+    },
+    border: {
+      side: 'all',
+    },
+    placeholder: {
+      extend: {
+        paddingLeft: `${baseSpacing * 1.125}px`,
+      },
+    },
+    disabled: {
+      opacity: 0.4,
+    },
+    extend: ({
+      plain, focus, reverse, icon, theme, readOnly = false, disabled, error,
+    }) => ({
+      padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
+      boxShadow: 'none',
+      height: '100%',
+      fontSize: theme.global.font.size,
+      borderBottomWidth: theme.global.borderSize.small,
+      fontWeight: 400,
+      color: normalizeColor('dark-7', theme),
+      paddingLeft: !reverse && icon && `${baseSpacing / 0.64}px`,
+      borderColor: error ? 'transparent' : !plain && normalizeColor('border', theme),
+      ...(!plain && { minHeight: `${baseSpacing * 2.5}px` }),
+      ...(focus && !readOnly ? {
+        borderColor: normalizeColor('border', theme),
+        borderBottom: `${theme.global.borderSize.small} solid ${normalizeColor('accent-12', theme)}`,
+        background: `${normalizeColor('background-back', theme)}`,
+      } : {}),
+      ...(readOnly ? { backgroundColor: normalizeColor('background-contrast', theme) } : {}),
+      ...((!readOnly && !error && !disabled) ? {
+        '&:hover': {
+          borderBottomColor: normalizeColor('accent-12', theme),
+        },
+      } : {}),
+    }),
+  };
+
   const result = {
     global: {
       active: {
@@ -1120,10 +1164,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       // extend: undefined,
     },
-    maskedInput: {
-      // extend: undefined,
-      // disabled: { opacity: undefined },
-    },
+    maskedInput: inputStyles,
     menu: {
       // background: undefined,
       // extend: undefined,
@@ -1930,49 +1971,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
       }),
     },
-    textInput: {
-      container: {
-        extend: {
-          height: '100%',
-        },
-      },
-      border: {
-        side: 'all',
-      },
-      placeholder: {
-        extend: {
-          paddingLeft: `${baseSpacing * 1.125}px`,
-        },
-      },
-      disabled: {
-        opacity: 0.4,
-      },
-      extend: ({
-        plain, focus, reverse, icon, theme, readOnly = false, disabled, error,
-      }) => ({
-        padding: `${baseSpacing * 0.5}px ${baseSpacing}px`,
-        boxShadow: 'none',
-        height: '100%',
-        fontSize: theme.global.font.size,
-        borderBottomWidth: theme.global.borderSize.small,
-        fontWeight: 400,
-        color: normalizeColor('dark-7', theme),
-        paddingLeft: !reverse && icon && `${baseSpacing / 0.64}px`,
-        borderColor: error ? 'transparent' : !plain && normalizeColor('border', theme),
-        ...(!plain && { minHeight: `${baseSpacing * 2.5}px` }),
-        ...(focus && !readOnly ? {
-          borderColor: normalizeColor('border', theme),
-          borderBottom: `${theme.global.borderSize.small} solid ${normalizeColor('accent-12', theme)}`,
-          background: `${normalizeColor('background-back', theme)}`,
-        } : {}),
-        ...(readOnly ? { backgroundColor: normalizeColor('background-contrast', theme) } : {}),
-        ...((!readOnly && !error && !disabled) ? {
-          '&:hover': {
-            borderBottomColor: normalizeColor('accent-12', theme),
-          },
-        } : {}),
-      }),
-    },
+    textInput: inputStyles,
     pagination: {
       control: {
         extend: props => css`

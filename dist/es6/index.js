@@ -159,6 +159,58 @@ export var generate = function generate(baseSpacing, scale) {
 
   var borderWidth = 0;
   var controlBorderWidth = 1;
+  var inputStyles = {
+    container: {
+      extend: {
+        height: '100%'
+      }
+    },
+    border: {
+      side: 'all'
+    },
+    placeholder: {
+      extend: {
+        paddingLeft: baseSpacing * 1.125 + "px"
+      }
+    },
+    disabled: {
+      opacity: 0.4
+    },
+    extend: function extend(_ref) {
+      var plain = _ref.plain,
+          focus = _ref.focus,
+          reverse = _ref.reverse,
+          icon = _ref.icon,
+          theme = _ref.theme,
+          _ref$readOnly = _ref.readOnly,
+          readOnly = _ref$readOnly === void 0 ? false : _ref$readOnly,
+          disabled = _ref.disabled,
+          error = _ref.error;
+      return _extends({
+        padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
+        boxShadow: 'none',
+        height: '100%',
+        fontSize: theme.global.font.size,
+        borderBottomWidth: theme.global.borderSize.small,
+        fontWeight: 400,
+        color: normalizeColor('dark-7', theme),
+        paddingLeft: !reverse && icon && baseSpacing / 0.64 + "px",
+        borderColor: error ? 'transparent' : !plain && normalizeColor('border', theme)
+      }, !plain && {
+        minHeight: baseSpacing * 2.5 + "px"
+      }, focus && !readOnly ? {
+        borderColor: normalizeColor('border', theme),
+        borderBottom: theme.global.borderSize.small + " solid " + normalizeColor('accent-12', theme),
+        background: "" + normalizeColor('background-back', theme)
+      } : {}, readOnly ? {
+        backgroundColor: normalizeColor('background-contrast', theme)
+      } : {}, !readOnly && !error && !disabled ? {
+        '&:hover': {
+          borderBottomColor: normalizeColor('accent-12', theme)
+        }
+      } : {});
+    }
+  };
   var result = {
     global: {
       active: {
@@ -267,9 +319,9 @@ export var generate = function generate(baseSpacing, scale) {
         },
         zIndex: '20',
         marginTop: '4px',
-        extend: function extend(_ref) {
-          var _ref$isTooltip = _ref.isTooltip,
-              isTooltip = _ref$isTooltip === void 0 ? false : _ref$isTooltip;
+        extend: function extend(_ref2) {
+          var _ref2$isTooltip = _ref2.isTooltip,
+              isTooltip = _ref2$isTooltip === void 0 ? false : _ref2$isTooltip;
           return _extends({
             'box-shadow': !isTooltip && '0 2px 4px 0 rgba(0,0,0,0.26)'
           }, !isTooltip ? {
@@ -443,8 +495,8 @@ export var generate = function generate(baseSpacing, scale) {
     },
     scrollablebox: {
       box: {
-        extend: function extend(_ref2) {
-          var theme = _ref2.theme;
+        extend: function extend(_ref3) {
+          var theme = _ref3.theme;
           return {
             '::-webkit-scrollbar': {
               width: baseSpacing * 0.25 + "px"
@@ -722,11 +774,11 @@ export var generate = function generate(baseSpacing, scale) {
       },
       // level ranges from 1-6
       day: {
-        extend: function extend(_ref3) {
-          var isSelected = _ref3.isSelected,
-              isInRange = _ref3.isInRange,
-              children = _ref3.children,
-              theme = _ref3.theme;
+        extend: function extend(_ref4) {
+          var isSelected = _ref4.isSelected,
+              isInRange = _ref4.isInRange,
+              children = _ref4.children,
+              theme = _ref4.theme;
           return {
             backgroundColor: "" + ( // eslint-disable-next-line no-nested-ternary
             isSelected ? normalizeColor('brand', theme) : isInRange ? normalizeColor('active', theme) : undefined),
@@ -761,9 +813,9 @@ export var generate = function generate(baseSpacing, scale) {
       },
       check: {
         thickness: '2px',
-        extend: function extend(_ref4) {
-          var checked = _ref4.checked,
-              theme = _ref4.theme;
+        extend: function extend(_ref5) {
+          var checked = _ref5.checked,
+              theme = _ref5.theme;
           return {
             background: checked ? normalizeColor('accent-12', theme) : 'white',
             border: checked && 'unset',
@@ -817,9 +869,9 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         radius: baseSpacing + "px",
-        extend: function extend(_ref5) {
-          var checked = _ref5.checked,
-              theme = _ref5.theme;
+        extend: function extend(_ref6) {
+          var checked = _ref6.checked,
+              theme = _ref6.theme;
           return {
             height: baseSpacing * 1.187 + "px",
             border: 'none',
@@ -827,8 +879,8 @@ export var generate = function generate(baseSpacing, scale) {
           };
         }
       },
-      extend: function extend(_ref6) {
-        var theme = _ref6.theme;
+      extend: function extend(_ref7) {
+        var theme = _ref7.theme;
         return {
           color: normalizeColor('dark-7', theme),
           fontWeight: 400,
@@ -1181,9 +1233,7 @@ export var generate = function generate(baseSpacing, scale) {
       } // extend: undefined,
 
     },
-    maskedInput: {// extend: undefined,
-      // disabled: { opacity: undefined },
-    },
+    maskedInput: inputStyles,
     menu: {// background: undefined,
       // extend: undefined,
     },
@@ -1279,10 +1329,10 @@ export var generate = function generate(baseSpacing, scale) {
           },
           justify: 'center',
           background: 'white',
-          extend: function extend(_ref7) {
-            var checked = _ref7.checked,
-                active = _ref7.active,
-                theme = _ref7.theme;
+          extend: function extend(_ref8) {
+            var checked = _ref8.checked,
+                active = _ref8.active,
+                theme = _ref8.theme;
             return {
               background: checked && normalizeColor('accent-3', theme),
               borderColor: active ? 'transparent' : lightColors[5],
@@ -1321,8 +1371,8 @@ export var generate = function generate(baseSpacing, scale) {
             right: 'small'
           },
           direction: 'row',
-          extend: function extend(_ref8) {
-            var twoColumnLayout = _ref8.twoColumnLayout;
+          extend: function extend(_ref9) {
+            var twoColumnLayout = _ref9.twoColumnLayout;
             return {
               padding: twoColumnLayout ? 0 : baseSpacing / 1.618 + "px",
               borderBottom: 'none'
@@ -1339,9 +1389,9 @@ export var generate = function generate(baseSpacing, scale) {
           margin: 'small',
           direction: 'row',
           align: 'center',
-          extend: function extend(_ref9) {
-            var theme = _ref9.theme,
-                twoColumnLayout = _ref9.twoColumnLayout;
+          extend: function extend(_ref10) {
+            var theme = _ref10.theme,
+                twoColumnLayout = _ref10.twoColumnLayout;
             return {
               width: twoColumnLayout ? '100%' : 'auto',
               margin: twoColumnLayout ? 0 : baseSpacing / (1.618 * 2) + "px",
@@ -1421,9 +1471,9 @@ export var generate = function generate(baseSpacing, scale) {
             minHeight: baseSpacing * 2.5 + "px",
             position: 'relative'
           },
-          extend: function extend(_ref10) {
-            var layout = _ref10.layout,
-                theme = _ref10.theme;
+          extend: function extend(_ref11) {
+            var layout = _ref11.layout,
+                theme = _ref11.theme;
             return {
               background: layout === 'double-column' ? 'white' : lightColors[1],
               flexDirection: layout === 'double-column' ? 'row-reverse' : 'row',
@@ -1489,8 +1539,8 @@ export var generate = function generate(baseSpacing, scale) {
           }
         },
         container: {
-          extend: function extend(_ref11) {
-            var isEmpty = _ref11.isEmpty;
+          extend: function extend(_ref12) {
+            var isEmpty = _ref12.isEmpty;
             return {
               padding: (isEmpty ? "" + baseSpacing / 1.6 : '0') + "px " + (isEmpty ? "" + baseSpacing : '0') + "px"
             };
@@ -1649,8 +1699,8 @@ export var generate = function generate(baseSpacing, scale) {
     },
     radioButton: {
       container: {
-        extend: function extend(_ref12) {
-          var theme = _ref12.theme;
+        extend: function extend(_ref13) {
+          var theme = _ref13.theme;
           return {
             color: normalizeColor('dark-7', theme),
             fontWeight: 400,
@@ -1683,8 +1733,8 @@ export var generate = function generate(baseSpacing, scale) {
       },
       icon: {
         size: 'auto',
-        extend: function extend(_ref13) {
-          var theme = _ref13.theme;
+        extend: function extend(_ref14) {
+          var theme = _ref14.theme;
           return {
             border: "4px solid " + normalizeColor('accent-12', theme),
             borderRadius: '100%',
@@ -1734,17 +1784,17 @@ export var generate = function generate(baseSpacing, scale) {
       },
       control: {
         color: 'dark-7',
-        open: function open(_ref14) {
-          var plain = _ref14.callerPlain;
+        open: function open(_ref15) {
+          var plain = _ref15.callerPlain;
           return !plain && {
             borderBottomColor: accentColors[11],
             backgroundColor: lightColors[21]
           };
         },
-        extend: function extend(_ref15) {
-          var theme = _ref15.theme,
-              disabled = _ref15.disabled,
-              plain = _ref15.callerPlain;
+        extend: function extend(_ref16) {
+          var theme = _ref16.theme,
+              disabled = _ref16.disabled,
+              plain = _ref16.callerPlain;
           return _extends({
             border: !plain && "1px solid " + normalizeColor('dark-6', theme),
             input: {
@@ -1953,8 +2003,8 @@ export var generate = function generate(baseSpacing, scale) {
           lineHeight: fontSizing(0).height
         }
       },
-      extend: function extend(_ref16) {
-        var theme = _ref16.theme;
+      extend: function extend(_ref17) {
+        var theme = _ref17.theme;
         return {
           position: 'relative',
           'border-spacing': 0,
@@ -2049,9 +2099,9 @@ export var generate = function generate(baseSpacing, scale) {
       xxxxlarge: _extends({}, fontSizing(4.5))
     },
     textArea: {
-      extend: function extend(_ref17) {
-        var theme = _ref17.theme,
-            disabled = _ref17.disabled;
+      extend: function extend(_ref18) {
+        var theme = _ref18.theme,
+            disabled = _ref18.disabled;
         return {
           padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
           fontWeight: 400,
@@ -2062,58 +2112,7 @@ export var generate = function generate(baseSpacing, scale) {
         };
       }
     },
-    textInput: {
-      container: {
-        extend: {
-          height: '100%'
-        }
-      },
-      border: {
-        side: 'all'
-      },
-      placeholder: {
-        extend: {
-          paddingLeft: baseSpacing * 1.125 + "px"
-        }
-      },
-      disabled: {
-        opacity: 0.4
-      },
-      extend: function extend(_ref18) {
-        var plain = _ref18.plain,
-            focus = _ref18.focus,
-            reverse = _ref18.reverse,
-            icon = _ref18.icon,
-            theme = _ref18.theme,
-            _ref18$readOnly = _ref18.readOnly,
-            readOnly = _ref18$readOnly === void 0 ? false : _ref18$readOnly,
-            disabled = _ref18.disabled,
-            error = _ref18.error;
-        return _extends({
-          padding: baseSpacing * 0.5 + "px " + baseSpacing + "px",
-          boxShadow: 'none',
-          height: '100%',
-          fontSize: theme.global.font.size,
-          borderBottomWidth: theme.global.borderSize.small,
-          fontWeight: 400,
-          color: normalizeColor('dark-7', theme),
-          paddingLeft: !reverse && icon && baseSpacing / 0.64 + "px",
-          borderColor: error ? 'transparent' : !plain && normalizeColor('border', theme)
-        }, !plain && {
-          minHeight: baseSpacing * 2.5 + "px"
-        }, focus && !readOnly ? {
-          borderColor: normalizeColor('border', theme),
-          borderBottom: theme.global.borderSize.small + " solid " + normalizeColor('accent-12', theme),
-          background: "" + normalizeColor('background-back', theme)
-        } : {}, readOnly ? {
-          backgroundColor: normalizeColor('background-contrast', theme)
-        } : {}, !readOnly && !error && !disabled ? {
-          '&:hover': {
-            borderBottomColor: normalizeColor('accent-12', theme)
-          }
-        } : {});
-      }
-    },
+    textInput: inputStyles,
     pagination: {
       control: {
         extend: function extend(props) {
