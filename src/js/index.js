@@ -803,7 +803,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         thickness: '2px',
         extend: ({ checked, theme, indeterminate }) => ({
           background: (checked || indeterminate) ? normalizeColor('accent-12', theme) : 'white',
-          border: checked && 'unset',
+          border: (checked || indeterminate) && 'unset',
           boxShadow: 'unset',
           borderRadius: '2px',
           color: normalizeColor('white', theme),
