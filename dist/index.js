@@ -847,10 +847,11 @@ var generate = function generate(baseSpacing, scale) {
         thickness: '2px',
         extend: function extend(_ref5) {
           var checked = _ref5.checked,
-              theme = _ref5.theme;
+              theme = _ref5.theme,
+              indeterminate = _ref5.indeterminate;
           return {
-            background: checked ? (0, _colors.normalizeColor)('accent-12', theme) : 'white',
-            border: checked && 'unset',
+            background: checked || indeterminate ? (0, _colors.normalizeColor)('accent-12', theme) : 'white',
+            border: (checked || indeterminate) && 'unset',
             boxShadow: 'unset',
             borderRadius: '2px',
             color: (0, _colors.normalizeColor)('white', theme)

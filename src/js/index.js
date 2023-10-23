@@ -409,12 +409,10 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       input: {
         padding: {
-          horizontal: `${
-            parseMetricToNum(`${baseSpacing / 2}px`)
+          horizontal: `${parseMetricToNum(`${baseSpacing / 2}px`)
             - parseMetricToNum(`${controlBorderWidth}px`)
           }px`,
-          vertical: `${
-            parseMetricToNum(`${baseSpacing / 1.418}px`)
+          vertical: `${parseMetricToNum(`${baseSpacing / 1.418}px`)
             - parseMetricToNum(`${controlBorderWidth}px`)
           }px`,
         },
@@ -803,9 +801,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       check: {
         thickness: '2px',
-        extend: ({ checked, theme }) => ({
-          background: checked ? normalizeColor('accent-12', theme) : 'white',
-          border: checked && 'unset',
+        extend: ({ checked, theme, indeterminate }) => ({
+          background: (checked || indeterminate) ? normalizeColor('accent-12', theme) : 'white',
+          border: (checked || indeterminate) && 'unset',
           boxShadow: 'unset',
           borderRadius: '2px',
           color: normalizeColor('white', theme),
